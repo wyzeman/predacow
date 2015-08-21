@@ -1,0 +1,2621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2014-12-11 16:26-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: T_\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /p/querol/admin\n"
+"X-Poedit-SearchPath-1: /p/querol/entreprises\n"
+"X-Poedit-SearchPath-2: /p/querol/shared\n"
+
+#: /p/querol/shared/tools/admin.c:1 /p/querol/shared/tools/entreprises.c:12
+#: /p/querol/shared/tools/entreprises.c:60
+#: /p/querol/shared/tools/entreprises.c:144
+#: /p/querol/shared/tools/entreprises.c:155
+#: /p/querol/shared/tools/entreprises.c:158
+#: /p/querol/shared/tools/entreprises.c:196
+#: /p/querol/shared/includes/invoice_pdf.php:74
+#: /p/querol/shared/includes/invoice_pdf.php:107
+msgid "Phone number"
+msgstr "Téléphone"
+
+#: /p/querol/shared/tools/admin.c:2
+msgid "Show Results"
+msgstr "Voir R&eacute;sultats"
+
+#: /p/querol/shared/tools/admin.c:3
+msgid "No company found!"
+msgstr "Aucune entreprise n'a &eacute;t&eacute; trouv&eacute;!"
+
+#: /p/querol/shared/tools/admin.c:4 /p/querol/shared/tools/admin.c:87
+#: /p/querol/shared/tools/admin.c:117 /p/querol/shared/tools/admin.c:130
+#: /p/querol/admin/invoices.php:10 /p/querol/admin/includes/menu_items.php:18
+#: /p/querol/entreprises/invoices.php:15 /p/querol/entreprises/options.php:190
+msgid "Invoices"
+msgstr "Factures"
+
+#: /p/querol/shared/tools/admin.c:5 /p/querol/shared/tools/admin.c:10
+#: /p/querol/shared/tools/admin.c:53 /p/querol/shared/tools/admin.c:72
+#: /p/querol/shared/tools/admin.c:105 /p/querol/shared/tools/entreprises.c:109
+msgid "Search"
+msgstr "Chercher"
+
+#: /p/querol/shared/tools/admin.c:6 /p/querol/shared/tools/admin.c:11
+msgid "Date (Start)"
+msgstr "Date (Début)"
+
+#: /p/querol/shared/tools/admin.c:7 /p/querol/shared/tools/admin.c:12
+msgid "Date (Stop)"
+msgstr "Date (Fin)"
+
+#: /p/querol/shared/tools/admin.c:8
+msgid "Selected company"
+msgstr "Compagnie"
+
+#: /p/querol/shared/tools/admin.c:9 /p/querol/shared/tools/admin.c:129
+#: /p/querol/shared/tools/entreprises.c:108 /p/querol/admin/mainpage.php:177
+#: /p/querol/admin/includes/menu_items.php:12
+msgid "Orders"
+msgstr "Dossiers"
+
+#: /p/querol/shared/tools/admin.c:13
+#: /p/querol/shared/includes/functions.php:350
+msgid "Step"
+msgstr "Étape"
+
+#: /p/querol/shared/tools/admin.c:14
+msgid "Creation Date"
+msgstr "Date de création"
+
+#: /p/querol/shared/tools/admin.c:15 /p/querol/shared/tools/entreprises.c:111
+msgid "Order Name"
+msgstr "Nom Dossier"
+
+#: /p/querol/shared/tools/admin.c:16 /p/querol/shared/tools/entreprises.c:112
+#: /p/querol/admin/orders.php:632 /p/querol/entreprises/orders.php:432
+msgid "Order #"
+msgstr "Dossier #"
+
+#: /p/querol/shared/tools/admin.c:17
+msgid "Lot #"
+msgstr "Lot #"
+
+#: /p/querol/shared/tools/admin.c:18 /p/querol/shared/tools/entreprises.c:113
+#: /p/querol/admin/orders.php:120 /p/querol/admin/orders.php:648
+#: /p/querol/admin/mainpage.php:224 /p/querol/entreprises/orders.php:89
+#: /p/querol/entreprises/orders.php:388 /p/querol/entreprises/orders.php:440
+msgid "Client"
+msgstr "Client"
+
+#: /p/querol/shared/tools/admin.c:19 /p/querol/shared/tools/admin.c:24
+#: /p/querol/shared/tools/entreprises.c:114
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: /p/querol/shared/tools/admin.c:20 /p/querol/shared/tools/admin.c:25
+msgid "Tel.:"
+msgstr "Tél.:"
+
+#: /p/querol/shared/tools/admin.c:21 /p/querol/shared/tools/admin.c:26
+msgid "Fax.:"
+msgstr "Fax.:"
+
+#: /p/querol/shared/tools/admin.c:22 /p/querol/shared/tools/admin.c:27
+msgid "Email:"
+msgstr "Courriel:"
+
+#: /p/querol/shared/tools/admin.c:23 /p/querol/admin/invoices.php:230
+#: /p/querol/admin/orders.php:644 /p/querol/admin/users.php:439
+#: /p/querol/admin/users.php:460 /p/querol/admin/mainpage.php:228
+msgid "Distributor"
+msgstr "Distributeur"
+
+#: /p/querol/shared/tools/admin.c:28 /p/querol/shared/tools/entreprises.c:115
+msgid "Ship Order To"
+msgstr "Livrer À"
+
+#: /p/querol/shared/tools/admin.c:29 /p/querol/shared/tools/entreprises.c:116
+#: /p/querol/admin/invoices.php:250 /p/querol/admin/orders.php:652
+#: /p/querol/entreprises/invoices.php:492 /p/querol/entreprises/orders.php:448
+#: /p/querol/entreprises/mainpage.php:174
+#: /p/querol/entreprises/proofing.php:120
+msgid "Status"
+msgstr "&Eacute;tat"
+
+#: /p/querol/shared/tools/admin.c:30 /p/querol/shared/tools/entreprises.c:117
+#: /p/querol/entreprises/invoices.php:85
+#: /p/querol/shared/includes/invoice_pdf.php:586
+msgid "Invoice"
+msgstr "Facture"
+
+#: /p/querol/shared/tools/admin.c:31 /p/querol/shared/tools/entreprises.c:118
+msgid "Proof / Assembly"
+msgstr "Montage"
+
+#: /p/querol/shared/tools/admin.c:32 /p/querol/shared/tools/entreprises.c:119
+msgid "View it now"
+msgstr "Voir Maintenant"
+
+#: /p/querol/shared/tools/admin.c:33 /p/querol/shared/tools/entreprises.c:120
+msgid "<b>Shipment Information</b>"
+msgstr "<b>Information sur la livraison</b>"
+
+#: /p/querol/shared/tools/admin.c:34 /p/querol/shared/tools/entreprises.c:14
+#: /p/querol/shared/tools/entreprises.c:62
+#: /p/querol/shared/tools/entreprises.c:121
+#: /p/querol/shared/tools/entreprises.c:160
+#: /p/querol/shared/includes/invoice_pdf.php:111
+msgid "Street Address"
+msgstr "Adresse (Rue)"
+
+#: /p/querol/shared/tools/admin.c:35 /p/querol/shared/tools/entreprises.c:15
+#: /p/querol/shared/tools/entreprises.c:63
+#: /p/querol/shared/tools/entreprises.c:122
+#: /p/querol/shared/tools/entreprises.c:161
+#: /p/querol/shared/includes/invoice_pdf.php:113
+msgid "City"
+msgstr "Ville"
+
+#: /p/querol/shared/tools/admin.c:36 /p/querol/shared/tools/entreprises.c:16
+#: /p/querol/shared/tools/entreprises.c:64
+#: /p/querol/shared/tools/entreprises.c:123
+#: /p/querol/shared/tools/entreprises.c:162
+#: /p/querol/shared/includes/invoice_pdf.php:115
+msgid "Province / State"
+msgstr "Province / État"
+
+#: /p/querol/shared/tools/admin.c:37 /p/querol/shared/tools/entreprises.c:17
+#: /p/querol/shared/tools/entreprises.c:65
+#: /p/querol/shared/tools/entreprises.c:124
+#: /p/querol/shared/tools/entreprises.c:163
+#: /p/querol/shared/includes/invoice_pdf.php:117
+msgid "Postal / Zip Code"
+msgstr "Zip / Code Postal"
+
+#: /p/querol/shared/tools/admin.c:38 /p/querol/shared/tools/entreprises.c:34
+#: /p/querol/shared/tools/entreprises.c:99
+#: /p/querol/shared/tools/entreprises.c:125
+#: /p/querol/shared/tools/entreprises.c:179
+#: /p/querol/entreprises/problems.php:31
+#: /p/querol/shared/includes/invoice_pdf.php:140
+msgid "Shipping"
+msgstr "Livraison"
+
+#: /p/querol/shared/tools/admin.c:39 /p/querol/shared/tools/entreprises.c:126
+msgid "<b>Optional Information</b>"
+msgstr "<b>Information facultative</b>"
+
+#: /p/querol/shared/tools/admin.c:40 /p/querol/shared/tools/entreprises.c:127
+msgid "Specific date for<br/>shipment:"
+msgstr "Date sp&eacute;cifique pour<br/>livraison:"
+
+#: /p/querol/shared/tools/admin.c:41 /p/querol/shared/tools/entreprises.c:128
+msgid "Contact:"
+msgstr "Contact:"
+
+#: /p/querol/shared/tools/admin.c:42 /p/querol/shared/tools/entreprises.c:129
+msgid "Notes About Order:"
+msgstr "Notes à  propos du dossier:"
+
+#: /p/querol/shared/tools/admin.c:43
+msgid "Files in folder:"
+msgstr "Fichiers:"
+
+#: /p/querol/shared/tools/admin.c:44 /p/querol/shared/tools/entreprises.c:130
+msgid "<b>Products</b>"
+msgstr "<b>Produits</b>"
+
+#: /p/querol/shared/tools/admin.c:45
+msgid "Unfollow"
+msgstr "Ne plus suivre"
+
+#: /p/querol/shared/tools/admin.c:46
+msgid "Follow"
+msgstr "Suivre"
+
+#: /p/querol/shared/tools/admin.c:47 /p/querol/shared/tools/entreprises.c:131
+#: /p/querol/admin/invoices.php:215 /p/querol/entreprises/invoices.php:469
+#: /p/querol/entreprises/proofing.php:97
+msgid "View Invoice"
+msgstr "Voir Facture"
+
+#: /p/querol/shared/tools/admin.c:48 /p/querol/shared/tools/entreprises.c:132
+msgid "Print Order"
+msgstr "Imprimer la commande"
+
+#: /p/querol/shared/tools/admin.c:49 /p/querol/shared/tools/entreprises.c:133
+msgid "Back To Previous Page"
+msgstr "Revenir en arri&egrave;re"
+
+#: /p/querol/shared/tools/admin.c:50 /p/querol/shared/tools/admin.c:69
+#: /p/querol/shared/tools/admin.c:98
+msgid "Are you sure?"
+msgstr "Etes-vous sure?"
+
+#: /p/querol/shared/tools/admin.c:51
+msgid "Filter List"
+msgstr "Liste des filtres"
+
+#: /p/querol/shared/tools/admin.c:52
+msgid "Add New Filter"
+msgstr "Ajouter Un Filtre"
+
+#: /p/querol/shared/tools/admin.c:54 /p/querol/shared/tools/admin.c:58
+msgid "Product List"
+msgstr "Produits"
+
+#: /p/querol/shared/tools/admin.c:55 /p/querol/shared/tools/admin.c:59
+msgid "(comma-separated values)"
+msgstr "(valeurs séparés par une virgule)"
+
+#: /p/querol/shared/tools/admin.c:56 /p/querol/shared/tools/admin.c:60
+msgid "Step(s)"
+msgstr "Étape(s)"
+
+#: /p/querol/shared/tools/admin.c:57
+msgid "Add Filter"
+msgstr "Ajouter un filtre"
+
+#: /p/querol/shared/tools/admin.c:61 /p/querol/shared/tools/admin.c:67
+#: /p/querol/shared/tools/admin.c:92 /p/querol/entreprises/options.php:202
+msgid "Save Changes"
+msgstr "Sauvegarder changements"
+
+#: /p/querol/shared/tools/admin.c:62 /p/querol/shared/tools/admin.c:68
+#: /p/querol/shared/tools/admin.c:93 /p/querol/entreprises/quote.php:35
+#: /p/querol/entreprises/options.php:203 /p/querol/entreprises/problems.php:44
+msgid "Cancel"
+msgstr "Annuler"
+
+#: /p/querol/shared/tools/admin.c:63 /p/querol/shared/tools/admin.c:73
+#: /p/querol/admin/mainpage.php:172 /p/querol/admin/sherlock_steps.php:298
+msgid "Internal Name"
+msgstr "Nom Interne"
+
+#: /p/querol/shared/tools/admin.c:64 /p/querol/shared/tools/admin.c:74
+#: /p/querol/admin/sherlock_steps.php:302
+msgid "Name (english)"
+msgstr "Nom (anglais)"
+
+#: /p/querol/shared/tools/admin.c:65 /p/querol/shared/tools/admin.c:75
+#: /p/querol/admin/sherlock_steps.php:306
+msgid "Name (french)"
+msgstr "Nom (français)"
+
+#: /p/querol/shared/tools/admin.c:66 /p/querol/shared/tools/admin.c:76
+#: /p/querol/admin/sherlock_steps.php:310
+msgid "Step #"
+msgstr "Étape #"
+
+#: /p/querol/shared/tools/admin.c:70
+msgid "Step List"
+msgstr "Étapes"
+
+#: /p/querol/shared/tools/admin.c:71
+msgid "Add New Step"
+msgstr "Ajouter une étape"
+
+#: /p/querol/shared/tools/admin.c:77
+msgid "Add Step"
+msgstr "Ajouter une étape"
+
+#: /p/querol/shared/tools/admin.c:78 /p/querol/admin/mainpage.php:74
+msgid "User Name"
+msgstr "Usager:"
+
+#: /p/querol/shared/tools/admin.c:79 /p/querol/shared/tools/admin.c:108
+#: /p/querol/shared/tools/admin.c:109
+msgid "Company"
+msgstr "Entreprise"
+
+#: /p/querol/shared/tools/admin.c:80 /p/querol/shared/tools/admin.c:110
+#: /p/querol/shared/tools/admin.c:119 /p/querol/admin/users.php:446
+msgid "Real Name"
+msgstr "Nom complet"
+
+#: /p/querol/shared/tools/admin.c:81
+msgid "User Level"
+msgstr "Niveau Usager"
+
+#: /p/querol/shared/tools/admin.c:82
+msgid "User is active"
+msgstr "L'usager est actif"
+
+#: /p/querol/shared/tools/admin.c:83 /p/querol/shared/tools/admin.c:123
+msgid "Sherlock Steps"
+msgstr "Sherlock (Étapes)"
+
+#: /p/querol/shared/tools/admin.c:84 /p/querol/shared/tools/admin.c:114
+msgid "Email Addresses"
+msgstr "Adresse courriel"
+
+#: /p/querol/shared/tools/admin.c:85 /p/querol/shared/tools/admin.c:115
+#: /p/querol/entreprises/options.php:188
+msgid "Notifications"
+msgstr "Avertissements"
+
+#: /p/querol/shared/tools/admin.c:86 /p/querol/shared/tools/admin.c:116
+#: /p/querol/entreprises/options.php:189 /p/querol/entreprises/proofing.php:12
+#: /p/querol/entreprises/includes/menu_items.php:16
+msgid "Artwork Approval"
+msgstr "Approuver Montage"
+
+#: /p/querol/shared/tools/admin.c:88
+msgid "Password Change (Leave blank to keep current one)"
+msgstr "Changer le mot de passe (Laisser vide pour garder le même)"
+
+#: /p/querol/shared/tools/admin.c:89
+msgid "Old password"
+msgstr "Vieux mot de passe"
+
+#: /p/querol/shared/tools/admin.c:90
+msgid "New Password"
+msgstr "Nouveau mot de passe"
+
+#: /p/querol/shared/tools/admin.c:91
+msgid "Password (Confirm)"
+msgstr "Mot de passe (Confirmation)"
+
+#: /p/querol/shared/tools/admin.c:94
+msgid "Customer not found!"
+msgstr "Client introuvable!"
+
+#: /p/querol/shared/tools/admin.c:95 /p/querol/shared/tools/admin.c:96
+msgid "Passwords doesn't matches!"
+msgstr "Les mots de passes ne correspondent pas!"
+
+#: /p/querol/shared/tools/admin.c:97
+msgid "Please select a company first!"
+msgstr "Il faut d'abord choisir une entreprise!"
+
+#: /p/querol/shared/tools/admin.c:99
+msgid "User List"
+msgstr "Liste des usagers"
+
+#: /p/querol/shared/tools/admin.c:100
+msgid "Add New User (Distributor)"
+msgstr "Ajouter Un Usager"
+
+#: /p/querol/shared/tools/admin.c:101
+msgid "Add New User (Staff)"
+msgstr "Ajouter Un Employé"
+
+#: /p/querol/shared/tools/admin.c:102
+msgid "Selected Company"
+msgstr "Choisir cette entreprise"
+
+#: /p/querol/shared/tools/admin.c:103 /p/querol/admin/users.php:437
+#: /p/querol/admin/users.php:458
+msgid "Level"
+msgstr "Niveau"
+
+#: /p/querol/shared/tools/admin.c:104 /p/querol/admin/orders.php:386
+#: /p/querol/admin/orders.php:388
+msgid "All"
+msgstr "Tous"
+
+#: /p/querol/shared/tools/admin.c:106 /p/querol/shared/tools/entreprises.c:56
+msgid "Search by phone number"
+msgstr "Chercher par numéro de téléphone"
+
+#: /p/querol/shared/tools/admin.c:107 /p/querol/shared/tools/entreprises.c:57
+msgid "Find"
+msgstr "Chercher"
+
+#: /p/querol/shared/tools/admin.c:111 /p/querol/shared/tools/admin.c:120
+#: /p/querol/shared/tools/admin.c:127 /p/querol/admin/users.php:428
+#: /p/querol/admin/users.php:450 /p/querol/shared/includes/functions.php:350
+#: /p/querol/shared/includes/register_fields.php:5
+msgid "Username"
+msgstr "Usager"
+
+#: /p/querol/shared/tools/admin.c:112 /p/querol/shared/tools/admin.c:121
+#: /p/querol/shared/includes/register_fields.php:6
+msgid "Password"
+msgstr "Mot de passe"
+
+#: /p/querol/shared/tools/admin.c:113 /p/querol/shared/tools/admin.c:122
+msgid "Password (Again)"
+msgstr "Mot de passe (Confirmation)"
+
+#: /p/querol/shared/tools/admin.c:118 /p/querol/shared/tools/admin.c:124
+msgid "Add User"
+msgstr "Ajouter Usager"
+
+#: /p/querol/shared/tools/admin.c:125
+msgid "System"
+msgstr "Syst&egrave;me"
+
+#: /p/querol/shared/tools/admin.c:126
+msgid "Date and time"
+msgstr "Date et heure"
+
+#: /p/querol/shared/tools/admin.c:128
+msgid "Companies"
+msgstr "Entreprises"
+
+#: /p/querol/shared/tools/admin.c:131
+msgid "Users"
+msgstr "Usagers"
+
+#: /p/querol/shared/tools/admin.c:132
+msgid "Registered Users"
+msgstr "Usagers enregistr&eacute;s"
+
+#: /p/querol/shared/tools/admin.c:133
+msgid "Active Users"
+msgstr "Usagers actifs"
+
+#: /p/querol/shared/tools/admin.c:134
+msgid "Logged User this day"
+msgstr "Utilisateurs aujourd'hui"
+
+#: /p/querol/shared/tools/admin.c:135 /p/querol/shared/tools/portal.c:1
+#: /p/querol/shared/tools/entreprises.c:188
+msgid "2010-2014 All Rights Reserved"
+msgstr "2010-2014 Tous droits r&eacute;serv&eacute;s"
+
+#: /p/querol/shared/tools/admin.c:136
+msgid "Admin Access"
+msgstr "Acc&egrave;s Administrateur"
+
+#: /p/querol/shared/tools/admin.c:137 /p/querol/shared/tools/admin.c:139
+#: /p/querol/shared/tools/entreprises.c:209
+#: /p/querol/shared/tools/entreprises.c:211
+msgid "Unable to continue"
+msgstr "Incapable de continuer"
+
+#: /p/querol/shared/tools/admin.c:138 /p/querol/shared/tools/entreprises.c:210
+msgid "Your email address field is empty!"
+msgstr "Votre champ courriel est vide!"
+
+#: /p/querol/shared/tools/admin.c:140 /p/querol/shared/tools/entreprises.c:212
+msgid "Unable to send a email to this address (' + result + ')"
+msgstr "Incapable d'envoyer un courriel à  cette adresse (' + result + ')"
+
+#: /p/querol/shared/tools/admin.c:141 /p/querol/shared/tools/entreprises.c:213
+msgid "Operation completed"
+msgstr "Op&eacute;ration termin&eacute;"
+
+#: /p/querol/shared/tools/admin.c:142 /p/querol/shared/tools/entreprises.c:214
+msgid "A email containing your new password was succesfully sent."
+msgstr ""
+"Un courriel contenant votre nouveau mot de passe à  été envoyé avec succès."
+
+#: /p/querol/shared/tools/admin.c:143 /p/querol/shared/tools/admin.c:145
+#: /p/querol/shared/tools/admin.c:147 /p/querol/shared/tools/entreprises.c:215
+#: /p/querol/shared/tools/entreprises.c:217
+#: /p/querol/shared/tools/entreprises.c:219
+msgid "Unable to perform a login"
+msgstr "Incapable de se connecter"
+
+#: /p/querol/shared/tools/admin.c:144 /p/querol/shared/tools/entreprises.c:216
+msgid "Your username field is empty!"
+msgstr "Le champ usager est vide!"
+
+#: /p/querol/shared/tools/admin.c:146 /p/querol/shared/tools/entreprises.c:218
+msgid "Your password field is empty!"
+msgstr "Votre champ mot de passe est vide!"
+
+#: /p/querol/shared/tools/admin.c:148 /p/querol/shared/tools/entreprises.c:220
+msgid ""
+"The username and password entered are not matching any entry in our database!"
+msgstr "Votre usager et mot de passe ne retourne aucun r&eacute;sultat valide!"
+
+#: /p/querol/shared/tools/admin.c:149 /p/querol/shared/tools/entreprises.c:221
+msgid "Forgot Password Reminder"
+msgstr "J'ai oubli&eacute; mon mot de passe"
+
+#: /p/querol/shared/tools/admin.c:150 /p/querol/shared/tools/entreprises.c:222
+msgid ""
+"A new password will be generated and the details will be sent to you through "
+"your email address."
+msgstr ""
+"Un nouveau mot de passe va &ecirc;tre g&eacute;n&eacute;r&eacute; et les "
+"d&eacute;tails vont vous &ecirc;tre communiqu&eacute; par courriel."
+
+#: /p/querol/shared/tools/admin.c:151 /p/querol/shared/tools/admin.c:155
+#: /p/querol/shared/tools/entreprises.c:106
+#: /p/querol/shared/tools/entreprises.c:223
+#: /p/querol/shared/tools/entreprises.c:227
+msgid "Continue"
+msgstr "Continuer"
+
+#: /p/querol/shared/tools/admin.c:152 /p/querol/shared/tools/entreprises.c:224
+msgid "Please wait... "
+msgstr "Veuillez patienter ..."
+
+#: /p/querol/shared/tools/admin.c:153 /p/querol/shared/tools/entreprises.c:225
+msgid "Username:"
+msgstr "Usager:"
+
+#: /p/querol/shared/tools/admin.c:154 /p/querol/shared/tools/entreprises.c:226
+msgid "Password:"
+msgstr "Mot de passe:"
+
+#: /p/querol/shared/tools/admin.c:156 /p/querol/shared/tools/entreprises.c:228
+msgid "Register Account"
+msgstr "Enregistrer"
+
+#: /p/querol/shared/tools/admin.c:157 /p/querol/shared/tools/entreprises.c:229
+msgid "I forgot my password"
+msgstr "J'ai oubli&eacute; mon mot de passe"
+
+#: /p/querol/shared/tools/admin.c:158
+msgid "Modify"
+msgstr "Modifier"
+
+#: /p/querol/shared/tools/admin.c:159
+#: /p/querol/admin/sherlock_products.php:260 /p/querol/admin/users.php:415
+#: /p/querol/admin/sherlock_steps.php:290
+#: /p/querol/shared/includes/classes/widgets/table_widget.php:23
+msgid "Delete"
+msgstr "Effacer"
+
+#: /p/querol/shared/tools/portal.c:2 /p/querol/shared/tools/portal.c:14
+msgid "Catalog"
+msgstr "Catalogue"
+
+#: /p/querol/shared/tools/portal.c:3 /p/querol/shared/tools/portal.c:9
+msgid "Back"
+msgstr "Retour"
+
+#: /p/querol/shared/tools/portal.c:4
+msgid "Our catalog is prodived in two versions for your convenience."
+msgstr ""
+"Vous trouvez plus bas notre catalogue en 2 versions pour vous faciliter la "
+"t&acirc;che."
+
+#: /p/querol/shared/tools/portal.c:5
+msgid ""
+"The JPEG version allows you to quickly load the catalogue and save the pages "
+"that you want. The PDF format takes a longer time to load, but allows you to "
+"read all the text and extract certain passages."
+msgstr ""
+"La version JPEG vous permet de t&eacute;l&eacute;charger plus rapidement le "
+"catalogue et de sauvegarder les pages que vous voulez. La version PDF, plus "
+"longue &agrave; t&eacute;l&eacute;charger, vous permets de bien lire tout le "
+"texte et d'extraire certains passages."
+
+#: /p/querol/shared/tools/portal.c:6
+msgid "JPEG version of the catalog (faster)"
+msgstr "Version JPEG (rapide)"
+
+#: /p/querol/shared/tools/portal.c:7
+msgid "PDF version of the catalog (slower)"
+msgstr "Version PDF (plus lent)"
+
+#: /p/querol/shared/tools/portal.c:8 /p/querol/shared/tools/portal.c:13
+#: /p/querol/shared/tools/entreprises.c:204
+msgid "Stock Status"
+msgstr "&Eacute;tat des stocks"
+
+#: /p/querol/shared/tools/portal.c:10
+msgid ""
+"In business since 1974, we specialize in calendars and card games, but we "
+"also offer a range of products that will meet the needs of your customers."
+msgstr ""
+"En affaires depuis 1974, nous nous sp&eacute;cialisons dans les calendriers "
+"et les jeux de cartes, mais nous offrons aussi une panoplie de produits "
+"divers qui sauront combler tous les besoins de vos clients."
+
+#: /p/querol/shared/tools/portal.c:11
+msgid ""
+"We supply you with the image files of each of our products. This will allow "
+"you to prepare your quote or flyers with quality images."
+msgstr ""
+"Nous mettons &agrave; votre disposition des fichiers image de chacun de nos "
+"produits. Vous pourrez ainsi pr&eacute;parer vos devis ou circulaires avec "
+"des images de qualit&eacute;."
+
+#: /p/querol/shared/tools/portal.c:12
+msgid ""
+"You could also list the different templates and data sheets that will give "
+"you details for the various jobs that you will send us."
+msgstr ""
+"Vous trouverez aussi, une page qui liste les diff&eacute;rents gabarits et "
+"fiches techniques qui vous permettront de nous fournir des fichiers "
+"ad&eacute;quats pour les diff&eacute;rents travaux que vous voulez "
+"entreprendre."
+
+#: /p/querol/shared/tools/portal.c:15 /p/querol/shared/tools/portal.c:17
+msgid "Product Images"
+msgstr "Nos produits"
+
+#: /p/querol/shared/tools/portal.c:16 /p/querol/shared/tools/portal.c:18
+msgid "Templates"
+msgstr "Gabarits"
+
+#: /p/querol/shared/tools/portal.c:19
+msgid "Distributor Login"
+msgstr "Acc&egrave;s distributeur"
+
+#: /p/querol/shared/tools/entreprises.c:1
+#: /p/querol/shared/tools/entreprises.c:147
+msgid "Phone"
+msgstr "T&eacute;l&eacute;phone"
+
+#: /p/querol/shared/tools/entreprises.c:2
+#: /p/querol/shared/tools/entreprises.c:148
+msgid "Fax"
+msgstr "Fax"
+
+#: /p/querol/shared/tools/entreprises.c:3
+#: /p/querol/shared/tools/entreprises.c:145
+#: /p/querol/shared/tools/entreprises.c:149
+msgid "Email"
+msgstr "Courriel"
+
+#: /p/querol/shared/tools/entreprises.c:4
+#: /p/querol/shared/tools/entreprises.c:143
+#: /p/querol/shared/tools/entreprises.c:150
+#: /p/querol/shared/tools/entreprises.c:195
+msgid "Address"
+msgstr "Adresse"
+
+#: /p/querol/shared/tools/entreprises.c:5
+msgid "Unable to submit your order, please contact us directly!"
+msgstr ""
+"Nous sommes incapable de traiter votre commande, veuillez nous contacter "
+"directement!"
+
+#: /p/querol/shared/tools/entreprises.c:6
+msgid ""
+"Please check if the information is valid and click on submit your order."
+msgstr ""
+"Veuillez vérifier si les informations entrées sont exactes et appuyez sur "
+"SOUMETTRE MA COMMANDE."
+
+#: /p/querol/shared/tools/entreprises.c:7
+msgid "Submit my order"
+msgstr "Soumettre ma commande"
+
+#: /p/querol/shared/tools/entreprises.c:8
+msgid "Print"
+msgstr "Imprimer"
+
+#: /p/querol/shared/tools/entreprises.c:9
+#: /p/querol/admin/sherlock_products.php:259 /p/querol/admin/users.php:414
+#: /p/querol/admin/sherlock_steps.php:289
+#: /p/querol/shared/includes/classes/widgets/table_widget.php:22
+msgid "Edit"
+msgstr "Modifier"
+
+#: /p/querol/shared/tools/entreprises.c:10
+#: /p/querol/shared/tools/entreprises.c:55
+#: /p/querol/shared/tools/entreprises.c:156
+#: /p/querol/shared/includes/invoice_pdf.php:103
+msgid "For which customer"
+msgstr "Pour quel client"
+
+#: /p/querol/shared/tools/entreprises.c:11
+#: /p/querol/shared/tools/entreprises.c:59
+#: /p/querol/shared/tools/entreprises.c:157
+#: /p/querol/shared/includes/invoice_pdf.php:72
+#: /p/querol/shared/includes/invoice_pdf.php:105
+msgid "Company name"
+msgstr "Nom de l'entreprise"
+
+#: /p/querol/shared/tools/entreprises.c:13
+#: /p/querol/shared/tools/entreprises.c:61
+#: /p/querol/shared/tools/entreprises.c:159
+#: /p/querol/shared/includes/invoice_pdf.php:109
+msgid "Fax."
+msgstr "Fax."
+
+#: /p/querol/shared/tools/entreprises.c:18
+#: /p/querol/shared/tools/entreprises.c:66
+#: /p/querol/shared/tools/entreprises.c:164
+#: /p/querol/shared/includes/invoice_pdf.php:123
+msgid "Order Content"
+msgstr "Contenu de la commande"
+
+#: /p/querol/shared/tools/entreprises.c:19
+#: /p/querol/shared/tools/entreprises.c:67
+#: /p/querol/shared/tools/entreprises.c:165 /p/querol/admin/orders.php:628
+#: /p/querol/entreprises/orders.php:428 /p/querol/entreprises/mainpage.php:171
+#: /p/querol/shared/includes/invoice_pdf.php:66
+msgid "P.O."
+msgstr "P.O."
+
+#: /p/querol/shared/tools/entreprises.c:20
+#: /p/querol/shared/tools/entreprises.c:68
+#: /p/querol/shared/tools/entreprises.c:110
+#: /p/querol/shared/tools/entreprises.c:166
+#: /p/querol/entreprises/mainpage.php:172
+msgid "Season"
+msgstr "Saison"
+
+#: /p/querol/shared/tools/entreprises.c:21
+#: /p/querol/shared/tools/entreprises.c:69
+#: /p/querol/shared/tools/entreprises.c:167
+msgid "Line-up"
+msgstr "Série"
+
+#: /p/querol/shared/tools/entreprises.c:22
+#: /p/querol/shared/tools/entreprises.c:70
+#: /p/querol/shared/tools/entreprises.c:168
+msgid "Artwork"
+msgstr "Montage"
+
+#: /p/querol/shared/tools/entreprises.c:23
+#: /p/querol/shared/tools/entreprises.c:71
+#: /p/querol/shared/tools/entreprises.c:169
+msgid "Action"
+msgstr "Action"
+
+#: /p/querol/shared/tools/entreprises.c:24
+#: /p/querol/shared/tools/entreprises.c:72
+#: /p/querol/shared/tools/entreprises.c:73
+#: /p/querol/shared/tools/entreprises.c:170
+msgid "Use previous artwork"
+msgstr "Utiliser montage précédent"
+
+#: /p/querol/shared/tools/entreprises.c:25
+#: /p/querol/shared/tools/entreprises.c:30
+#: /p/querol/shared/tools/entreprises.c:74
+#: /p/querol/shared/tools/entreprises.c:75
+#: /p/querol/shared/tools/entreprises.c:84
+#: /p/querol/shared/tools/entreprises.c:171
+#: /p/querol/shared/tools/entreprises.c:175
+msgid "New text"
+msgstr "Nouveau texte"
+
+#: /p/querol/shared/tools/entreprises.c:26
+#: /p/querol/shared/tools/entreprises.c:76
+#: /p/querol/shared/tools/entreprises.c:77
+#: /p/querol/shared/tools/entreprises.c:172
+msgid "Upload new file(s)"
+msgstr "Transmettre de nouveaux fichiers"
+
+#: /p/querol/shared/tools/entreprises.c:27
+#: /p/querol/shared/tools/entreprises.c:78
+#: /p/querol/shared/tools/entreprises.c:79
+#: /p/querol/shared/tools/entreprises.c:173
+msgid "Email file(s)"
+msgstr "Fichiers par courriel"
+
+#: /p/querol/shared/tools/entreprises.c:28
+#: /p/querol/shared/tools/entreprises.c:174
+msgid "---"
+msgstr "---"
+
+#: /p/querol/shared/tools/entreprises.c:29
+#: /p/querol/shared/tools/entreprises.c:46
+#: /p/querol/shared/tools/entreprises.c:47
+#: /p/querol/shared/tools/entreprises.c:49
+#: /p/querol/shared/tools/entreprises.c:50
+#: /p/querol/shared/tools/entreprises.c:80
+#: /p/querol/shared/tools/entreprises.c:82
+msgid "No artwork found"
+msgstr "Aucun résultat trouvé!"
+
+#: /p/querol/shared/tools/entreprises.c:31
+#: /p/querol/shared/tools/entreprises.c:176
+msgid "File(s)"
+msgstr "Ficher(s)"
+
+#: /p/querol/shared/tools/entreprises.c:32
+#: /p/querol/shared/tools/entreprises.c:177
+msgid "Color"
+msgstr "Couleur"
+
+#: /p/querol/shared/tools/entreprises.c:33
+#: /p/querol/shared/tools/entreprises.c:88
+#: /p/querol/shared/tools/entreprises.c:178 /p/querol/admin/users.php:434
+#: /p/querol/admin/users.php:455 /p/querol/entreprises/mainpage.php:85
+msgid "No"
+msgstr "Non"
+
+#: /p/querol/shared/tools/entreprises.c:35
+#: /p/querol/shared/tools/entreprises.c:100
+#: /p/querol/shared/tools/entreprises.c:180
+#: /p/querol/shared/includes/invoice_pdf.php:142
+msgid "Ship to"
+msgstr "Livrer a"
+
+#: /p/querol/shared/tools/entreprises.c:36
+#: /p/querol/shared/tools/entreprises.c:181
+#: /p/querol/entreprises/new_order.php:1360
+msgid "To distributor"
+msgstr "Au distributeur"
+
+#: /p/querol/shared/tools/entreprises.c:37
+#: /p/querol/shared/tools/entreprises.c:182
+#: /p/querol/entreprises/new_order.php:1361
+msgid "To customer"
+msgstr "Au client"
+
+#: /p/querol/shared/tools/entreprises.c:38
+#: /p/querol/shared/tools/entreprises.c:101
+#: /p/querol/shared/includes/invoice_pdf.php:144
+msgid "For the attention of"
+msgstr "À l'attention de"
+
+#: /p/querol/shared/tools/entreprises.c:39
+#: /p/querol/shared/tools/entreprises.c:102
+#: /p/querol/shared/tools/entreprises.c:183
+#: /p/querol/shared/includes/invoice_pdf.php:146
+msgid "Specific period for shipment"
+msgstr "Date spécifique pour la livraison"
+
+#: /p/querol/shared/tools/entreprises.c:40
+#: /p/querol/shared/tools/entreprises.c:103
+#: /p/querol/shared/tools/entreprises.c:184
+#: /p/querol/shared/includes/invoice_pdf.php:161
+msgid "Miscellaneous"
+msgstr "Autre"
+
+#: /p/querol/shared/tools/entreprises.c:41
+#: /p/querol/shared/tools/entreprises.c:104
+#: /p/querol/shared/tools/entreprises.c:185
+#: /p/querol/entreprises/options.php:185
+#: /p/querol/shared/includes/invoice_pdf.php:163
+msgid "Contact Person"
+msgstr "Personne Contact"
+
+#: /p/querol/shared/tools/entreprises.c:42
+#: /p/querol/shared/tools/entreprises.c:105
+#: /p/querol/shared/tools/entreprises.c:186
+msgid "Additional notes"
+msgstr "Notes additionnelles"
+
+#: /p/querol/shared/tools/entreprises.c:43
+msgid "Customer not found! Please fill the form below"
+msgstr ""
+"Le client n'a pas été trouvé, entrez les informations dans les champs ci-"
+"dessous."
+
+#: /p/querol/shared/tools/entreprises.c:44
+#: /p/querol/entreprises/new_order.php:88
+msgid "P.O. is empty!"
+msgstr "Le P.O. est vide!"
+
+#: /p/querol/shared/tools/entreprises.c:45
+msgid "Close"
+msgstr "Fermer"
+
+#: /p/querol/shared/tools/entreprises.c:48
+#: /p/querol/shared/tools/entreprises.c:51
+#: /p/querol/shared/tools/entreprises.c:81
+#: /p/querol/shared/tools/entreprises.c:83
+msgid "Download previous artwork"
+msgstr "Télécharger le montage précédent"
+
+#: /p/querol/shared/tools/entreprises.c:52
+#: /p/querol/entreprises/new_order.php:563
+msgid "Order Confirmation"
+msgstr "Confirmation de commande"
+
+#: /p/querol/shared/tools/entreprises.c:53
+msgid "Pick a customer"
+msgstr "Choisir un client"
+
+#: /p/querol/shared/tools/entreprises.c:54
+msgid "Select this customer"
+msgstr "Choisir cette entreprise"
+
+#: /p/querol/shared/tools/entreprises.c:58
+msgid "Customer List"
+msgstr "Liste des clients"
+
+#: /p/querol/shared/tools/entreprises.c:85
+msgid "File(s) to upload"
+msgstr "Fichier(s)"
+
+#: /p/querol/shared/tools/entreprises.c:86
+msgid "Click here to send your files"
+msgstr "Appuyer ici pour envoyer vos fichiers"
+
+#: /p/querol/shared/tools/entreprises.c:87
+msgid "Artwork Color"
+msgstr "Couleur pour montage "
+
+#: /p/querol/shared/tools/entreprises.c:89
+#: /p/querol/shared/tools/entreprises.c:90 /p/querol/admin/users.php:434
+#: /p/querol/admin/users.php:455 /p/querol/entreprises/mainpage.php:85
+msgid "Yes"
+msgstr "Oui"
+
+#: /p/querol/shared/tools/entreprises.c:91
+msgid "Brown"
+msgstr "Brun"
+
+#: /p/querol/shared/tools/entreprises.c:92
+msgid "Green"
+msgstr "Vert"
+
+#: /p/querol/shared/tools/entreprises.c:93
+msgid "Red"
+msgstr "Rouge"
+
+#: /p/querol/shared/tools/entreprises.c:94
+msgid "Yellow Process"
+msgstr "Jaune Process"
+
+#: /p/querol/shared/tools/entreprises.c:95
+msgid "Blue Reflex"
+msgstr "Bleu Reflex"
+
+#: /p/querol/shared/tools/entreprises.c:96
+msgid "Blue Process"
+msgstr "Bleu Process"
+
+#: /p/querol/shared/tools/entreprises.c:97
+#: /p/querol/shared/tools/entreprises.c:98
+msgid "PMS / Name"
+msgstr "PMS / Nom"
+
+#: /p/querol/shared/tools/entreprises.c:107
+msgid "Clear"
+msgstr "Recommencer"
+
+#: /p/querol/shared/tools/entreprises.c:134
+msgid "Current date and time"
+msgstr "Date et heure courante"
+
+#: /p/querol/shared/tools/entreprises.c:135
+msgid "Connected as"
+msgstr "Connecter en tant que "
+
+#: /p/querol/shared/tools/entreprises.c:136
+msgid "Download our catalog"
+msgstr "T&eacute;l&eacute;charger notre catalogue"
+
+#: /p/querol/shared/tools/entreprises.c:137
+#: /p/querol/entreprises/options.php:149
+msgid "French"
+msgstr "Fran&ccedil;ais"
+
+#: /p/querol/shared/tools/entreprises.c:138
+#: /p/querol/entreprises/options.php:150
+msgid "English"
+msgstr "Anglais"
+
+#: /p/querol/shared/tools/entreprises.c:139
+msgid "Promotion"
+msgstr "Promotion"
+
+#: /p/querol/shared/tools/entreprises.c:140
+msgid "Click here"
+msgstr "Cliquer ici"
+
+#: /p/querol/shared/tools/entreprises.c:141
+#: /p/querol/shared/tools/entreprises.c:193
+msgid "Your Company Information"
+msgstr "Votre Entreprise"
+
+#: /p/querol/shared/tools/entreprises.c:142
+#: /p/querol/shared/tools/entreprises.c:194
+msgid "Name"
+msgstr "Nom"
+
+#: /p/querol/shared/tools/entreprises.c:146
+msgid "To Contact Us"
+msgstr "Pour Nous Contacter"
+
+#: /p/querol/shared/tools/entreprises.c:151
+msgid "QUEROL: New Order Submitted!"
+msgstr "QU&Eacute;ROL: Nouveau dossier ajout&eacute;!"
+
+#: /p/querol/shared/tools/entreprises.c:152
+msgid "QU&Eacute;-ROL: New Order Submitted!"
+msgstr "QU&Eacute;ROL: Nouveau dossier ajout&eacute;!"
+
+#: /p/querol/shared/tools/entreprises.c:153
+#: /p/querol/shared/includes/invoice_pdf.php:70
+msgid "For which distributor"
+msgstr "Pour quel distributeur"
+
+#: /p/querol/shared/tools/entreprises.c:154
+msgid "Distributor name"
+msgstr "Nom du distributeur"
+
+#: /p/querol/shared/tools/entreprises.c:187
+msgid ""
+"To see your order, please visit <a style=\"color:#333\" href=\"http://www."
+"que-rol.com\">QU&Eacute;-ROL.COM</a>"
+msgstr ""
+"Pour voir votre dossier, visiter <a style=\"color:#333\" href=\"http://www."
+"que-rol.com\">QUE-ROL.COM</a>"
+
+#: /p/querol/shared/tools/entreprises.c:189
+msgid "You are logged as user:"
+msgstr "Vous êtes connecté avec l'usager:"
+
+#: /p/querol/shared/tools/entreprises.c:190
+msgid "of company:"
+msgstr "de l'entreprise:"
+
+#: /p/querol/shared/tools/entreprises.c:191
+msgid "Back to administration"
+msgstr "Retour à l'administration"
+
+#: /p/querol/shared/tools/entreprises.c:192
+msgid ""
+"<a href=\"../admin/\" class=\"color_highlight\" style=\"text-decoration:none"
+"\">Customers Access</a>"
+msgstr ""
+"<a href=\"../admin/\" class=\"color_highlight\" style=\"text-decoration:none"
+"\">Accès Distributeurs</a>"
+
+#: /p/querol/shared/tools/entreprises.c:197
+msgid "Fax. number"
+msgstr "Télécopieur"
+
+#: /p/querol/shared/tools/entreprises.c:198
+msgid "Contact"
+msgstr "Personne Contact"
+
+#: /p/querol/shared/tools/entreprises.c:199
+msgid "Email (General)"
+msgstr "Courriel (Général)"
+
+#: /p/querol/shared/tools/entreprises.c:200
+msgid "Email (Artwork)"
+msgstr "Courriel (Montage)"
+
+#: /p/querol/shared/tools/entreprises.c:201
+msgid "Email (Invoice)"
+msgstr "Courriel (Facturation)"
+
+#: /p/querol/shared/tools/entreprises.c:202
+msgid "Credit Card"
+msgstr "Carte de crédit"
+
+#: /p/querol/shared/tools/entreprises.c:203
+msgid "Pre-authorized Payments"
+msgstr "Paiements pré-authorisés"
+
+#: /p/querol/shared/tools/entreprises.c:205
+msgid "Last Orders"
+msgstr "Dernières Commandes"
+
+#: /p/querol/shared/tools/entreprises.c:206
+msgid "More Orders ..."
+msgstr "Plus de commandes ..."
+
+#: /p/querol/shared/tools/entreprises.c:207
+msgid "Important"
+msgstr "Important"
+
+#: /p/querol/shared/tools/entreprises.c:208
+msgid "Back to dashboard"
+msgstr "Retour au menu principal"
+
+#: /p/querol/admin/invoices.php:177 /p/querol/entreprises/invoices.php:448
+#: /p/querol/entreprises/proofing.php:74
+msgid "PAID"
+msgstr "Payé"
+
+#: /p/querol/admin/invoices.php:218 /p/querol/entreprises/invoices.php:472
+#: /p/querol/entreprises/proofing.php:100
+msgid "No invoice yet!"
+msgstr "Pas de factures!"
+
+#: /p/querol/admin/invoices.php:222 /p/querol/entreprises/invoices.php:476
+#: /p/querol/entreprises/proofing.php:104
+msgid "# Invoice"
+msgstr "# Facture"
+
+#: /p/querol/admin/invoices.php:226 /p/querol/admin/orders.php:640
+#: /p/querol/entreprises/invoices.php:480 /p/querol/entreprises/orders.php:436
+#: /p/querol/entreprises/proofing.php:108
+msgid "Date"
+msgstr "Date"
+
+#: /p/querol/admin/invoices.php:234 /p/querol/entreprises/invoices.php:484
+#: /p/querol/entreprises/mainpage.php:173
+#: /p/querol/entreprises/proofing.php:112
+msgid "Customer"
+msgstr "Client"
+
+#: /p/querol/admin/invoices.php:238 /p/querol/admin/mainpage.php:220
+msgid "Order"
+msgstr "Dossier"
+
+#: /p/querol/admin/invoices.php:242
+msgid "Origin"
+msgstr "Origine"
+
+#: /p/querol/admin/invoices.php:246 /p/querol/admin/orders.php:217
+#: /p/querol/entreprises/invoices.php:148
+#: /p/querol/entreprises/invoices.php:488
+#: /p/querol/entreprises/proofing.php:116
+msgid "Total"
+msgstr "Total"
+
+#: /p/querol/admin/sherlock_products.php:14
+#: /p/querol/admin/includes/menu_items.php:36
+msgid "Sherlock (Products)"
+msgstr "Sherlock (Produits)"
+
+#: /p/querol/admin/sherlock_products.php:26
+#: /p/querol/admin/sherlock_products.php:67
+#: /p/querol/admin/sherlock_steps.php:74
+#: /p/querol/admin/sherlock_steps.php:130
+msgid "Missing value(s) error!"
+msgstr "Valeurs manquantes!"
+
+#: /p/querol/admin/sherlock_products.php:31
+#: /p/querol/admin/sherlock_products.php:72
+msgid "Product list is empty!"
+msgstr "Liste de produits vide!"
+
+#: /p/querol/admin/sherlock_products.php:44
+#: /p/querol/admin/sherlock_products.php:85
+msgid "No step selected for this filter!"
+msgstr "Aucune étape n'est sélectionnée!"
+
+#: /p/querol/admin/sherlock_products.php:55
+msgid "Filter successfully added!"
+msgstr "Filtre ajout&eacute; avec succ&egrave;s!"
+
+#: /p/querol/admin/sherlock_products.php:96 /p/querol/admin/users.php:96
+#: /p/querol/admin/sherlock_steps.php:167
+msgid "Changes successfully saved!"
+msgstr "Modifications sauvegard&eacute;es!"
+
+#: /p/querol/admin/sherlock_products.php:107
+msgid "Modify Filter"
+msgstr "Modifier le filtre"
+
+#: /p/querol/admin/sherlock_products.php:111
+msgid "Invalid filter identification number provided!"
+msgstr "Num&eacute;ro d'identification invalide!"
+
+#: /p/querol/admin/sherlock_products.php:145
+msgid "Invalid filter identification number used!"
+msgstr "Num&eacute;ro d'identification invalide!"
+
+#: /p/querol/admin/sherlock_products.php:150
+msgid "Filter successfully removed!"
+msgstr "Filtre supprim&eacute; avec succ&egrave;s!"
+
+#: /p/querol/admin/sherlock_products.php:262 /p/querol/admin/users.php:417
+#: /p/querol/admin/sherlock_steps.php:292
+msgid "No result found!"
+msgstr "Aucun résultat!"
+
+#: /p/querol/admin/sherlock_products.php:268
+msgid "Product Filter"
+msgstr "Filtre des produits"
+
+#: /p/querol/admin/sherlock_products.php:272
+msgid "Steps"
+msgstr "Étapes"
+
+#: /p/querol/admin/orders.php:13 /p/querol/entreprises/orders.php:13
+#: /p/querol/entreprises/includes/menu_items.php:11
+msgid "Order Tracking"
+msgstr "Suivi des commandes"
+
+#: /p/querol/admin/orders.php:28 /p/querol/entreprises/orders.php:49
+msgid "Invalid id!"
+msgstr "Numéro invalide!"
+
+#: /p/querol/admin/orders.php:118 /p/querol/entreprises/orders.php:87
+msgid "Me"
+msgstr "Moi"
+
+#: /p/querol/admin/orders.php:123
+msgid "In Progress"
+msgstr "En Progression"
+
+#: /p/querol/admin/orders.php:200 /p/querol/entreprises/orders.php:193
+msgid "No products!"
+msgstr "Pas de produits!"
+
+#: /p/querol/admin/orders.php:205 /p/querol/entreprises/orders.php:198
+#: /p/querol/shared/includes/invoice_pdf.php:124
+#: /p/querol/shared/includes/invoice_pdf.php:322
+msgid "Product"
+msgstr "Produit"
+
+#: /p/querol/admin/orders.php:209 /p/querol/entreprises/invoices.php:142
+#: /p/querol/entreprises/orders.php:202
+#: /p/querol/entreprises/new_order.php:692
+#: /p/querol/shared/includes/invoice_pdf.php:320
+msgid "Quantity"
+msgstr "Quantité"
+
+#: /p/querol/admin/orders.php:213
+#: /p/querol/shared/includes/invoice_pdf.php:324
+msgid "Unit Cost"
+msgstr "Coût Unitaire"
+
+#: /p/querol/admin/orders.php:232 /p/querol/entreprises/invoices.php:316
+#: /p/querol/entreprises/orders.php:228
+#: /p/querol/shared/includes/invoice_pdf.php:659
+msgid "Fatal Error: Invalid 'facture' ID!"
+msgstr "Erreur Fatale: Identifiant 'facture' invalide!"
+
+#: /p/querol/admin/orders.php:247 /p/querol/entreprises/orders.php:256
+msgid "Paid"
+msgstr "Pay&eacute;"
+
+#: /p/querol/admin/orders.php:249 /p/querol/entreprises/orders.php:258
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#: /p/querol/admin/orders.php:392 /p/querol/admin/orders.php:394
+msgid "Unassigned"
+msgstr "Pas associé"
+
+#: /p/querol/admin/orders.php:418 /p/querol/admin/orders.php:420
+msgid "Invoice sent"
+msgstr "Facture envoyé"
+
+#: /p/querol/admin/orders.php:573 /p/querol/entreprises/orders.php:376
+msgid "Unnamed"
+msgstr "Sans Nom"
+
+#: /p/querol/admin/orders.php:587 /p/querol/entreprises/orders.php:121
+#: /p/querol/entreprises/orders.php:391
+msgid "Not associated yet!"
+msgstr "Pas associé"
+
+#: /p/querol/admin/orders.php:619 /p/querol/entreprises/orders.php:419
+msgid "View Order"
+msgstr "Voir la commande"
+
+#: /p/querol/admin/orders.php:623 /p/querol/entreprises/orders.php:423
+msgid "Sorry, No order yet."
+msgstr "D&eacute;sol&eacute;, pas de dossiers pour l'instant."
+
+#: /p/querol/admin/orders.php:636
+msgid "Lot"
+msgstr "Lot"
+
+#: /p/querol/admin/orders.php:656
+msgid "Type"
+msgstr "Type"
+
+#: /p/querol/admin/orders.php:712 /p/querol/entreprises/orders.php:472
+msgid "Order Details"
+msgstr "D&eacute;tails"
+
+#: /p/querol/admin/users.php:13 /p/querol/admin/includes/menu_items.php:24
+msgid "Users Manager"
+msgstr "Gestion Usagers"
+
+#: /p/querol/admin/users.php:51 /p/querol/admin/users.php:59
+#: /p/querol/admin/users.php:191
+msgid "Sorry, but the system must have at least one active adninistrator!"
+msgstr ""
+"D&eacute;sol&eacute; mais le syst&egrave;me doit conserver au moins un "
+"administrateur actif!"
+
+#: /p/querol/admin/users.php:77 /p/querol/admin/users.php:242
+msgid "The password doesn't match!"
+msgstr "Les mots de passes ne correspondent pas!"
+
+#: /p/querol/admin/users.php:108
+msgid "You cannot impersonate this user(staff)!"
+msgstr "Vous ne pouvez pas faire ça!"
+
+#: /p/querol/admin/users.php:122
+msgid "Modify User"
+msgstr "Modifier Usager"
+
+#: /p/querol/admin/users.php:126
+msgid "Invalid user identification number provided!"
+msgstr "Num&eacute;ro d'usager invalide!"
+
+#: /p/querol/admin/users.php:149 /p/querol/admin/users.php:475
+msgid "DISTRIBUTOR"
+msgstr "DISTRIBUTEUR"
+
+#: /p/querol/admin/users.php:184
+msgid "Invalid user identification number used!"
+msgstr "Num&eacute;ro d'usager invalide!"
+
+#: /p/querol/admin/users.php:197
+msgid "User successfully removed!"
+msgstr "Usager supprim&eacute; avec succ&egrave;s!"
+
+#: /p/querol/admin/users.php:225
+msgid "Invalid company identification number!"
+msgstr "Num&eacute;ro d'entreprise invalide!"
+
+#: /p/querol/admin/users.php:238 /p/querol/admin/users.php:539
+#: /p/querol/shared/includes/classes/pages/register_page.php:13
+msgid "Username already in use!"
+msgstr "Nom d'usager d&eacute;j&agrave;  en utilisation!"
+
+#: /p/querol/admin/users.php:274
+msgid "User successfully added!"
+msgstr "Usager ajout&eacute; avec succ&egrave;s!"
+
+#: /p/querol/admin/users.php:390
+msgid "Telephone Number"
+msgstr "Numéro de téléphone"
+
+#: /p/querol/admin/users.php:391
+msgid "Fax Number"
+msgstr "Télécopieur"
+
+#: /p/querol/admin/users.php:392
+msgid "Email Address"
+msgstr "Adresse"
+
+#: /p/querol/admin/users.php:413
+msgid "Impersonate"
+msgstr "usurper l'identité"
+
+#: /p/querol/admin/users.php:424
+msgid "Company Name"
+msgstr "Nom d'entreprise"
+
+#: /p/querol/admin/users.php:432 /p/querol/admin/users.php:453
+msgid "Active"
+msgstr "Actif"
+
+#: /p/querol/admin/users.php:439 /p/querol/admin/users.php:460
+msgid "Staff"
+msgstr "Employé"
+
+#: /p/querol/admin/users.php:439 /p/querol/admin/users.php:460
+msgid "Admin."
+msgstr "Admin."
+
+#: /p/querol/admin/users.php:505
+msgid "Phonenumber must be at least seven digits!"
+msgstr "Le numéro de téléphone doit être composé d'au moins sept chiffres?"
+
+#: /p/querol/admin/mainpage.php:27 /p/querol/admin/includes/menu_items.php:6
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: /p/querol/admin/mainpage.php:69
+msgid "No session!"
+msgstr "Pas de session!"
+
+#: /p/querol/admin/mainpage.php:78
+msgid "Connected since"
+msgstr "Connect&eacute; depuis"
+
+#: /p/querol/admin/mainpage.php:83
+msgid "Last activity"
+msgstr "Derni&egrave; activit&eacute;"
+
+#: /p/querol/admin/mainpage.php:88
+msgid "Last page visited"
+msgstr "Derni&egrave;re page"
+
+#: /p/querol/admin/mainpage.php:92
+msgid "Platform"
+msgstr "Plateforme"
+
+#: /p/querol/admin/mainpage.php:108 /p/querol/admin/mainpage.php:115
+msgid "Not assigned"
+msgstr "Pas associé"
+
+#: /p/querol/admin/mainpage.php:163
+msgid "No step!"
+msgstr "Aucune étape!"
+
+#: /p/querol/admin/mainpage.php:168
+msgid "#"
+msgstr "#"
+
+#: /p/querol/admin/mainpage.php:215
+msgid "Not following any order!"
+msgstr "Aucun dossier!"
+
+#: /p/querol/admin/mainpage.php:233
+msgid "Current Step"
+msgstr "Étape en cours"
+
+#: /p/querol/admin/mainpage.php:238
+#: /p/querol/shared/includes/invoice_pdf.php:165
+msgid "Notes"
+msgstr "Notes"
+
+#: /p/querol/admin/view_proof.php:35 /p/querol/entreprises/view_proof.php:35
+msgid "Invalid order id!"
+msgstr "Numéro invalide!"
+
+#: /p/querol/admin/sherlock_steps.php:14
+#: /p/querol/admin/includes/menu_items.php:30
+msgid "Sherlock (Steps)"
+msgstr "Sherlock (Étapes)"
+
+#: /p/querol/admin/sherlock_steps.php:79
+#: /p/querol/admin/sherlock_steps.php:135
+msgid "Empty value for 'Internal Name' field!"
+msgstr "Champ 'Nom Interne' vide!"
+
+#: /p/querol/admin/sherlock_steps.php:84
+#: /p/querol/admin/sherlock_steps.php:140
+msgid "Empty value for 'Name (english)' field!"
+msgstr "Champ 'Nom (anglais)' vide!"
+
+#: /p/querol/admin/sherlock_steps.php:89
+#: /p/querol/admin/sherlock_steps.php:145
+msgid "Empty value for 'Name (french)' field!"
+msgstr "Champ 'Nom (français)' vide!"
+
+#: /p/querol/admin/sherlock_steps.php:94
+#: /p/querol/admin/sherlock_steps.php:150
+msgid "Empty value for 'Step #' field!"
+msgstr "Champ 'Étape #' vide!"
+
+#: /p/querol/admin/sherlock_steps.php:98
+#: /p/querol/admin/sherlock_steps.php:154
+msgid "This step already exists, please use different names and/or id!"
+msgstr "Cette étape existe déjà!"
+
+#: /p/querol/admin/sherlock_steps.php:110
+msgid "Step successfully added!"
+msgstr "Étape ajoutée avec succès!"
+
+#: /p/querol/admin/sherlock_steps.php:123
+#: /p/querol/admin/sherlock_steps.php:182
+msgid "Invalid step identification number provided!"
+msgstr "Num&eacute;ro d'identification invalide!"
+
+#: /p/querol/admin/sherlock_steps.php:178
+msgid "Modify Step"
+msgstr "Modifier l'étape"
+
+#: /p/querol/admin/sherlock_steps.php:206
+msgid "Invalid step identification number used!"
+msgstr "Num&eacute;ro d'identification invalide!"
+
+#: /p/querol/admin/sherlock_steps.php:214
+msgid "Step successfully removed!"
+msgstr "Étape supprim&eacute; avec succ&egrave;s!"
+
+#: /p/querol/admin/includes/menu_items.php:42
+msgid "Exit / Close"
+msgstr "Fermer / Sortir"
+
+#: /p/querol/entreprises/invoices.php:67
+msgid "Tel.: "
+msgstr "Tél.:"
+
+#: /p/querol/entreprises/invoices.php:68
+msgid "Fax.: "
+msgstr "Fax.:"
+
+#: /p/querol/entreprises/invoices.php:91
+msgid "Invoice Summary"
+msgstr "Sommaire de la facture"
+
+#: /p/querol/entreprises/invoices.php:93
+msgid "Date Produced"
+msgstr "Date d'émission"
+
+#: /p/querol/entreprises/invoices.php:114
+msgid "Invoice Amount"
+msgstr "Montant exigible"
+
+#: /p/querol/entreprises/invoices.php:116
+msgid "Expiration"
+msgstr "Échéance"
+
+#: /p/querol/entreprises/invoices.php:121
+msgid "Special payment conditions are found at invoice bottom."
+msgstr ""
+"Des conditions spéciales de paiement sont décrites au bas de la facture."
+
+#: /p/querol/entreprises/invoices.php:124
+msgid "Payment Conditions:"
+msgstr "Conditions de paiement:"
+
+#: /p/querol/entreprises/invoices.php:125
+msgid "2% 10 days"
+msgstr "2% 10 jours"
+
+#: /p/querol/entreprises/invoices.php:127
+msgid "Net 30 days"
+msgstr "Net 30 jours"
+
+#: /p/querol/entreprises/invoices.php:130
+msgid ""
+"This bill may receive a discount of 2% if paid within 10 days of its "
+"issuance. This account will be considered past due 30 days after its "
+"issuance. Interest of 2% per month can (26.82% per year) apply when an "
+"account is considered past due."
+msgstr ""
+"Cette facture peut bénéficier d'un escompte de 2% si payée dans les 10 jours "
+"suivant son émission. Ce compte sera considéré comme en souffrance 30 jours "
+"après son emission. Des intérêts de 2% par mois peuvent (26.82% par année) "
+"s'appliquer lorsqu'un compte est considéré comme étant en souffrance."
+
+#: /p/querol/entreprises/invoices.php:132
+msgid "Your Order:"
+msgstr "Votre Dossier:"
+
+#: /p/querol/entreprises/invoices.php:144
+#: /p/querol/entreprises/new_order.php:692
+msgid "Product Name"
+msgstr "Nom du produit"
+
+#: /p/querol/entreprises/invoices.php:146
+msgid "Price"
+msgstr "Prix"
+
+#: /p/querol/entreprises/invoices.php:193
+msgid "No merchandise refund accepted without authorization."
+msgstr "Aucun retour de marchandise n'est accepté sans autorisation."
+
+#: /p/querol/entreprises/invoices.php:195
+msgid "Total Amount"
+msgstr "Montant exigible"
+
+#: /p/querol/entreprises/invoices.php:200
+#: /p/querol/shared/includes/invoice_pdf.php:475
+msgid "Details about how discount is calculated:"
+msgstr "Détails du calcul de l'escompte:"
+
+#: /p/querol/entreprises/invoices.php:202
+msgid "Available discount is: 2.09% (2% of sub-total "
+msgstr "L'escompte disponible est de 2.09% (2% du sous-total "
+
+#: /p/querol/entreprises/invoices.php:209
+#: /p/querol/shared/includes/invoice_pdf.php:489
+msgid "Total amount if you use your discount: "
+msgstr "Montant à  payer si vous prenez l'escompte: "
+
+#: /p/querol/entreprises/invoices.php:216
+msgid "This amount have to be paid before "
+msgstr "Ce montant doit être payé avant le "
+
+#: /p/querol/entreprises/invoices.php:219
+#: /p/querol/shared/includes/invoice_pdf.php:504
+msgid ""
+"The taxes are calculated on the net price of products. Volume discounts "
+"granted at the time the supplier issues an invoice now represent a price "
+"reduction and therefore the taxes are applied to prices after reducing "
+"discount. As for interest charges imposed for late payment and cash "
+"discounts for early payment, these are financial burdens, so that these "
+"costs do not affect the amount of taxes that apply to the transaction. "
+"(Source: Government of Canada)"
+msgstr ""
+"Les taxes sont calculées sur le prix net des produits. Des remises sur "
+"quantité accordées au moment ou le fournisseur délivre la facture consituent "
+"une réduction de prix et par conséquent, les taxes s'appliquent au prix "
+"après réduction de la remise. Quant aux frais d'intérêts imposés pour "
+"paiement tardif et aux escomptes accordés pour paiement anticipé, ceux-ci "
+"constituent des charges financières, si bien que ces frais n'influent pas "
+"sur le montant des taxes qui s'appliquent à  la transaction. (Source: "
+"Gouvernement du Canada)"
+
+#: /p/querol/entreprises/invoices.php:236
+msgid "Date paid:"
+msgstr "Payé le:"
+
+#: /p/querol/entreprises/invoices.php:239
+msgid "Please cut here and return with your payment."
+msgstr "S'il vous plait, découpez ici et retournez avec votre paiement."
+
+#: /p/querol/entreprises/invoices.php:259
+msgid "Payment To:"
+msgstr "Remettre À :"
+
+#: /p/querol/entreprises/invoices.php:260
+msgid "Invoice Number:"
+msgstr "Numéro de facture:"
+
+#: /p/querol/entreprises/invoices.php:267
+msgid "Date Produced:"
+msgstr "Date d'émission:"
+
+#: /p/querol/entreprises/invoices.php:280
+msgid "Amount Paid:"
+msgstr "Montant Payé:"
+
+#: /p/querol/entreprises/invoices.php:285
+msgid "Thank you for your fast payment"
+msgstr "Merci de votre prompt paiement"
+
+#: /p/querol/entreprises/invoices.php:311
+#: /p/querol/shared/includes/invoice_pdf.php:638
+msgid "Fatal Error: No product in your invoice!"
+msgstr "Erreur Fatale: Pas de produit dans votre facture!"
+
+#: /p/querol/entreprises/invoices.php:325
+#: /p/querol/shared/includes/invoice_pdf.php:668
+msgid "Fatal Error: Invalid 'provenance' ID!"
+msgstr "Erreur Fatale: Identifiant 'provenance' invalide!"
+
+#: /p/querol/entreprises/invoices.php:339
+#: /p/querol/shared/includes/invoice_pdf.php:687
+msgid "Fatal Error: Invalid 'destination' ID!"
+msgstr "Erreur Fatale: Identifiant 'destination' invalide!"
+
+#: /p/querol/entreprises/invoices.php:361
+msgid "From"
+msgstr "De"
+
+#: /p/querol/entreprises/invoices.php:363
+msgid "To"
+msgstr "À"
+
+#: /p/querol/entreprises/invoices.php:369
+#: /p/querol/shared/includes/invoice_pdf.php:760
+msgid "invoice"
+msgstr "facture"
+
+#: /p/querol/entreprises/quote.php:17
+msgid "Thank you for submitting your quote, we will contact you soon."
+msgstr ""
+"Merci de nous avoir soumis cette soumission, nous vous contacterons très "
+"bientôt."
+
+#: /p/querol/entreprises/quote.php:22
+msgid "Quote"
+msgstr "Soumission"
+
+#: /p/querol/entreprises/quote.php:29 /p/querol/entreprises/problems.php:38
+msgid "Description"
+msgstr "Description"
+
+#: /p/querol/entreprises/quote.php:34
+msgid "Submit"
+msgstr "Soumettre"
+
+#: /p/querol/entreprises/quote.php:39
+msgid "You could send us a quote using this form."
+msgstr "Vous pouvez nous envoyer une soumission à l'aide de ce formulaire."
+
+#: /p/querol/entreprises/contact.php:12
+#: /p/querol/entreprises/includes/menu_items.php:41
+msgid "Contact Qu&eacute;-Rol"
+msgstr "Contacter Qué-Rol"
+
+#: /p/querol/entreprises/view_document.php:15
+msgid "Document not found!"
+msgstr "Document introuvable!"
+
+#: /p/querol/entreprises/view_document.php:26
+msgid "No document found!"
+msgstr "Document introuvable!"
+
+#: /p/querol/entreprises/options.php:12
+#: /p/querol/entreprises/includes/menu_items.php:36
+msgid "Options"
+msgstr "Options"
+
+#: /p/querol/entreprises/options.php:55
+msgid "Invalid credit card number entered!"
+msgstr "Numéro de carte de crédit invalide!"
+
+#: /p/querol/entreprises/options.php:88
+msgid "Invalid expiration date!"
+msgstr "Date d'expiration invalide!"
+
+#: /p/querol/entreprises/options.php:121
+msgid "Changes successfully saved."
+msgstr "Modifications sauvegard&eacute;es."
+
+#: /p/querol/entreprises/options.php:134
+msgid "No card"
+msgstr "Pas de carte"
+
+#: /p/querol/entreprises/options.php:148
+msgid "Automatic"
+msgstr "Automatique"
+
+#: /p/querol/entreprises/options.php:186
+msgid "Preferred Language"
+msgstr "Langage à utiliser"
+
+#: /p/querol/entreprises/options.php:187
+msgid "Email addresses"
+msgstr "Adresse courriel"
+
+#: /p/querol/entreprises/options.php:191
+msgid "Credit Card Information"
+msgstr "Information de la carte de crédit"
+
+#: /p/querol/entreprises/options.php:192
+msgid "Card Type"
+msgstr "Type de carte"
+
+#: /p/querol/entreprises/options.php:193
+msgid "Owner Name"
+msgstr "Nom / Propriétaire"
+
+#: /p/querol/entreprises/options.php:194
+msgid "Card Number (16 digits)"
+msgstr "Numéro de carte (16 chiffres)"
+
+#: /p/querol/entreprises/options.php:195
+msgid "New Card Number (16 digits)"
+msgstr "Numéro de carte (16 chiffres)"
+
+#: /p/querol/entreprises/options.php:196
+msgid "Expiration Date (MM/YY)"
+msgstr "Date d'expiration (MM/AA)"
+
+#: /p/querol/entreprises/options.php:197
+msgid "Pre-authorized withdrawal"
+msgstr "Paiements pré-authorisés"
+
+#: /p/querol/entreprises/orders.php:386
+msgid "You"
+msgstr "Vous"
+
+#: /p/querol/entreprises/orders.php:444
+msgid "Ship To"
+msgstr "Livrer &Agrave;"
+
+#: /p/querol/entreprises/mainpage.php:15
+msgid "Welcome to Qu&eacute;-Rol distributor website"
+msgstr "Plateforme distributeurs Qué-Rol."
+
+#: /p/querol/entreprises/mainpage.php:29
+msgid "Your user have an invalid company associated with it!"
+msgstr "Une mauvaise entreprise est associ&eacute;e a votre usager!"
+
+#: /p/querol/entreprises/mainpage.php:137
+msgid "Pending"
+msgstr "En Attente"
+
+#: /p/querol/entreprises/mainpage.php:149
+#: /p/querol/entreprises/mainpage.php:157
+msgid "Processed"
+msgstr "En Traitement"
+
+#: /p/querol/entreprises/mainpage.php:163
+msgid "Shipped"
+msgstr "Livr&eacute;"
+
+#: /p/querol/entreprises/mainpage.php:169
+msgid "No data!"
+msgstr "Aucune information!"
+
+#: /p/querol/entreprises/mainpage.php:179
+msgid "No alerts!"
+msgstr "Pas d'alertes!"
+
+#: /p/querol/entreprises/problems.php:18
+msgid "Thank you for submitting your problem, we will contact you soon."
+msgstr ""
+"Merci de nous avoir soumis ce problème, nous vous contacterons très bientôt."
+
+#: /p/querol/entreprises/problems.php:23
+msgid "Problems"
+msgstr "Problèmes"
+
+#: /p/querol/entreprises/problems.php:30
+msgid "Website"
+msgstr "Site web"
+
+#: /p/querol/entreprises/problems.php:32
+msgid "Sales"
+msgstr "Ventes"
+
+#: /p/querol/entreprises/problems.php:33
+msgid "Products"
+msgstr "Produits"
+
+#: /p/querol/entreprises/problems.php:34
+msgid "Other"
+msgstr "Autre"
+
+#: /p/querol/entreprises/problems.php:37
+msgid "Problem Related To"
+msgstr "Problème lié à"
+
+#: /p/querol/entreprises/problems.php:43
+msgid "Submit Problem"
+msgstr "Soumettre le problème"
+
+#: /p/querol/entreprises/problems.php:108
+msgid "You have encountered a problem on our website? Let us know."
+msgstr ""
+"Vous avez rencontrer un problème avec notre site web? Laissez-nous le savoir."
+
+#: /p/querol/entreprises/proofing.php:76
+msgid "DUE: "
+msgstr "Dû:"
+
+#: /p/querol/entreprises/proofing.php:128
+msgid "No artwork to approve for now."
+msgstr "Aucun montage à approuver."
+
+#: /p/querol/entreprises/new_order.php:12
+#: /p/querol/entreprises/includes/menu_items.php:6
+msgid "New Order"
+msgstr "Nouveau Dossier"
+
+#: /p/querol/entreprises/new_order.php:29
+msgid "Invalid operation, please contact QUE-ROL directly."
+msgstr ""
+"Nous sommes incapable de traiter votre opération, veuillez nous contacter "
+"directement!"
+
+#: /p/querol/entreprises/new_order.php:49
+msgid "Customer name is empty!"
+msgstr "Le nom de l'entreprise est vide!"
+
+#: /p/querol/entreprises/new_order.php:53
+msgid "Customer phone number is empty!"
+msgstr "Numéro de téléphone vide!"
+
+#: /p/querol/entreprises/new_order.php:57
+msgid "Customer adress (street) is empty!"
+msgstr "L'adresse (rue) est vide!"
+
+#: /p/querol/entreprises/new_order.php:61
+msgid "Customer adress (city) is empty!"
+msgstr "L'adresse (ville) est vide!"
+
+#: /p/querol/entreprises/new_order.php:65
+msgid "Customer adress (state) is empty!"
+msgstr "L'adresse (province/état) est vide!"
+
+#: /p/querol/entreprises/new_order.php:69
+msgid "Customer adress (postal code) is empty!"
+msgstr "L'adresse (code postal) est vide!"
+
+#: /p/querol/entreprises/new_order.php:83
+msgid ""
+"Phone number already in use! You can't create a new customer with this phone "
+"number."
+msgstr ""
+"Numéro de téléphone déja en utilisation! Vous ne pouvez pas créer un nouveau "
+"client avec le même numéro."
+
+#: /p/querol/entreprises/new_order.php:96
+#: /p/querol/entreprises/new_order.php:831
+msgid "P.O. already in use!"
+msgstr "Numéro de commande déjà en  utilisation!"
+
+#: /p/querol/entreprises/new_order.php:100
+msgid "Artwork action is not defined!"
+msgstr "La prise en charge du montage n'est pas valide!"
+
+#: /p/querol/entreprises/new_order.php:104
+msgid "Season is empty!"
+msgstr "La saison est vide!"
+
+#: /p/querol/entreprises/new_order.php:108
+msgid "Season is invalid!"
+msgstr "La saison est invalide!"
+
+#: /p/querol/entreprises/new_order.php:112
+msgid "Line-up is empty!"
+msgstr "La série est invalide!"
+
+#: /p/querol/entreprises/new_order.php:116
+#: /p/querol/entreprises/new_order.php:123
+msgid "No products were specified!"
+msgstr "Pas de produits!"
+
+#: /p/querol/entreprises/new_order.php:128
+msgid "Shipping destination is empty!"
+msgstr "La destination de livraison est vide!"
+
+#: /p/querol/entreprises/new_order.php:132
+msgid "Shipping date is empty!"
+msgstr "La date de livraison est vide!"
+
+#: /p/querol/entreprises/new_order.php:137
+msgid "You must choose a color!"
+msgstr "Vous devez choisir une couleur!"
+
+#: /p/querol/entreprises/new_order.php:145
+msgid "No artwork found!"
+msgstr "Aucun montage n'à été trouvé!"
+
+#: /p/querol/entreprises/new_order.php:151
+msgid "New text is empty!"
+msgstr "Le champ texte est vide!"
+
+#: /p/querol/entreprises/new_order.php:156
+msgid "No file(s) was specified!"
+msgstr "Aucun fichier n'est spécifié!"
+
+#: /p/querol/entreprises/new_order.php:194
+#: /p/querol/entreprises/new_order.php:206
+msgid "Unable to add this customer to database!"
+msgstr "Impossible d'ajouter un client au syst&egrave;me!"
+
+#: /p/querol/entreprises/new_order.php:255
+msgid "Send from form"
+msgstr "Envoyé à partir du formulaire web"
+
+#: /p/querol/entreprises/new_order.php:265
+msgid "File not found, maybe you uploaded an invalid file?"
+msgstr "Fichier introuvable, vous avez peut-être utilisé un fichier invalide?"
+
+#: /p/querol/entreprises/new_order.php:279
+#: /p/querol/entreprises/new_order.php:866
+#: /p/querol/entreprises/new_order.php:920
+#: /p/querol/entreprises/new_order.php:1173
+msgid "Black"
+msgstr "Noir"
+
+#: /p/querol/entreprises/new_order.php:378
+msgid "No Name"
+msgstr "Sans Nom"
+
+#: /p/querol/entreprises/new_order.php:486
+msgid "New order from QUEROL"
+msgstr "Nouvelle commande de QUÉ-ROL"
+
+#: /p/querol/entreprises/new_order.php:500
+msgid "Thank you submitting your order."
+msgstr "Merci d'avoir soumis votre commande en ligne."
+
+#: /p/querol/entreprises/new_order.php:708
+#: /p/querol/entreprises/new_order.php:796
+msgid "Invalid Quantity!"
+msgstr "Quantit&eacute; Invalide!"
+
+#: /p/querol/entreprises/new_order.php:770
+msgid "Invalid product!"
+msgstr "Produit invalide!"
+
+#: /p/querol/entreprises/new_order.php:773
+msgid "Invalid quantity!"
+msgstr "Quantit&eacute; Invalide!"
+
+#: /p/querol/entreprises/new_order.php:1060
+msgid "Phone number must be at least ten digits!"
+msgstr "Le numéro de téléphone doit être composé d'au moins dix chiffres!"
+
+#: /p/querol/entreprises/new_order.php:1227
+msgid "No customer yet!"
+msgstr "Pas de client pour l'instant!"
+
+#: /p/querol/entreprises/new_order.php:1242
+msgid "Artwork for "
+msgstr "Montage pour "
+
+#: /p/querol/entreprises/new_order.php:1243
+msgid "Please put your artwork as attachment to this email. Thank you"
+msgstr "S.VP. Veuillez mettre vos  fichiers en pièces-jointes. Merci"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "January"
+msgstr "Janvier"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "February"
+msgstr "F&eacute;vrier"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "March"
+msgstr "Mars"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "April"
+msgstr "Avril"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "May"
+msgstr "Mai"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "June"
+msgstr "Juin"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "July"
+msgstr "Juillet"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "August"
+msgstr "Ao&ucirc;t"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "September"
+msgstr "Septembre"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "October"
+msgstr "Octobre"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "November"
+msgstr "Novembre"
+
+#: /p/querol/entreprises/new_order.php:1368
+msgid "December"
+msgstr "D&eacute;cembre"
+
+#: /p/querol/entreprises/new_order.php:1369
+msgid "Start of"
+msgstr "D&eacute;but "
+
+#: /p/querol/entreprises/new_order.php:1369
+msgid "Middle"
+msgstr "Mi"
+
+#: /p/querol/entreprises/new_order.php:1369
+msgid "End of"
+msgstr "Fin "
+
+#: /p/querol/entreprises/includes/menu_items.php:26
+msgid "Request Quote"
+msgstr "Soumission"
+
+#: /p/querol/entreprises/includes/menu_items.php:31
+msgid "Problems?"
+msgstr "Problème(s)?"
+
+#: /p/querol/entreprises/includes/menu_items.php:46
+msgid "Logout"
+msgstr "Sortir"
+
+#: /p/querol/shared/includes/functions.php:147
+msgid "second"
+msgstr "seconde"
+
+#: /p/querol/shared/includes/functions.php:149
+msgid "seconds"
+msgstr "secondes"
+
+#: /p/querol/shared/includes/functions.php:153
+msgid "minute"
+msgstr "minute"
+
+#: /p/querol/shared/includes/functions.php:155
+msgid "minutes"
+msgstr "minutes"
+
+#: /p/querol/shared/includes/functions.php:159
+msgid "hour"
+msgstr "heure"
+
+#: /p/querol/shared/includes/functions.php:161
+msgid "hours"
+msgstr "heures"
+
+#: /p/querol/shared/includes/functions.php:165
+msgid "day"
+msgstr "jour"
+
+#: /p/querol/shared/includes/functions.php:167
+msgid "days"
+msgstr "jours"
+
+#: /p/querol/shared/includes/functions.php:171
+msgid "week"
+msgstr "semaine"
+
+#: /p/querol/shared/includes/functions.php:173
+msgid "weeks"
+msgstr "semaines"
+
+#: /p/querol/shared/includes/functions.php:350
+msgid "Date/Time"
+msgstr "Date/Heure"
+
+#: /p/querol/shared/includes/functions.php:350
+msgid "Elapsed Time"
+msgstr "Temps Écoulé"
+
+#: /p/querol/shared/includes/functions.php:439
+#: /p/querol/shared/includes/functions.php:440
+msgid "No step done"
+msgstr "Aucune étape"
+
+#: /p/querol/shared/includes/functions.php:443
+#: /p/querol/shared/includes/functions.php:444
+msgid "Not associated yet"
+msgstr "Pas associé"
+
+#: /p/querol/shared/includes/invoice_pdf.php:66
+msgid "Original Order"
+msgstr "Commande Originale"
+
+#: /p/querol/shared/includes/invoice_pdf.php:125
+msgid "Qty"
+msgstr "Qté"
+
+#: /p/querol/shared/includes/invoice_pdf.php:126
+msgid "Unit Price"
+msgstr "Prix Unitaire"
+
+#: /p/querol/shared/includes/invoice_pdf.php:253
+#: /p/querol/shared/includes/invoice_pdf.php:588
+msgid "Date of issue:"
+msgstr "Date d'émission:"
+
+#: /p/querol/shared/includes/invoice_pdf.php:264
+msgid "Due Date:"
+msgstr "Date d'échéance:"
+
+#: /p/querol/shared/includes/invoice_pdf.php:306
+#: /p/querol/shared/includes/invoice_pdf.php:364
+msgid "received on"
+msgstr "reçu le"
+
+#: /p/querol/shared/includes/invoice_pdf.php:327
+msgid "Total CAD"
+msgstr "Total CAD"
+
+#: /p/querol/shared/includes/invoice_pdf.php:329
+msgid "Total USD"
+msgstr "Total USD"
+
+#: /p/querol/shared/includes/invoice_pdf.php:340
+msgid "Your order"
+msgstr "Votre Dossier"
+
+#: /p/querol/shared/includes/invoice_pdf.php:353
+msgid "Our file"
+msgstr "Notre fichier"
+
+#: /p/querol/shared/includes/invoice_pdf.php:374
+msgid "lot"
+msgstr "lot"
+
+#: /p/querol/shared/includes/invoice_pdf.php:380
+msgid "Reference:"
+msgstr "Référence:"
+
+#: /p/querol/shared/includes/invoice_pdf.php:459
+msgid "Total Amount : USD"
+msgstr "Montant Total: USD"
+
+#: /p/querol/shared/includes/invoice_pdf.php:461
+msgid "Total Amount : CAD"
+msgstr "Montant Total: CAD"
+
+#: /p/querol/shared/includes/invoice_pdf.php:468
+msgid ""
+"No returns accepted without authorization. / No claim for 10 days after "
+"receiving the goods."
+msgstr ""
+"Aucun retour de marchandise accepté sans autorisation. / Aucune réclamation "
+"passé 10 jours suivant la réception de la marchandise."
+
+#: /p/querol/shared/includes/invoice_pdf.php:469
+msgid "Restocking fee of 15% will be charged on all returned merchandise."
+msgstr ""
+"Des frais de réapprovisionnement de 15 % seront facturé sur toute "
+"marchandise retournée."
+
+#: /p/querol/shared/includes/invoice_pdf.php:477
+msgid "Available discount is:"
+msgstr "L'escompte disponible est:"
+
+#: /p/querol/shared/includes/invoice_pdf.php:481
+#, php-format
+msgid "(2% of sub-total "
+msgstr "2% du sous-total"
+
+#: /p/querol/shared/includes/invoice_pdf.php:496
+msgid "The discount is not available if paid by credit card"
+msgstr "L'escompte n'est pas disponible si payé par carte de crédit"
+
+#: /p/querol/shared/includes/invoice_pdf.php:498
+msgid "This amount have to be paid before"
+msgstr "Ce montant doit être payé avant le "
+
+#: /p/querol/shared/includes/invoice_pdf.php:517
+msgid "Please cut out the bottom part and return with your payment."
+msgstr "S'il vous plait, découpez ici et retournez avec votre paiement."
+
+#: /p/querol/shared/includes/invoice_pdf.php:535
+msgid "Remit to:"
+msgstr "Remettre à :"
+
+#: /p/querol/shared/includes/invoice_pdf.php:540
+msgid "Playing Cards Factory"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:544
+msgid "Les Calendriers Qué-Rol"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:550
+msgid "2026 rue du Cardinal-Persico"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:552
+msgid "Québec QC G1T 1V4"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:561
+msgid "1 855 683-9258"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:563
+msgid "418 681-5754"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:571
+msgid "418 681-1494"
+msgstr ""
+
+#: /p/querol/shared/includes/invoice_pdf.php:577
+msgid "Paid amount:"
+msgstr "Montant exigible:"
+
+#: /p/querol/shared/includes/register_fields.php:7
+msgid "Email address"
+msgstr "Adresse courriel"
+
+#: /p/querol/shared/includes/register_fields.php:8
+msgid "Country"
+msgstr "Pays"
+
+#: /p/querol/shared/includes/classes/database.php:47
+msgid "Unable to delete invalid users: "
+msgstr "Incapable de supprimer les usagers invalides:"
+
+#: /p/querol/shared/includes/classes/database.php:347
+msgid "Internal error!"
+msgstr "Erreur interne!"
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:14
+msgid "Email address already in use!"
+msgstr "Adresse courriel d&eacute;j&agrave; en utilisation!"
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:48
+msgid ""
+"Your account we  successfully activated! You can now login into your account."
+msgstr ""
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:50
+msgid "Unable to activate your account, the activiation key is invalid!"
+msgstr ""
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:116
+msgid "Activate your account for site: "
+msgstr ""
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:117
+#: /p/querol/shared/includes/classes/pages/login_page.php:81
+msgid "To view the message, please use an HTML compatible email viewer!"
+msgstr ""
+"Pour voir ce message, veuillez utiliser un visionneur de courriel supportant "
+"le HTML!"
+
+#: /p/querol/shared/includes/classes/pages/register_page.php:158
+msgid "(Again)"
+msgstr "(Encore)"
+
+#: /p/querol/shared/includes/classes/pages/login_page.php:60
+msgid "Email not found in database!"
+msgstr ""
+
+#: /p/querol/shared/includes/classes/pages/login_page.php:80
+msgid "New password generated for site: "
+msgstr ""
+
+#: /p/querol/shared/includes/classes/pages/login_page.php:86
+msgid "Unable to update password!"
+msgstr "Incapable de mettre &agrave; jour le mot de passe!"
+
+#: /p/querol/shared/includes/classes/widgets/form_widget.php:44
+msgid "Invalid form method!"
+msgstr "Méthode du formulaire invalide!"
+
+#~ msgid "Direct Debit"
+#~ msgstr "Prélévements automatiques"
+
+#~ msgid "No step done."
+#~ msgstr "Aucune étape"
+
+#~ msgid "Expiration Date:"
+#~ msgstr "Date d'expiration:"
+
+#~ msgid "Received on"
+#~ msgstr "Reçu le"
+
+#~ msgid "for the attention of"
+#~ msgstr "à l'attention de"
+
+#~ msgid "Customers Access"
+#~ msgstr "Acc&egrave;s Distributeur"
+
+#~ msgid "Change Card Number (16 digits)"
+#~ msgstr "Numéro de carte (16 chiffres)"
+
+#~ msgid "Get Invoices"
+#~ msgstr "Voir Factures"
+
+#~ msgid "No credit card owner name entered!"
+#~ msgstr "Pas de propriétaire pour la carte de crédit?"
+
+#, fuzzy
+#~ msgid "reason"
+#~ msgstr "Saison"
+
+#, fuzzy
+#~ msgid "Information not found!"
+#~ msgstr "Document introuvable!"
+
+#, fuzzy
+#~ msgid "default_password"
+#~ msgstr "Vieux mot de passe"
+
+#, fuzzy
+#~ msgid "Operation successfully completed."
+#~ msgstr "Op&eacute;ration termin&eacute;"
+
+#, fuzzy
+#~ msgid "Invalid validation attempt!"
+#~ msgstr "Date d'expiration invalide!"
+
+#, fuzzy
+#~ msgid "Order:"
+#~ msgstr "Dossiers"
+
+#, fuzzy
+#~ msgid "P.O.:"
+#~ msgstr "P.O."
+
+#, fuzzy
+#~ msgid "Default Username:"
+#~ msgstr "Usager:"
+
+#, fuzzy
+#~ msgid "Default Password:"
+#~ msgstr "Mot de passe:"
+
+#, fuzzy
+#~ msgid "Invalid code scanned!"
+#~ msgstr "Numéro invalide!"
+
+#, fuzzy
+#~ msgid "Invalid session token"
+#~ msgstr "Date d'expiration invalide!"
+
+#, fuzzy
+#~ msgid "Session token not found!"
+#~ msgstr "Client introuvable!"
+
+#, fuzzy
+#~ msgid "No username field!"
+#~ msgstr "Le champ usager est vide!"
+
+#, fuzzy
+#~ msgid "No password field!"
+#~ msgstr "Votre champ mot de passe est vide!"
+
+#, fuzzy
+#~ msgid "Invalid user or password!"
+#~ msgstr "Incapable de mettre &agrave; jour le mot de passe!"
+
+#~ msgid "User ID"
+#~ msgstr "Usager:"
+
+#~ msgid "Invalid Value or Quantity!"
+#~ msgstr "Quantit&eacute; Invalide!"
+
+#~ msgid "Order identification already in use!"
+#~ msgstr "Num&eacute;ro de dossier d&eacute;j&agrave;  en utilisation!"
+
+#~ msgid "Invalid data submitted!"
+#~ msgstr "Contenu invalide!"
+
+#~ msgid "Invalid quantity submitted!"
+#~ msgstr "Quantit&eacute; Invalide!"
+
+#~ msgid "Empty text field for assembly!"
+#~ msgstr "Champ texte vide!"
+
+#~ msgid "Unable to handle this operation!"
+#~ msgstr "Op&eacute;ration invalide!"
+
+#~ msgid "New Order (Step 1 of 3)"
+#~ msgstr "Nouveau Dossier (&Eacute;tape 1 de 3)"
+
+#~ msgid "New Order (Step 2 of 3)"
+#~ msgstr "Nouveau Dossier (&Eacute;tape 2 de 3)"
+
+#~ msgid "New Order (Step 3 of 3)"
+#~ msgstr "Nouveau Dossier (&eacute;tape 3 de 3)"
+
+#~ msgid "My Client"
+#~ msgstr "Mon Client"
+
+#~ msgid "No products added yet! Click on 'Add Product'"
+#~ msgstr "Pas de produit pour l'instant!"
+
+#~ msgid "Invalid client id!"
+#~ msgstr "Client invalide!"
+
+#~ msgid "Order Completed"
+#~ msgstr "Dossier Compl&eacute;t&eacute;"
+
+#~ msgid "Pages"
+#~ msgstr "Pages"
+
+#~ msgid "Add New Customer"
+#~ msgstr "Ajouter Nouveau Client"
+
+#~ msgid "Phonenumber"
+#~ msgstr "Téléphone"
+
+#~ msgid "Ext."
+#~ msgstr "Ext."
+
+#~ msgid "Add Customer"
+#~ msgstr "Ajouter Client"
+
+#~ msgid "Modify Customer"
+#~ msgstr "Modifier Client"
+
+#~ msgid "Upload a Document"
+#~ msgstr "Envoyer un document"
+
+#~ msgid "Document"
+#~ msgstr "Document"
+
+#~ msgid "Upload document"
+#~ msgstr "Envoyer un document"
+
+#~ msgid "Are you sure? Your will loose all information regarding this order."
+#~ msgstr ""
+#~ "Etes-vous sure? Tous les informations concernant le dossier vont être "
+#~ "supprimés."
+
+#~ msgid "Specific period for<br/>shipment:"
+#~ msgstr "Date sp&eacute;cifique pour<br/>livraison:"
+
+#~ msgid "Continue My Order"
+#~ msgstr "Poursuivre Mon Dossier"
+
+#~ msgid "Confirm My Order"
+#~ msgstr "Confirmer Mon Dossier"
+
+#~ msgid "<b>Assembly Options</b>"
+#~ msgstr "<b>Options de montage</b>"
+
+#~ msgid "Use last assembly"
+#~ msgstr "Utiliser le dernier montage"
+
+#~ msgid "New text / Modify text"
+#~ msgstr "Nouveau texte / Modifier"
+
+#~ msgid "Use uploaded document"
+#~ msgstr "Utiliser document"
+
+#~ msgid "Black and white"
+#~ msgstr "Noir et blanc"
+
+#~ msgid "Complete  My Order"
+#~ msgstr "Terminer Mon Dossier"
+
+#~ msgid ""
+#~ "Thank you for submitting your order. At any time, you can consult your "
+#~ "orders to see how they are processed."
+#~ msgstr ""
+#~ "Merci d'avoir soumis votre dossier. Vous pouvez maintenant consulter "
+#~ "l'état de votre dossier à  partir de la page 'Mes Dossiers'."
+
+#~ msgid "View My Orders"
+#~ msgstr "Voir Mes Dossiers"
+
+#~ msgid "Find Company"
+#~ msgstr "Chercher Entreprise"
+
+#~ msgid "Company ID"
+#~ msgstr "Entreprise"
+
+#~ msgid "You need at least one product in your order!"
+#~ msgstr "Votre dossier ne contient aucun produit!"
+
+#~ msgid "Add Product"
+#~ msgstr "Ajouter Produit"
+
+#~ msgid "Details (Optional)"
+#~ msgstr "D&eacute;tails (Facultatif)"
+
+#~ msgid "2010 All Rights Reserved"
+#~ msgstr "2010 Tous droits r&eacute;serv&eacute;s"
+
+#~ msgid "Search by phonenumber"
+#~ msgstr "Chercher par numéro de téléphone"
+
+#~ msgid "My Documents"
+#~ msgstr "Mes Documents"
+
+#~ msgid "Document upload failed!"
+#~ msgstr "Envoie du document interrompue!"
+
+#~ msgid "No documents yet!"
+#~ msgstr "Pas de documents!"
+
+#~ msgid "Filename"
+#~ msgstr "Fichier"
+
+#~ msgid "Time Sent"
+#~ msgstr "Date / Heure"
+
+#~ msgid "My Customers"
+#~ msgstr "Mes Clients"
+
+#~ msgid "Empty company name field!"
+#~ msgstr "Champ nom d'entreprise vide!"
+
+#~ msgid "Empty telephone field!"
+#~ msgstr "Champ t&eacute;l&eacute;phone vide!"
+
+#~ msgid "Empty street address field!"
+#~ msgstr "Champ adresse (rue) vide!"
+
+#~ msgid "Empty city field!"
+#~ msgstr "Champ ville vide!"
+
+#~ msgid "Empty province / state field!"
+#~ msgstr "Champ province / &eacute;tat vide!"
+
+#~ msgid "You cannot modify a customer while a order is pending!"
+#~ msgstr ""
+#~ "Vous ne pouvez pas modifier un client pendant qu'une commande est en "
+#~ "cours!"
+
+#~ msgid "Modify Existing Customer"
+#~ msgstr "Modifier Client Existant"
+
+#~ msgid "Invalid company specified!"
+#~ msgstr "Entreprise invalide!"
+
+#~ msgid "No customers yet!"
+#~ msgstr "Pas de client pour l'instant!"
+
+#~ msgid "No such field!"
+#~ msgstr "Champ introuvable!"
+
+#~ msgid "Company identification number already in use!"
+#~ msgstr "Num&eacute;ro d'entreprise d&eacute;j&agrave;  en utilisation!"
+
+#~ msgid "Username field is empty!"
+#~ msgstr "Le champ usager est vide!"
+
+#~ msgid "Company identification number field is empty!"
+#~ msgstr "Le champ num&eacute;ro d'entreprise est vide!"
+
+#~ msgid "Company identification number is invalid!"
+#~ msgstr "Num&eacute;ro d'entreprise invalide!"
+
+#~ msgid ""
+#~ "Company identification number already in use in a different user entry!"
+#~ msgstr ""
+#~ "Cette entreprise est d&eacute;j&agrave;  utilis&eacute; par un autre "
+#~ "usager!"
+
+#~ msgid "No users yet (This is not possible!)"
+#~ msgstr "Pas encore d'usagers (C'est impossible!)"
+
+#~ msgid "Email (Notifications)"
+#~ msgstr "Courriel (Avertissements)"
+
+#~ msgid "Fatal Error: You have not access to this page!"
+#~ msgstr "Erreur Fatale: Vous n'avez pas acc&egrave;s &agrave;  cette page!"
+
+#~ msgid "Fatal Error: Order ID not found!"
+#~ msgstr "Erreur Fatale: Identifiant dossier invalide!"
+
+#~ msgid "Fatal Error: Invalid Order ID!"
+#~ msgstr "Erreur Fatale: Identifiant de dossier invalide!"
+
+#~ msgid "Fatal Error: Invalid 'suivis' ID!"
+#~ msgstr "Erreur Fatale: Identifiant 'suivis' invalide!"
+
+#~ msgid "Fatal Error: Invalid product!"
+#~ msgstr "Erreur Fatale: Produit invalide!"
+
+#~ msgid ""
+#~ "Cette facture peut bÃ©nÃ©ficier d'un escompte de 2% si payÃ©e dans les 10 "
+#~ "jours suivant son Ã©mission. Ce compte sera considÃ©rÃ© comme en "
+#~ "souffrance 30 jours aprÃ¨s son emission. Des intÃ©rÃªts de 2% par mois "
+#~ "peuvent (26.82% par annÃ©e) s'appliquer lorsqu'un compte est considÃ©rÃ© "
+#~ "comme Ã©tant en souffrance."
+#~ msgstr ""
+#~ "This bill may receive a discount of 2% if paid within 10 days of its "
+#~ "issuance. This account will be considered past due 30 days after its "
+#~ "issuance. Interest of 2% per month can (26.82% per year) apply when an "
+#~ "account is considered past due."

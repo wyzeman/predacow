@@ -1,0 +1,51 @@
+.notification-board {
+	position: fixed;
+	max-width: 400px;
+    font-size: 120%;
+	z-index: 9999;
+}
+.notification-board.top {
+	top: 0;
+}
+.notification-board.right {
+	right: 0;
+}
+.notification-board.bottom {
+	bottom: 0;
+}
+.notification-board.left {
+	left: 0;
+}
+.notification-board > .notification {
+	background: url("blue-transparency.png") repeat;
+	border-radius: 5px;
+	color: #fff;
+	padding: 20px;
+	position: relative;
+	
+}
+
+.notification-board > .warning {
+    background: url("red-transparency.png") repeat;
+}
+
+.notification-board > .notification:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+.notification-board.top > .notification {
+	margin-top: 20px;
+}
+.notification-board.right > .notification {
+	margin-right: 20px;
+}
+.notification-board.bottom > .notification {
+	margin-bottom: 10px;
+}
+.notification-board.left > .notification {
+	margin-left: 10px;
+}
