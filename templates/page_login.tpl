@@ -210,7 +210,6 @@ $(function(){
         // AJAX submission of username and password
         $.ajax({ url: current_script, type:'POST', data: ajaxData, success: function(result){
 
-
             if (result != 'TRUE') {
                 {/literal}
                 var dlgTitle = '{t}Unable to perform a login{/t}';

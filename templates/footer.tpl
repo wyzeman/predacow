@@ -25,7 +25,7 @@
 {/literal}
 
 <div class="footer">
-        &copy; {t}2015 All Rights Reserved{/t} <a href="#" class="link_light">Publirama Inc.</a>&nbsp;
+        &copy; {t}2015 NO Rights Reserved{/t} <a href="#" class="link_light">Mindkind</a>&nbsp;
         {section name=l loop=$languages}
             <a href="?LANG={$languages[l].gettext}"><img src="images/languages/{$languages[l].name}.png" alt="{$languages[l].name}" title="{$languages[l].name}"></a>
         {/section}

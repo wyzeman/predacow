@@ -29,10 +29,10 @@ class LoginPage {
             if(isset($_SESSION[SI]["user"])) {
             
                 //log the logoff attempt
-                $LOG->logActivity($_SESSION[SI]["user"]["email_address"],LogMonitor::ACTIVITY_LOGOUT,"");
+                $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_LOGOUT,"");
                 
                 //erasing occurence in table tb_sessions        
-                $user_id = $DB->getScalar("id","tb_users", array("email_address","=",$_SESSION[SI]["user"]["email_address"]), $order_by = array("email_address"));
+                $user_id = $DB->getScalar("id","tb_users", array("username","=",$_SESSION[SI]["user"]["username"]), $order_by = array("username"));
                 $DB->delete("tb_sessions",array("id_user","=",$user_id));
 
                 //do the logoff action
@@ -91,6 +91,8 @@ class LoginPage {
         if ($INPUT->post->keyExists("username") && $INPUT->post->keyExists("password")) {
 
 
+           // error_log( $DB->hashPassword($INPUT->post->noTags("password")));
+
             $username = $INPUT->post->getAlnum("username");
             $password = $INPUT->post->getAlnum("password");
             
@@ -103,15 +105,21 @@ class LoginPage {
             //do the login action
             $result = $DB->login($username,$password);
 
+            error_log($result);
+            error_log("mooo");
             if ($result == false) {
+
                 //log the failed login attempt
                 $LOG->logActivity("",LogMonitor::ACTIVITY_LOGIN_FAIL,$username." ".$password);
                 //do the failed login action
                 die("FALSE");
             }
-            
+
+            error_log($result);
+            error_log("mooo2");
+
             //check if the user have an existing session open
-            $user_id = $DB->getScalar("id","tb_users", array("email_address","=",$username), array("email_address"));
+            $user_id = $DB->getScalar("id","tb_users", array("username","=",$username), array("username"));
 
             //log the login attempt
             $LOG->logActivity($username,LogMonitor::ACTIVITY_LOGIN,"");
@@ -121,6 +129,9 @@ class LoginPage {
             if ($default_language != "") {
                 $_SESSION[SI]["LANG"] = $default_language;
             }
+            error_log($result);
+            error_log("mooo3");
+
             die("TRUE");
         }
 

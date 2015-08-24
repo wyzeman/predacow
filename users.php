@@ -16,7 +16,7 @@ function displayPasswordForm($id) {
     global $page, $DB;
 
     require_once("includes/classes/widgets/FormWidget.php");
-    $form = new FormWidget(T_("Change Password for user:")." ".$DB->getScalar("email_address","tb_users",["id","=",$id]),"",FormWidget::FORM_METHOD_POST,"320px","right");
+    $form = new FormWidget(T_("Change Password for user:")." ".$DB->getScalar("username","tb_users",["id","=",$id]),"",FormWidget::FORM_METHOD_POST,"320px","right");
 
 
     $items = [];
@@ -47,8 +47,8 @@ function displaySuperTable() {
     $fields =
         [
             [
-                "label" => T_("First Name"),
-                "column" => "first_name",
+                "label" => T_("Username"),
+                "column" => "username",
                 "table" => [
                     "width" => "120px"
                 ],
@@ -61,21 +61,7 @@ function displaySuperTable() {
                     "value" => ""
                 ]
             ],
-            [
-                "label" => T_("Last Name"),
-                "column" => "last_name",
-                "table" => [
-                    "width" => "120px"
-                ],
-                "form" => [
-                    "type" => FormWidget::FORM_ITEM_INPUT,
-                    "width" => "300px",
-                    "validation" => "required",
-                    "add" => true,
-                    "modify" => true,
-                    "value" => ""
-                ]
-            ],
+
             [
                 "label"=> T_("Email Address"),
                 "column" => "email_address",
@@ -150,33 +136,8 @@ function displaySuperTable() {
                 ]
 
             ],
-            [
-                "label" => T_("Phone Number"),
-                "column" => "phone_number",
-                "table" => [
-                    "width" => "120px"
-                ],
-                "form" => [
-                    "type" => FormWidget::FORM_ITEM_PHONENUMBER,
-                    "validation" => "",
-                    "add" => true,
-                    "modify" => true,
-                    "value" => ""
-                ]
 
-            ],
-            [
-                "label" => T_("Fax. Number"),
-                "column" => "fax_number",
-                "form" => [
-                    "type" => FormWidget::FORM_ITEM_PHONENUMBER,
-                    "validation" => "",
-                    "add" => true,
-                    "modify" => true,
-                    "value" => ""
-                ]
 
-            ],
             [
                 "label" => T_("Date Created"),
                 "column" => "timestamp_created",
@@ -203,116 +164,9 @@ function displaySuperTable() {
                 ]
 
             ],
-            [
-                "label" => T_("Facebook ID"),
-                "column" => "fb_id",
-                "form" => [
-                    "type" => FormWidget::FORM_ITEM_INPUT,
-                    "validation" => "",
-                    "add" => false,
-                    "modify" => true,
-                    "width" => "300px",
-                    "value" => ""
-                ]
 
-            ],
-            [
-                "label" => T_("Twitter ID"),
-                "column" => "twitter_id",
-                "form" => [
-                    "type" => FormWidget::FORM_ITEM_INPUT,
-                    "validation" => "",
-                    "add" => false,
-                    "modify" => true,
-                    "width" => "300px",
-                    "value" => "",
-                ]
 
-            ],
-            [
-                "label" => T_("LinkedIn ID"),
-                "column" => "linkedin_id",
-                "form" => [
-                            "type" => FormWidget::FORM_ITEM_INPUT,
-                            "validation" => "",
-                            "add" => false,
-                            "modify" => true,
-                            "width" => "300px",
-                            "value" => "",
-                        ]
 
-                ],
-            [
-                "label" => "Shipping Coordinates",
-                "column" => "",
-                "form" => ["type"=>FormWidget::FORM_ITEM_SEPARATOR,"validation"=>"","add"=>true,"modify"=>true, "value"=>""]
-            ],
-            [
-                "label" => T_("Street Address #1"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_address1", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Street Address #2"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_address2", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("City"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_city", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("State"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_state", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Country"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_country", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Postal Code"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "shipping_postalcode", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "220px","value"=>""]
-            ],
-            [
-                "label" => "Billing Coordinates",
-                "column" => "",
-                "form" => ["type"=>FormWidget::FORM_ITEM_SEPARATOR,"validation"=>"","add"=>true,"modify"=>true, "value"=>""]
-            ],
-
-            [
-                "label" => T_("Street Address #1"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_address1", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Street Address #2"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_address2", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("City"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_city", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("State"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_state", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Country"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_country", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "300px","value"=>""]
-            ],
-            [
-                "label" => T_("Postal Code (Billing)"),
-                "column" => [ "table" => "tb_users_addresses", "name" => "billing_postalcode", "key" => "id_user" ],
-                "form" => [ "type" => FormWidget::FORM_ITEM_INPUT, "validation" => "", "add" => true, "modify" => true, "width" => "220px","value"=>""]
-            ],
         ];
 
 
@@ -362,17 +216,10 @@ function displaySuperTable() {
                 $row["timestamp_created"] = date("m/d/Y", $row["timestamp_created"]);
             }
 
-            $row["phone_number"] = format_phone($row["phone_number"]);
             return $row;
         }
 
-        public function callbackDeletePost($delete_id) {
 
-            global $DB;
-            $DB->delete("tb_users_addresses", ["id_user","=",$delete_id]);
-
-
-        }
 
 
         public function callbackAddPre($items, $foreign_items) {

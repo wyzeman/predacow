@@ -106,13 +106,13 @@ class Database {
 
         global $INPUT;
 
-        $query = "SELECT * FROM tb_users WHERE email_address='".addslashes($username)."' AND password='".$this->hashPassword($password)."' AND fb_id=-1 AND twitter_id=-1 AND linkedin_id=-1 AND user_level >= " . UserLevel::NORMAL;
+        $query = "SELECT * FROM tb_users WHERE username='".addslashes($username)."' AND password='".$this->hashPassword($password)."' AND user_level >= " . UserLevel::NORMAL;
         $this->last_query = $query;
         $result = $this->mysqli->query($query);
+
         if ($result == FALSE) return false;
         if ($result->num_rows == 0) return false;
         $values = $result->fetch_array(MYSQLI_ASSOC);
-        
         $_SESSION[SI]["user"] = $values;
 
         $hostname = addslashes($INPUT->server->noTags("REMOTE_ADDR"));
@@ -136,12 +136,11 @@ class Database {
 
         // Spawn a new session
         $query = "INSERT INTO tb_sessions (id_user, timestamp_created,timestamp_last_activity,hostname,url_last_activity) VALUES ($id_user,".time().",".time().",'$hostname','')";
-        error_log($query);
+       // error_log($query);
         $this->last_query = $query;
         if (!$this->mysqli->query($query)) {
             error_log($this->mysqli->error." = ".$query);
         }
-
 
         return true;
 

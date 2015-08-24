@@ -1,2 +1,1 @@
-# pr_admin
-Publirama Admin
+# Predacow
