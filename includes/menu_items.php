@@ -18,6 +18,10 @@ $MENU_ITEMS = [
         ]
 
     ], [
+        "label" => T_("Security Monitor"),
+        "url" => "sm.php",
+        "user_level" => UserLevel::ADMIN
+    ],[
         "label" => T_("Users"),
         "url" => "users.php",
         "user_level" => UserLevel::ADMIN

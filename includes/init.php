@@ -40,9 +40,7 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-
-require_once(__DIR__."/thirdparties/funkatron/inspekt/Inspekt.php");
-
+use Inspekt\Inspekt;
 // Initialize inspekt
 $INPUT = Inspekt::makeSuperCage();
 

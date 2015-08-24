@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/php-console/php-console" />
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/includes/thirdparties/smarty/smarty" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/composer.phar" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/composer.phar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/includes/thirdparties/php-console/php-console" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/smarty/smarty" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/filp/whoops" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/includes/thirdparties/php-console/php-console" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/smarty/smarty" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/filp/whoops" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
+
