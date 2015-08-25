@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+{include file="webchat.tpl"}
 <link href="styles/side-menu.css" rel="stylesheet" type="text/css"/>
 
 

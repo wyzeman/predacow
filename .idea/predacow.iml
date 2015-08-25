@@ -24,23 +24,22 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/php-console/php-console" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/smarty/smarty" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/filp/whoops" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
+          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/php-console/php-console" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/smarty/smarty" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/includes/thirdparties/filp/whoops" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/funkatron/inspekt" />
-          <root url="file://$MODULE_DIR$/includes/thirdparties/composer" />
         </SOURCES>
       </library>
     </orderEntry>
   </component>
 </module>
-

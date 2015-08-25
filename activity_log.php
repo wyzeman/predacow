@@ -101,7 +101,10 @@ function displaySuperTable() {
         $day = date("d") - $days + $i;
         $timestamp_start = mktime(0,0,0,date("m"),$day);
         $timestamp_stop = mktime(23,59,59,date("m"),$day);
+        $timestamp_lastyear_start = mktime(0, 0, 0, date('Y')-1,$day);
+        $timestamp_lastyear_stop = mktime(23, 59, 59,  date('Y')-1,$day);
         $total_login = 0;
+        $total_lastyear_login = 0;
 
         $logins = $DB->select(
             "*",
@@ -113,18 +116,37 @@ function displaySuperTable() {
             )
         );
 
+
+        $lastyear_logins = $DB->select(
+            "*",
+            "tb_activities",
+            array(
+                array("field_when",">=",$timestamp_lastyear_start ),
+                "AND",
+                array("field_when","<=",$timestamp_lastyear_stop)
+            )
+        );
+
+
         foreach($logins as $login) {
 
             $total_login++;
         }
 
+        foreach($lastyear_logins as $lastyear_login) {
+
+            $total_lastyear_login++;
+        }
+
+
+
 
         $graph_data[] = "['".date("d-M-y",$timestamp_start)."',".$total_login."]";
-
+        $graph_data2[] = "['".date("d-M-y",$timestamp_start)."',".$total_lastyear_login."]";
     }
 
     $TPL->assign("graph_data",implode($graph_data, ","));
-
+    $TPL->assign("graph_data2",implode($graph_data2, ","));
     $page->setContent($TPL->fetch("activity.tpl").$st->display());
 
     $page->show();

@@ -16,35 +16,86 @@
 
 
 
-<p><div id="chart_activity" style="height:240px; width:1450px;"></div></p><br>
+<p><div id="chart_activity" style="margin-left:auto;margin-right:auto; height:240px; max-width:1400px; "></div></p><br>
 <script type="text/javascript">
+    $(document).ready(function () {
+        $.jqplot._noToImageButton = true;
 
-    $(document).ready(function(){
-        var plot1 = $.jqplot ('chart_activity', [[{$graph_data}]], {
-            axes:{
-                xaxis:{
-                    renderer:$.jqplot.DateAxisRenderer,
-                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                    tickOptions:{
-                        formatString:'%b&nbsp;%#d'
-                    }
-                },
-                yaxis:{
-                    label:'Login Activity',
-                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+
+    var plot1 = $.jqplot("chart_activity", [[{$graph_data2}], [{$graph_data}]], {
+        seriesColors: ["rgba(78, 135, 194, 0.7)", "rgb(211, 235, 59)"],
+        title: 'System login',
+        highlighter: {
+            show: true,
+            sizeAdjust: 1,
+            tooltipOffset: 9
+        },
+        grid: {
+            background: 'rgba(57,57,57,0.0)',
+            drawBorder: false,
+            shadow: false,
+            gridLineColor: '#666666',
+            gridLineWidth: 2
+        },
+        legend: {
+            show: true,
+            placement: 'outside'
+        },
+        seriesDefaults: {
+            rendererOptions: {
+                smooth: true,
+                animation: {
+                    show: true
                 }
-
             },
-            highlighter: {
-                show: true,
-                sizeAdjust: 7.5
+            showMarker: false
+        },
+        series: [
+            {
+                fill: true,
+                label: 'last years'
             },
-            cursor: {
-                show: false
+            {
+                label: 'this year'
             }
-        });
+        ],
+        axesDefaults: {
+            rendererOptions: {
+                baselineWidth: 1.5,
+                baselineColor: '#444444',
+                drawBaseline: false
+            }
+        },
+        axes: {
+            xaxis: {
+                renderer: $.jqplot.DateAxisRenderer,
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                tickOptions: {
+                    formatString: "%b %e",
+                    angle: -30,
+                    textColor: '#aaaaaa'
+                },
 
+                tickInterval: "7 days",
+                drawMajorGridlines: false
+            },
+            yaxis: {
+                renderer: $.jqplot.LogAxisRenderer,
+                pad: 0,
+                rendererOptions: {
+                    minorTicks: 1
+                },
+                tickOptions: {
+                    formatString: "%'d",
+                    showMark: false
+                }
+            }
+        }
     });
+
+    $('.jqplot-highlighter-tooltip').addClass('ui-corner-all')
+    });
+
 
 </script>
 

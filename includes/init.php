@@ -40,7 +40,8 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-use Inspekt\Inspekt;
+//use inspekt\Inspekt;
+require_once(__DIR__."/thirdparties/funkatron/inspekt/Inspekt.php");
 // Initialize inspekt
 $INPUT = Inspekt::makeSuperCage();
 
@@ -113,8 +114,11 @@ if (isset($_SESSION[SI]) && isset($_SESSION[SI]["user"]) && isset($_SESSION[SI][
         die(header("location: index.php"));
     } else {
         $DB->update("tb_sessions", array("timestamp_last_activity" => $time, "url_last_activity" => $INPUT->server->noTags("SCRIPT_NAME")), array("id_user", "=", $_SESSION[SI]["user"]["id"]));
+        require_once("includes/webchat.php");
     }
 
 }
 
 require_once("includes/functions.php");
+
+
