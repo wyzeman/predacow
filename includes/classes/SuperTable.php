@@ -302,7 +302,11 @@ class SuperTable {
 
                 if ($item["type"] == FormWidget::FORM_ITEM_SELECT) {
                     $item["value"] = $c["form"]["value"]["source"];
+
                     for ($i=0;$i<count($item["value"]);$i++) {
+
+
+
                         if ($item["value"][$i]["id"] == $c["form"]["value"]["selection"]) {
                             $item["value"][$i]["extra"] = "selected";
                         } else {

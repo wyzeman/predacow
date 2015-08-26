@@ -39,10 +39,21 @@ function displayPasswordForm($id) {
  */
 function displaySuperTable() {
 
-    global $page;
+    global $page, $DB;
 
     require_once("includes/classes/SuperTable.php");
 
+
+    $groups_raw = $DB->select("*","tb_groups");
+    $groups = "";
+
+
+    for ($i=0;$i<count($groups_raw);$i++) {
+
+        $groups .= "[\"id\"=>\"".$groups_raw[$i]["id"]."\",\"name\"=>\"".$groups_raw[$i]["name"]."\"],";
+
+    }
+//echo $groups;die();
 
     $fields =
         [
@@ -124,6 +135,28 @@ function displaySuperTable() {
                 ]
 
             ],
+
+            [
+                "label" => T_("Group"),
+                "column" => "id_group",
+                "table" => [
+                    "width" => "120px",
+                ],
+                "form" => [
+                    "type" => FormWidget::FORM_ITEM_SELECT,
+                    "validation" => "",
+                    "add" => true,
+                    "modify" => true,
+                    "value" => [
+                        "source" => [
+
+
+                        ],
+                        "selection" => 0
+                    ],
+                ]
+
+            ],
             [
                 "label" => T_("Password"),
                 "column" => "password",
@@ -177,7 +210,6 @@ function displaySuperTable() {
         public function callbackAddValidate($items, $foreign_items) {
 
             global $DB;
-
             if ($items["email_address"] == "") {
                 return ["result"=>false,"error"=>T_("Email address is empty!")];
             }
@@ -198,6 +230,7 @@ function displaySuperTable() {
 
         public function callbackModifyValidate($items, $foreign_items, $modify_id) {
 
+
             global $DB;
 
             if ($items["email_address"] == "") {
@@ -212,17 +245,23 @@ function displaySuperTable() {
         }
 
         public function callbackFilterRow($row) {
+
+            global $DB;
+
             if ($row["timestamp_created"] > 0) {
                 $row["timestamp_created"] = date("m/d/Y", $row["timestamp_created"]);
             }
 
+            if ($row["id_group"] > 0) {
+                $row["id_group"] = $DB->getScalar("name","tb_groups",array("id","=",$row["id_group"]));
+            }
             return $row;
         }
 
 
 
-
         public function callbackAddPre($items, $foreign_items) {
+
 
             $items["password"] = crypt($items["password"],'$5$');
             return $items;

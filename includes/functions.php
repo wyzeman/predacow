@@ -135,50 +135,65 @@ function startsWith($haystack, $needle) {
     return $needle === "" || strpos($haystack, $needle) === 0;
 }
 
-//this function return a formatted value of the time elapsed since $timestamp
-function elapsed_time($timestamp) {
+//this function return a formated value of the time elapsed
+function elapsed_time($elapsed_time, $short_values = false) {
 
-    $elapsed_time = $timestamp;
+    $min=60;
+    $hour=$min*$min;
+    $day=$hour*24;
+    $week=$day*7;
 
-    $min = 60;
-    $hour = $min * $min;
-    $day = $hour * 24;
-    $week = $day * 7;
 
     if ($elapsed_time == 0) {
 
         $elapsed_time = 1;
     }
 
-    if ($elapsed_time < $min) {
-        if ($elapsed_time == 1) {
-            $elapsed_time = $elapsed_time . " " . T_("second");
-        } else {
-            $elapsed_time = $elapsed_time . " " . T_("seconds");
+    if ($short_values == true) {
+        if ($elapsed_time < $min) {
+            $elapsed_time = $elapsed_time."s";
+        } elseif ($elapsed_time < $hour) {
+            $elapsed_time = (int)($elapsed_time/$min)."m";
+        } elseif ($elapsed_time < $day) {
+            $elapsed_time = (int)($elapsed_time/$hour)."h";
+        } elseif ($elapsed_time < $week) {
+            $elapsed_time = (int)($elapsed_time/$day)."d";
+        } elseif ($elapsed_time > $week) {
+            $elapsed_time = (int)($elapsed_time/$week)."w";
         }
-    } elseif ($elapsed_time > $min & $elapsed_time < $hour) {
-        if ((int) ($elapsed_time / $min) == 1) {
-            $elapsed_time = (int) ($elapsed_time / $min) . " " . T_("minute");
-        } else {
-            $elapsed_time = (int) ($elapsed_time / $min) . " " . T_("minutes");
-        }
-    } elseif ($elapsed_time > $hour & $elapsed_time < $day) {
-        if ((int) ($elapsed_time / $hour) == 1) {
-            $elapsed_time = (int) ($elapsed_time / $hour) . " " . T_("hour");
-        } else {
-            $elapsed_time = (int) ($elapsed_time / $hour) . " " . T_("hours");
-        }
-    } elseif ($elapsed_time > $day & $elapsed_time < $week) {
-        if ((int) ($elapsed_time / $day) == 1) {
-            $elapsed_time = (int) ($elapsed_time / $day) . " " . T_("day");
-        } else {
-            $elapsed_time = (int) ($elapsed_time / $day) . " " . T_("days");
-        }
-    } elseif ($elapsed_time > $week) {
-        if ((int) ($elapsed_time / $week) == 1) {
-            $elapsed_time = (int) ($elapsed_time / $week) . " " . T_("week");
-        } else {
-            $elapsed_time = (int) ($elapsed_time / $week) . " " . T_("weeks");
+
+    } else {
+
+        if ($elapsed_time < $min) {
+            if ($elapsed_time == 1) {
+                $elapsed_time = $elapsed_time." ".T_("second");
+            } else {
+                $elapsed_time = $elapsed_time." ".T_("seconds");
+            }
+        } elseif ($elapsed_time < $hour) {
+            if ((int)($elapsed_time/$min) == 1) {
+                $elapsed_time = (int)($elapsed_time/$min)." ".T_("minute");
+            } else {
+                $elapsed_time = (int)($elapsed_time/$min)." ".T_("minutes");
+            }
+        } elseif ($elapsed_time < $day) {
+            if ((int)($elapsed_time/$hour) == 1) {
+                $elapsed_time = (int)($elapsed_time/$hour)." ".T_("hour");
+            } else {
+                $elapsed_time = (int)($elapsed_time/$hour)." ".T_("hours");
+            }
+        } elseif ($elapsed_time < $week) {
+            if ((int)($elapsed_time/$day) == 1) {
+                $elapsed_time = (int)($elapsed_time/$day)." ".T_("day");
+            } else {
+                $elapsed_time = (int)($elapsed_time/$day)." ".T_("days");
+            }
+        } elseif ($elapsed_time > $week) {
+            if ((int)($elapsed_time/$week) == 1) {
+                $elapsed_time = (int)($elapsed_time/$week)." ".T_("week");
+            } else {
+                $elapsed_time = (int)($elapsed_time/$week)." ".T_("weeks");
+            }
         }
     }
 

@@ -1,0 +1,203 @@
+#div_webchat {
+    background-color: #6ba4d0;
+    position: fixed;
+    bottom:0;
+    width: 180px;
+    padding: 5px;
+    border: 1px solid steelblue;
+    margin-right: 30px;
+    right:0;
+    font-size: 12px;
+    color: black;
+    z-index: 999;
+    box-shadow: 3px 3px 5px #666;
+
+}
+
+
+
+#div_webchat_header {
+    text-align: center;
+}
+
+#webchat_panel_toggle {
+    color: #eef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#webchat_panel_toggle:hover {
+    color: white;
+}
+
+#div_webchat_listing {
+    margin-top: 5px;
+    background-color: white;
+    border:1px solid #999;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 420px;
+}
+
+
+#table_webchat_users {
+    border-spacing: 1px;
+    text-align: left;
+}
+
+#table_webchat_users td {
+    width: 168px;
+    height: 24px;
+}
+
+#table_webchat_users td:hover {
+    color: white;
+    background: #d8e7f3;
+
+}
+
+
+
+.link_webchat_users {
+    color: #333;
+    text-decoration: none;
+}
+
+.link_webchat_users:hover {
+    color: black;
+}
+
+
+.webchat_img {
+    padding-right: 5px;
+    vertical-align: text-bottom;
+}
+
+.div_chat_message {
+    background-color: #6ba4d0;
+    position: fixed;
+    border: 1px solid steelblue;
+    box-shadow: 3px 3px 5px #666;
+    width: 230px;
+    height: 240px;
+    z-index: 999;
+    color: white;
+}
+
+.div_chat_room_message {
+    background-color: #d9d999;
+    position: fixed;
+    border: 1px solid steelblue;
+    box-shadow: 3px 3px 5px #666;
+    width: 230px;
+    height: 240px;
+    z-index: 999;
+    color: black;
+}
+
+
+.div_chat_message_header {
+    padding: 5px;
+}
+
+.div_chat_message_content {
+    background-color: white;
+    border:1px solid #999;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 174px;
+    padding: 5px;
+}
+
+.div_chat_message_input {
+    height: 18px;
+    width: 220px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.div_webchat_message_from_you {
+
+    border:1px solid #999;
+    background-color: whitesmoke;
+    color: #444;
+    padding: 5px;
+    margin: 10px;
+    word-wrap:break-word;
+}
+
+
+.div_webchat_message_to_you {
+
+    border:1px solid #abb;
+    background-color: #EBFBFB;
+    color: #244;
+    padding: 5px;
+    margin: 5px;
+    word-wrap:break-word;
+}
+
+
+
+.speechbubble_me {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.speechbubble_me:after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    right: -4px;
+    border-left: 5px solid whitesmoke;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.speechbubble_me:before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    right: -5px;
+    border-left: 5px solid #999;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+
+.speechbubble_you {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.speechbubble_you:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -4px;
+    border-right: 5px solid #EBFBFB;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.speechbubble_you:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -5px;
+    border-right: 5px solid #abb;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+
+#webchat_events_toggle {
+    color: #eef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#webchat_events_toggle:hover {
+    color: white;
+}
+

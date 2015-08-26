@@ -7,7 +7,7 @@ require_once("includes/classes/pages/CustomPage.php");
 // Handle toggling
 if ($INPUT->post->keyExists("toggle") == true) {
     $opened = $INPUT->post->getInt("toggle");
-    $DB->update("tb_webchat", array("opened" => $opened), array("id_user", "=", $_SESSION[SESSION_IDENTIFIER]["user"]["id"]));
+    $DB->update("tb_webchat", array("opened" => $opened), array("id_user", "=", $_SESSION[SI]["user"]["id"]));
     die("SUCCESS");
 }
 
@@ -17,9 +17,9 @@ if ($INPUT->post->keyExists("open_chatroom")) {
     $chatroom = $INPUT->post->getInt("open_chatroom");
     $real_name = $INPUT->post->noTags("real_name");
 
-    if ($DB->getCount("tb_webchat_chatrooms", array(array("id_user", "=", $_SESSION[SESSION_IDENTIFIER]["user"]["id"]), "AND", array("chatroom_id", "=", $chatroom))) == 0) {
+    if ($DB->getCount("tb_webchat_chatrooms", array(array("id_user", "=", $_SESSION[SI]["user"]["id"]), "AND", array("chatroom_id", "=", $chatroom))) == 0) {
 
-        $DB->insert("tb_webchat_chatrooms", array("id_user" => $_SESSION[SESSION_IDENTIFIER]["user"]["id"], "chatroom_id" => $chatroom, "name" => $real_name));
+        $DB->insert("tb_webchat_chatrooms", array("id_user" => $_SESSION[SI]["user"]["id"], "chatroom_id" => $chatroom, "name" => $real_name));
     }
 
     die("SUCCESS");
@@ -55,7 +55,7 @@ if ($INPUT->post->keyExists("send_chatroom")) {
 
         foreach($users as $user) {
 
-             if ($user["id"] == $_SESSION[SESSION_IDENTIFIER]["user"]["id"]) {
+             if ($user["id"] == $_SESSION[SI]["user"]["id"]) {
                  continue;
              }
 
@@ -74,13 +74,13 @@ if ($INPUT->post->keyExists("refresh") == true) {
 
 
     $time_expiration = time() - CONFIG_SESSION_IDLE_TIME;
-    $output["users_connected"] = $DB->getCount("tb_sessions", array(array("id_user", "!=", $_SESSION[SESSION_IDENTIFIER]["user"]["id"]), "AND", array("timestamp_last_activity", ">=", $time_expiration)));
+    $output["users_connected"] = $DB->getCount("tb_sessions", array(array("id_user", "!=", $_SESSION[SI]["user"]["id"]), "AND", array("timestamp_last_activity", ">=", $time_expiration)));
 
     $table = build_webchat_users_table();
     $output["total_unseens"] = $table["total_unseens"];
     $output["table_webchat"] = base64_encode($table["output"]);
 
-    $rooms = $DB->select("*", "tb_webchat_chatrooms", array("id_user", "=", $_SESSION[SESSION_IDENTIFIER]["user"]["id"]));
+    $rooms = $DB->select("*", "tb_webchat_chatrooms", array("id_user", "=", $_SESSION[SI]["user"]["id"]));
     foreach ($rooms as $key => $room) {
 
         // Fetch chat!
@@ -90,7 +90,7 @@ if ($INPUT->post->keyExists("refresh") == true) {
 
         foreach ($items as $item) {
 
-            if ($item["username"] == $_SESSION[SESSION_IDENTIFIER]["user"]["username"]) {
+            if ($item["username"] == $_SESSION[SI]["user"]["username"]) {
  
                 $elapsed_time = elapsed_time(time()-$item["timestamp"], true); 
                 $outputMessages .= "<div class=\"div_webchat_message_from_you speechbubble_me ui-corner-all\"><span style=\"font-size:10px;color:#666;float:right\">".$elapsed_time."</span>" . $item["message"] . "</div>";
@@ -110,7 +110,7 @@ if ($INPUT->post->keyExists("refresh") == true) {
                     array(
                         array("channel","=",$rooms[$key]["chatroom_id"]),
                         "AND",
-                        array("id_user","=",$_SESSION[SESSION_IDENTIFIER]["user"]["id"])
+                        array("id_user","=",$_SESSION[SI]["user"]["id"])
                         )
                     );
 

@@ -34,7 +34,7 @@ define("CONFIG_SESSION_IDENTIFIER","predacow");
 define("CONFIG_WEBSITE_PUBLIC_URL","http://localhost/predacow/");
 define("CONFIG_WEBSITE_PUBLIC_PATH","/var/www/html/predacow");
 
-
+define("CONFIG_SESSION_EXPIRATION_TIME", 18000); // 300 minutes
 define("CONFIG_SESSION_IDLE_TIME", 180); // 3 minutes
 
 

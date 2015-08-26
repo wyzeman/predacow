@@ -102,6 +102,7 @@ foreach($sessions as $session) {
     $DB->delete("tb_sessions", array("id_user", "=", $session['id_user']));
 }
 
+require_once("includes/functions.php");
 
 //flushing session if session is timeout
 if (isset($_SESSION[SI]) && isset($_SESSION[SI]["user"]) && isset($_SESSION[SI]["user"]["id"])) {
@@ -119,6 +120,6 @@ if (isset($_SESSION[SI]) && isset($_SESSION[SI]["user"]) && isset($_SESSION[SI][
 
 }
 
-require_once("includes/functions.php");
+
 
 
