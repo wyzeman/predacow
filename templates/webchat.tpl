@@ -255,7 +255,6 @@
             var v = $(this).attr('id').split('_');
             
             if(document.getElementById("window_chatroom_" + v[2]) !== null) {
-                alert("WTF");
                 if (alreadyShaking == false) {
                     alreadyShaking = true;
                     $("#window_chatroom_" + v[2]).effect('shake',{distance:5}, 50, function() {
@@ -277,7 +276,6 @@
                 data: 'open_chatroom=' + v[2] + '&real_name=' + real_name
                 
              }).done(function(data) {
-                alert(data);
                 if (data == 'ERROR') {
                     {/literal}
                     alert('{t}Unable to open this chat room!{/t}');

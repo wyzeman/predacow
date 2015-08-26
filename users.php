@@ -44,16 +44,7 @@ function displaySuperTable() {
     require_once("includes/classes/SuperTable.php");
 
 
-    $groups_raw = $DB->select("*","tb_groups");
-    $groups = "";
-
-
-    for ($i=0;$i<count($groups_raw);$i++) {
-
-        $groups .= "[\"id\"=>\"".$groups_raw[$i]["id"]."\",\"name\"=>\"".$groups_raw[$i]["name"]."\"],";
-
-    }
-//echo $groups;die();
+    $groups = $DB->select("*","tb_groups");
 
     $fields =
         [
@@ -129,6 +120,7 @@ function displaySuperTable() {
                             ["id"=>1,"name"=>T_("Normal User")],
                             ["id"=>100,"name"=>T_("Staff")],
                             ["id"=>255,"name"=>T_("Administrator")],
+
                         ],
                         "selection" => 0
                     ],
@@ -148,10 +140,10 @@ function displaySuperTable() {
                     "add" => true,
                     "modify" => true,
                     "value" => [
-                        "source" => [
+                        "source" =>
+                            $groups,
 
 
-                        ],
                         "selection" => 0
                     ],
                 ]

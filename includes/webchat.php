@@ -33,17 +33,20 @@ function build_webchat_users_table() {
     
     
     $chat_groups = $DB->select(array("id", "name"), "tb_groups", array(array("deleted", "=", 0), "AND", array("parent_group", "=", -1)), array("name ASC"));
+    $user_group = $DB->getScalar("id_group","tb_users", array("id","=", $_SESSION[SI]["user"]["id"]));
     foreach ($chat_groups as $item) {
 
-        $id = -100 - $item["id"];
-        $unseens = $DB->getCount("tb_chat_unseens", array(array("id_user","=",$_SESSION[SI]["user"]["id"]),"AND",array("channel","=",$id)));
-        if ($unseens > 0) {
-            $total_unseens += $unseens;
-            $output .= "<tr><td nowrap bgcolor=\"" . ($count++ % 2 == 0 ? $bgcolor1_room : $bgcolor2_room) . "\"><a href=\"#\" class=\"link_webchat_users\" id=\"button_chatroom_" . $id . "\" username=\"" . $item["name"]  . "\"><img class=\"webchat_img\" width=\"16\" height=\"16\"  src=\"images/webchat/room_blink.gif\"><b>" . $item["name"] . " (".$unseens.")</b></a></td></tr>";
+        if ($item["id"] == $user_group) {
+            $id = -100 - $item["id"];
+            $unseens = $DB->getCount("tb_chat_unseens", array(array("id_user", "=", $_SESSION[SI]["user"]["id"]), "AND", array("channel", "=", $id)));
+            if ($unseens > 0) {
+                $total_unseens += $unseens;
+                $output .= "<tr><td nowrap bgcolor=\"" . ($count++ % 2 == 0 ? $bgcolor1_room : $bgcolor2_room) . "\"><a href=\"#\" class=\"link_webchat_users\" id=\"button_chatroom_" . $id . "\" username=\"" . $item["name"] . "\"><img class=\"webchat_img\" width=\"16\" height=\"16\"  src=\"images/webchat/room_blink.gif\"><b>" . $item["name"] . " (" . $unseens . ")</b></a></td></tr>";
 
-        } else {
-            $unseens = "";
-            $output .= "<tr><td nowrap bgcolor=\"" . ($count++ % 2 == 0 ? $bgcolor1_room : $bgcolor2_room) . "\"><a href=\"#\" class=\"link_webchat_users\" id=\"button_chatroom_" . $id . "\" username=\"" . $item["name"]  . "\"><img class=\"webchat_img\" width=\"16\" height=\"16\"  src=\"images/webchat/room.png\">" . $item["name"] . "</a></td></tr>";
+            } else {
+                $unseens = "";
+                $output .= "<tr><td nowrap bgcolor=\"" . ($count++ % 2 == 0 ? $bgcolor1_room : $bgcolor2_room) . "\"><a href=\"#\" class=\"link_webchat_users\" id=\"button_chatroom_" . $id . "\" username=\"" . $item["name"] . "\"><img class=\"webchat_img\" width=\"16\" height=\"16\"  src=\"images/webchat/room.png\">" . $item["name"] . "</a></td></tr>";
+            }
         }
     }
 
