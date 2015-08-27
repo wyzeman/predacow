@@ -142,8 +142,6 @@ function displaySuperTable() {
                     "value" => [
                         "source" =>
                             $groups,
-
-
                         "selection" => 0
                     ],
                 ]
@@ -277,6 +275,7 @@ function displaySuperTable() {
     $st->setActions(true, true, true, $buttons);
     $st->setSearchable(true);
     $st->setFilter(T_("User Level"),"user_level",[["id"=>1,"name"=>T_("Normal")],["id"=>100,"name"=>T_("Staff")],["id"=>255,"name"=>T_("Administrator")]]);
+    //$st->setFilter(T_("Groups"),"id_group",$groups);
 
     $page->setContent($st->display());
     $page->show();

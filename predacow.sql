@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 25, 2015 at 10:48 PM
+-- Generation Time: Aug 26, 2015 at 10:41 PM
 -- Server version: 5.5.44-0+deb8u1
 -- PHP Version: 5.6.9-0+deb8u1
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `tb_activities` (
   `field_what` varchar(255) NOT NULL,
   `field_reference` varchar(255) NOT NULL,
   `field_when` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_activities`
@@ -49,7 +49,25 @@ INSERT INTO `tb_activities` (`id`, `field_who`, `field_how`, `field_what`, `fiel
 (7, 'wyzeman', 'login', '', '', '1440473353'),
 (8, '2', 'logout_timeout', '', '', '1440549807'),
 (9, 'wyzeman', 'login', '', '', '1440549811'),
-(10, 'wyzeman', 'login', '', '', '1440556028');
+(10, 'wyzeman', 'login', '', '', '1440556028'),
+(11, 'qwz', 'login', '', '', '1440557969'),
+(12, 'wyzeman', 'login', '', '', '1440558027'),
+(13, '2', 'logout_timeout', '', '', '1440562705'),
+(14, 'wyzeman', 'login', '', '', '1440563212'),
+(15, '2', 'logout_timeout', '', '', '1440635559'),
+(16, 'wyzeman', 'login', '', '', '1440635636'),
+(17, 'wyzeman', 'login', '', '', '1440639230'),
+(18, 'wyzeman', 'login', '', '', '1440639624'),
+(19, 'CTD', 'login', '', '', '1440641433'),
+(20, '', 'login_fail', 'CDT cdtcdt', '', '1440641479'),
+(21, 'wyzeman', 'login', '', '', '1440641490'),
+(22, 'CTD', 'login', '', '', '1440641506'),
+(23, 'CTD', 'login', '', '', '1440641671'),
+(24, 'wyzeman', 'login', '', '', '1440642063'),
+(25, 'CTD', 'login', '', '', '1440642074'),
+(26, 'CTD', 'login', '', '', '1440642564'),
+(27, 'wyzeman', 'login', '', '', '1440642672'),
+(28, 'CTD', 'login', '', '', '1440642781');
 
 -- --------------------------------------------------------
 
@@ -95,6 +113,37 @@ INSERT INTO `tb_chat_unseens` (`id`, `id_user`, `channel`, `timestamp`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_events`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_events` (
+`id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `opened` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_events`
+--
+
+INSERT INTO `tb_events` (`id`, `id_user`, `opened`) VALUES
+(1, 2, 0),
+(2, 4, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_events_logs`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_events_logs` (
+`id` int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_groups`
 --
 
@@ -102,16 +151,18 @@ CREATE TABLE IF NOT EXISTS `tb_groups` (
 `id` int(11) NOT NULL,
   `name` varchar(75) NOT NULL,
   `parent_group` int(11) NOT NULL DEFAULT '-1',
-  `deleted` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `deleted` int(11) NOT NULL DEFAULT '0',
+  `timestamp_created` int(11) NOT NULL,
+  `active` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_groups`
 --
 
-INSERT INTO `tb_groups` (`id`, `name`, `parent_group`, `deleted`) VALUES
-(1, 'Mindkind', -1, 0),
-(2, 'test', -1, 0);
+INSERT INTO `tb_groups` (`id`, `name`, `parent_group`, `deleted`, `timestamp_created`, `active`) VALUES
+(1, 'Mindkind', -1, 0, 0, 1),
+(4, '3B tech', -1, 0, 1440640584, 1);
 
 -- --------------------------------------------------------
 
@@ -126,14 +177,14 @@ CREATE TABLE IF NOT EXISTS `tb_sessions` (
   `timestamp_last_activity` int(11) NOT NULL,
   `hostname` varchar(255) NOT NULL,
   `url_last_activity` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_sessions`
 --
 
 INSERT INTO `tb_sessions` (`id`, `id_user`, `timestamp_created`, `timestamp_last_activity`, `hostname`, `url_last_activity`) VALUES
-(5, 2, 1440556028, 1440557318, '127.0.0.1', '/predacow/webchat.php');
+(20, 4, 1440642781, 1440643296, '127.0.0.1', '/predacow/events.php');
 
 -- --------------------------------------------------------
 
@@ -144,7 +195,7 @@ INSERT INTO `tb_sessions` (`id`, `id_user`, `timestamp_created`, `timestamp_last
 CREATE TABLE IF NOT EXISTS `tb_users` (
 `id` int(11) NOT NULL,
   `username` varchar(75) NOT NULL,
-  `password` varchar(75) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email_address` varchar(255) NOT NULL,
   `user_level` int(11) NOT NULL,
   `id_group` int(11) NOT NULL DEFAULT '-1',
@@ -154,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
   `active` int(11) NOT NULL,
   `timestamp_created` int(11) NOT NULL,
   `deleted` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_users`
@@ -162,7 +213,8 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
 
 INSERT INTO `tb_users` (`id`, `username`, `password`, `email_address`, `user_level`, `id_group`, `default_language`, `last_visit_hostname`, `last_visit_datetime`, `active`, `timestamp_created`, `deleted`) VALUES
 (2, 'wyzeman', '$5$$QzsRjyEpRrd7eAfj8LYNYNPNkvoadO7HZyOXNKTRDe2', 'cyberwyze@hotmail.com', 255, 1, 'fr_CA', '127.0.0.1', 2015, 1, 1440380616, 0),
-(3, 'qwz', '$5$$ru5dV71zNhnQuQbs7FxtiBkPOlgAtsxjoClI.kV8oh0', 'qwz@hotmail.com', 255, 1, 'en_US', '', 0, 1, 1440556652, 0);
+(3, 'qwz', '$5$$sAQhvOPvB6fmGGoaZ1nlayOIIZ6P9pRhMEBnPEs2IR8', 'qwz@hotmail.com', 255, 1, 'en_US', '127.0.0.1', 2015, 1, 1440556652, 0),
+(4, 'CTD', '$5$$2i.aX8wIsNKClIK4a.XfxK68UqhEF1GR/Y/1aRrAlb.', 'ctd@3btech.ca', 100, 4, 'en_US', '127.0.0.1', 2015, 1, 1440640928, 0);
 
 -- --------------------------------------------------------
 
@@ -174,14 +226,16 @@ CREATE TABLE IF NOT EXISTS `tb_webchat` (
 `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `opened` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_webchat`
 --
 
 INSERT INTO `tb_webchat` (`id`, `id_user`, `opened`) VALUES
-(1, 2, 1);
+(1, 2, 1),
+(2, 3, 0),
+(3, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -194,14 +248,7 @@ CREATE TABLE IF NOT EXISTS `tb_webchat_chatrooms` (
   `id_user` int(11) NOT NULL,
   `chatroom_id` int(11) NOT NULL,
   `name` varchar(75) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_webchat_chatrooms`
---
-
-INSERT INTO `tb_webchat_chatrooms` (`id`, `id_user`, `chatroom_id`, `name`) VALUES
-(4, 2, -101, 'Mindkind');
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -223,6 +270,18 @@ ALTER TABLE `tb_chat`
 -- Indexes for table `tb_chat_unseens`
 --
 ALTER TABLE `tb_chat_unseens`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_events`
+--
+ALTER TABLE `tb_events`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_events_logs`
+--
+ALTER TABLE `tb_events_logs`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
 
 --
@@ -263,7 +322,7 @@ ALTER TABLE `tb_webchat_chatrooms`
 -- AUTO_INCREMENT for table `tb_activities`
 --
 ALTER TABLE `tb_activities`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `tb_chat`
 --
@@ -275,30 +334,40 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `tb_chat_unseens`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `tb_events`
+--
+ALTER TABLE `tb_events`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tb_events_logs`
+--
+ALTER TABLE `tb_events_logs`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tb_groups`
 --
 ALTER TABLE `tb_groups`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_sessions`
 --
 ALTER TABLE `tb_sessions`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tb_users`
 --
 ALTER TABLE `tb_users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_webchat`
 --
 ALTER TABLE `tb_webchat`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_webchat_chatrooms`
 --
 ALTER TABLE `tb_webchat_chatrooms`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

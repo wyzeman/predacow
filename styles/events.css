@@ -1,0 +1,51 @@
+#div_events {
+    background-color: #6ba4d0;
+    position: fixed;
+    bottom:0;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid steelblue;
+    margin-left: 160px;
+    font-size: 12px;
+    color: black;
+    z-index: 999;
+    box-shadow: 3px 3px 5px #666;
+
+}
+
+
+
+#div_events_header {
+    text-align: center;
+}
+
+#webchat_events_toggle {
+    color: #eef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#webchat_events_toggle:hover {
+    color: white;
+}
+
+#div_events_listing {
+    margin-top: 5px;
+    background-color: white;
+    border:1px solid #999;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+
+
+#events_panel_toggle {
+    color: #eef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#events_panel_toggle:hover {
+    color: white;
+}

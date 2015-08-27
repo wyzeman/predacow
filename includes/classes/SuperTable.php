@@ -122,6 +122,7 @@ class SuperTable {
         $this->filter = ["name"=>$filterName,"column"=>$filterColumn,"source"=>$source];
     }
 
+
     /**
      * @return mixed
      */

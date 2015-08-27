@@ -7,6 +7,8 @@
     <link href="styles/pure/pure-min.css" rel="stylesheet" type="text/css"/>
     <link href="styles/fa/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="styles/webchat.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/events.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/alerts.css" rel="stylesheet" type="text/css"/>
     <link href="scripts/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
     <link href="styles/stacktable/stacktable.css" rel="stylesheet" type="text/css"/>
     <link href="scripts/jquery_notification/notification.css" rel="stylesheet" type="text/css"/>

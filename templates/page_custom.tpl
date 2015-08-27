@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 {include file="webchat.tpl"}
+{include file="events.tpl"}
+{include file="alerts.tpl"}
 <link href="styles/side-menu.css" rel="stylesheet" type="text/css"/>
 
 
@@ -17,21 +19,17 @@
             <ul class="pure-menu-list">
 
                 {section name=m loop=$menu_items}
-                {if $current_userlevel >= $menu_items[m].user_level}
+                    {if $current_userlevel >= $menu_items[m].user_level}
 
-                   {if $menu_position eq $smarty.section.m.index}
-                       <li class="pure-menu-item menu-item-divided pure-menu-selected">
-                   {else}
-                       <li class="pure-menu-item menu-item-divided">
-                   {/if}
-                   <a class="pure-menu-link" href="{$menu_items[m].url}?initial">{$menu_items[m].label|stripslashes}</a>
-                    </li>
-                    {else}
-                    <li class="pure-menu-item menu-item-divided">
-                    <a href="{$menu_items[m].url}?initial"><img src="{$menu_items[m].img}" alt="{$menu_items[m].label}" title="{$menu_items[m].label}"></a>
-                    </li>
+                        {if $menu_position eq $smarty.section.m.index}
+                            <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                        {else}
+                            <li class="pure-menu-item menu-item-divided">
+                        {/if}
+                        <a class="pure-menu-link" href="{$menu_items[m].url}?initial">{$menu_items[m].label|stripslashes}</a>
+                        </li>
                     {/if}
-                    {/section}
+                {/section}
             </ul>
 
         </div>
