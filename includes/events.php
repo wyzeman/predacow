@@ -61,5 +61,5 @@ $TPL->assign("events_opened", $events_opened);
 $TPL->assign("table_events", build_events_table());
 
 if ($events_opened == 1) {
-    $DB->update("tb_events", array("timestamp"=>time()), array("id_user","=", $user_id));
+    $DB->update("tb_events", array("timestamp"=>time()), array("id_user","=", $_SESSION[SI]["user"]["id"]));
 }

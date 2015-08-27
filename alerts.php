@@ -8,7 +8,7 @@ require_once("includes/classes/pages/CustomPage.php");
 if ($INPUT->post->keyExists("toggle") == true) {
 
     $opened = $INPUT->post->getInt("toggle");
-    $_SESSION[SESSION_IDENTIFIER]["alerts_opened"] = $opened;
+    $_SESSION[SI]["alerts_opened"] = $opened;
     die("SUCCESS");
 }
 
@@ -18,8 +18,8 @@ if ($INPUT->post->keyExists("refresh") == true) {
     $output = array();
     $output["result"] = "SUCCESS";
 
-    $timestamp = $DB->getScalar("timestamp","tb_events", array("user_id","=",$user_id));
-    $opened = $DB->getScalar("opened","tb_events", array("user_id","=",$user_id));
+    $timestamp = $DB->getScalar("timestamp","tb_events", array("id_user","=",$user_id));
+    $opened = $DB->getScalar("opened","tb_events", array("id_user","=",$user_id));
 
 
     $table = build_alerts_table();
