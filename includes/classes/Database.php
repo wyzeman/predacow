@@ -10,6 +10,10 @@ class Database {
     private $transaction_started = false;
     private $mysqli = null;
     public $last_query = "";
+
+    public static $EVENT_NORMAL = 0;
+    public static $EVENT_WARNING = 1;
+    public static $EVENT_IMPORTANT = 2;
     
     /**
      * Database object constructor

@@ -25,8 +25,6 @@ function build_events_table($timestamp = null) {
             $type = "images/events/warning.png";
         } else if ($item["event_type"] == Database::$EVENT_IMPORTANT)  {
             $type = "images/events/important.png";
-        } else if ($item["event_type"] == Database::$EVENT_MOBILE)  {
-            $type = "images/events/mobile.png";
         }
         
         if ($count++ % 2 == 0) {

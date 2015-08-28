@@ -11,6 +11,8 @@ class LogMonitor {
 	const ACTIVITY_TEXT = "text";
     const ACTIVITY_REMOVE_STEP = "remove_step";
     const ACTIVITY_ADD_STEP = "add_step";
+	const ACTIVITY_CREATE_USER = "create_user";
+	const ACTIVITY_DELETED_USER = "delete_user";
 
 	private $db = NULL; 
 

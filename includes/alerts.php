@@ -16,7 +16,7 @@ function build_alerts_table()
     $total_unseens = count($expired_tasks);
 
     $output = "<table id=\"table_alerts\" style=\"color:#fff\" cellspacing=0 cellpadding=0>";
-    $output .= "<th><tr style=\"background-color:#600\"><td width=\"160\" style=\"padding:5px\"><b>".T_("Task")."</b></td><td width=\"150\" nowrap><b>".T_("Elapsed Time")."</b></td></tr></th>";
+    $output .= "<th><tr style=\"background-color:#600\"><td width=\"160\" style=\"padding:5px\"><b>".T_("What")."</b></td><td width=\"150\" nowrap><b>".T_("Elapsed Time")."</b></td></tr></th>";
 
 
 

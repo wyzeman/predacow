@@ -214,8 +214,22 @@ function displaySuperTable() {
 
         public function callbackAddPost($items,  $foreign_items, $insert_id) {
 
-            global $DB;
+
+            global $DB, $LOG;
+
+
             $DB->update("tb_users",["timestamp_created"=>time()],["id","=",$insert_id]);
+            $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_CREATE_USER,$items["username"]);
+
+            $DB->insert(
+                "tb_events_logs",
+                array(
+                    "id_user" => $_SESSION[SI]["user"]["id"],
+                    "event_type" => 0,
+                    "description" => $_SESSION[SI]["user"]["username"]." has created a new user: ".$items["username"],
+                    "timestamp" => time()
+                )
+            );
         }
 
         public function callbackModifyValidate($items, $foreign_items, $modify_id) {
@@ -255,6 +269,28 @@ function displaySuperTable() {
 
             $items["password"] = crypt($items["password"],'$5$');
             return $items;
+        }
+
+
+        public function callbackDeletePre($delete_id) {
+
+            global $DB, $LOG;
+
+            $username = $DB->getScalar("username","tb_users",array("id","=",$delete_id));
+
+            $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_DELETED_USER,$username);
+
+            $DB->insert(
+                "tb_events_logs",
+                array(
+                    "id_user" => $_SESSION[SI]["user"]["id"],
+                    "event_type" => 0,
+                    "description" => $_SESSION[SI]["user"]["username"]." has deleted the user: ".$username,
+                    "timestamp" => time()
+                )
+            );
+
+
         }
 
     }

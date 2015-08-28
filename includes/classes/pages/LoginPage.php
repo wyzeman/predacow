@@ -37,6 +37,7 @@ class LoginPage {
 
                 //do the logoff action
                 unset($_SESSION[SI]["user"]);
+
             }
         }
 
@@ -106,7 +107,7 @@ class LoginPage {
             $result = $DB->login($username,$password);
 
             error_log($result);
-            error_log("mooo");
+
             if ($result == false) {
 
                 //log the failed login attempt
@@ -116,7 +117,7 @@ class LoginPage {
             }
 
             error_log($result);
-            error_log("mooo2");
+
 
             //check if the user have an existing session open
             $user_id = $DB->getScalar("id","tb_users", array("username","=",$username), array("username"));
@@ -130,7 +131,18 @@ class LoginPage {
                 $_SESSION[SI]["LANG"] = $default_language;
             }
             error_log($result);
-            error_log("mooo3");
+
+
+            $DB->insert(
+                "tb_events_logs",
+                array(
+                    "id_user" => $user_id,
+                    "event_type" => 0,
+                    "description" => $username." has join the room.",
+                    "timestamp" => time()
+                )
+            );
+
 
             die("TRUE");
         }
