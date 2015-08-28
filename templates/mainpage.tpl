@@ -19,9 +19,10 @@
 <p><div id="pie1" style=" height:240px; max-width:300px; "></div></p><br>
 
 <script type="text/javascript">
-    {literal}
+
     $(document).ready(function(){
         var plot1 = $.jqplot('pie1', [[{$graph_data}]], {
+            {literal}
             gridPadding: {top:0, bottom:38, left:0, right:0},
             seriesDefaults:{
                 renderer:$.jqplot.PieRenderer,
@@ -37,7 +38,8 @@
                 location:'s',
                 marginTop: '15px'
             }
+            {/literal}
         });
     });
-    {/literal}
+
 </script>

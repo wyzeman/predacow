@@ -7,7 +7,6 @@ if (isset($_SESSION[SI]["user"]["id"])) {
    $DB->insert(
        "tb_events_logs",
        array(
-           "id_user" => $_SESSION[SI]["user"]["id"],
            "timestamp" => time(),
            "event_type" => 0,
            "description" => $_SESSION[SI]["user"]["username"]." has left the building."

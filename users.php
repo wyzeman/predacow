@@ -224,7 +224,6 @@ function displaySuperTable() {
             $DB->insert(
                 "tb_events_logs",
                 array(
-                    "id_user" => $_SESSION[SI]["user"]["id"],
                     "event_type" => 0,
                     "description" => $_SESSION[SI]["user"]["username"]." has created a new user: ".$items["username"],
                     "timestamp" => time()
@@ -286,7 +285,6 @@ function displaySuperTable() {
             $DB->insert(
                 "tb_events_logs",
                 array(
-                    "id_user" => $_SESSION[SI]["user"]["id"],
                     "event_type" => 0,
                     "description" => $_SESSION[SI]["user"]["username"]." has deleted the user: ".$username,
                     "timestamp" => time()

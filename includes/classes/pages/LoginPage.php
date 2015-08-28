@@ -112,11 +112,22 @@ class LoginPage {
 
                 //log the failed login attempt
                 $LOG->logActivity("",LogMonitor::ACTIVITY_LOGIN_FAIL,$username." ".$password);
+
+
+                $DB->insert(
+                    "tb_events_logs",
+                    array(
+                        "event_type" => 0,
+                        "description" => $username." failed to login decently.",
+                        "timestamp" => time()
+                    )
+                );
+
                 //do the failed login action
                 die("FALSE");
             }
 
-            error_log($result);
+
 
 
             //check if the user have an existing session open
@@ -136,7 +147,6 @@ class LoginPage {
             $DB->insert(
                 "tb_events_logs",
                 array(
-                    "id_user" => $user_id,
                     "event_type" => 0,
                     "description" => $username." has join the room.",
                     "timestamp" => time()
