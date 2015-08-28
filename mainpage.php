@@ -24,6 +24,20 @@ $buttons = array(
 $form = new FormWidget("", "#0", FormWidget::FORM_METHOD_POST, "160px", "right", "#333");
 $TPL->assign("form", $form->generate($items, $buttons));
 
+$graph_data[] = "['Users',".$user_connect_stat."]";
+$graph_data[] = "['Total',".$user_stat."]";
+
+/*echo implode($graph_data, ",");
+echo "<BR>";
+echo "<BR>";
+echo "[[['a',25],['b',14],['c',7]]]";
+echo "<BR>";
+echo "<BR>";
+print_r($graph_data);
+die();*/
+
+$TPL->assign("graph_data",implode($graph_data, ","));
+
 $content_data = $TPL->fetch("mainpage.tpl");
 $page->setContent($content_data);
 

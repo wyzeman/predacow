@@ -2,7 +2,6 @@
 
 
 <script src="scripts/jqplot/jquery.jqplot.js" type="text/javascript"></script>
-<script type="text/javascript" src="scripts/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.highlighter.min.js"></script>
@@ -12,6 +11,8 @@
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.donutRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.barRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script type="text/javascript" src="scripts/jqplot/plugins/jqplot.canvasTextRenderer.js"></script>
+
 
 
 

@@ -97,17 +97,19 @@ $sessions = $DB->select("*", "tb_sessions", array("timestamp_last_activity", "<"
 foreach($sessions as $session) {
      
     // Logging the automatic logout
-    $LOG->logActivity($session['id_user'], LogMonitor::ACTIVITY_LOGOUT_TIMEOUT, "");
+
+    $username = $DB->getScalar("username","tb_users", array("id", "=", $session['id_user']));
+    $LOG->logActivity($username, LogMonitor::ACTIVITY_LOGOUT_TIMEOUT, "");
     $DB->insert(
         "tb_events_logs",
         array(
-            "id_user" => $_SESSION[SI]["user"]["id"],
+            "id_user" => $session['id_user'],
             "timestamp" => time(),
             "event_type" => 0,
-            "description" => $_SESSION[SI]["user"]["username"]." ping timeout!"
+            "description" => $username." ping timeout!"
         )
     );
-    // Delecting the session in the database table tb_sessions 
+    // Delecting the session in the database table tb_sessions
     $DB->delete("tb_sessions", array("id_user", "=", $session['id_user']));
 }
 
