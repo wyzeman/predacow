@@ -219,7 +219,7 @@ function displaySuperTable() {
 
 
             $DB->update("tb_users",["timestamp_created"=>time()],["id","=",$insert_id]);
-            $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_CREATE_USER,$items["username"]);
+            $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_CREATE_USER,$items["username"],implode(",",$items));
 
             $DB->insert(
                 "tb_events_logs",
@@ -244,8 +244,29 @@ function displaySuperTable() {
                 return ["result"=>false,"error"=>T_("Email address already in use!")];
             }
 
+
+
             return ["result"=>true, "error"=>""];
         }
+
+        public function callbackModifyPost($items, $foreign_items, $modify_id) {
+
+            global $DB, $LOG;
+
+            $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_MODIFY_USER,$items["username"],implode(",",$items));
+
+            $DB->insert(
+                "tb_events_logs",
+                array(
+                    "event_type" => 0,
+                    "description" => $_SESSION[SI]["user"]["username"]." has modifyed user: ".$items["username"]." info.",
+                    "timestamp" => time()
+                )
+            );
+
+        }
+
+
 
         public function callbackFilterRow($row) {
 

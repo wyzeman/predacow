@@ -40,8 +40,8 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-use Inspekt\Inspekt;
-//require_once(__DIR__."/thirdparties/funkatron/inspekt/Inspekt.php");
+//use Inspekt\Inspekt;
+require_once(__DIR__."/thirdparties/funkatron/inspekt/Inspekt.php");
 // Initialize inspekt
 $INPUT = Inspekt::makeSuperCage();
 
@@ -103,7 +103,7 @@ foreach($sessions as $session) {
     $DB->insert(
         "tb_events_logs",
         array(
-            "id_user" => $session['id_user'],
+
             "timestamp" => time(),
             "event_type" => 0,
             "description" => $username." ping timeout!"

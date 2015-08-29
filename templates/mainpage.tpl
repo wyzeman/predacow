@@ -27,14 +27,18 @@
             seriesDefaults:{
                 renderer:$.jqplot.PieRenderer,
                 trendline:{ show:false },
-                rendererOptions: { padding: 8, showDataLabels: true }
+                rendererOptions: { padding: 8, showDataLabels: true,
+                    fill: true,         // render solid (filled) slices.
+                    shadowOffset: 2,    // offset of the shadow from the chart.
+                    shadowDepth: 5,     // Number of strokes to make when drawing shadow.  Each stroke is
+                                        // offset by shadowOffset from the last.
+                    shadowAlpha: 0.07   // Opacity of the shadow
+                }
             },
             legend:{
                 show:true,
                 placement: 'outside',
-                rendererOptions: {
-                    numberRows: 1
-                },
+
                 location:'s',
                 marginTop: '15px'
             }

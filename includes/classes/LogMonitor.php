@@ -13,8 +13,12 @@ class LogMonitor {
     const ACTIVITY_ADD_STEP = "add_step";
 	const ACTIVITY_CREATE_USER = "create_user";
 	const ACTIVITY_DELETED_USER = "delete_user";
+	const ACTIVITY_MODIFY_USER = "modify_user";
+	const ACTIVITY_CREATE_GROUP = "create_group";
+	const ACTIVITY_DELETED_GROUP = "delete_group";
+	const ACTIVITY_MODIFY_GROUP = "modify_group";
 
-	private $db = NULL; 
+	private $db = NULL;
 
 	function __construct($db) {
 

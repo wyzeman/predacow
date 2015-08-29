@@ -24,8 +24,13 @@ $buttons = array(
 $form = new FormWidget("", "#0", FormWidget::FORM_METHOD_POST, "160px", "right", "#333");
 $TPL->assign("form", $form->generate($items, $buttons));
 
-$graph_data[] = "['Users connected',".$user_connect_stat."]";
-$graph_data[] = "['Total users',".$user_stat."]";
+
+$user_connect_pcent = ($user_connect_stat / $user_stat) * 100;
+$user_pcent = 100 - $user_connect_pcent;
+
+
+$graph_data[] = "['Users connected',".$user_connect_pcent."]";
+$graph_data[] = "['Total users',".$user_pcent."]";
 
 
 $TPL->assign("graph_data",implode($graph_data, ","));
