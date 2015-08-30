@@ -91,7 +91,6 @@ class LoginPage {
 
         if ($INPUT->post->keyExists("username") && $INPUT->post->keyExists("password")) {
 
-
            // error_log( $DB->hashPassword($INPUT->post->noTags("password")));
 
             $username = $INPUT->post->getAlnum("username");
@@ -102,17 +101,13 @@ class LoginPage {
                 $username = substr($username,0,75);
             }
 
-
             //do the login action
             $result = $DB->login($username,$password);
-
-            error_log($result);
 
             if ($result == false) {
 
                 //log the failed login attempt
                 $LOG->logActivity("",LogMonitor::ACTIVITY_LOGIN_FAIL,$username." ".$password);
-
 
                 $DB->insert(
                     "tb_events_logs",
@@ -128,10 +123,38 @@ class LoginPage {
             }
 
 
-
-
             //check if the user have an existing session open
             $user_id = $DB->getScalar("id","tb_users", array("username","=",$username), array("username"));
+
+
+            @$geo = read_file(GEOLOCALISATION_API_URL."/".$INPUT->server->getRaw("REMOTE_ADDR"));
+
+            if ($geo != "") {
+                $geo = json_decode($geo, TRUE);
+                if ($geo["status"] != "fail") {
+                    $DB->insert(
+                        "tb_users_geolocalisation",
+                        array(
+                            "id_user" => $user_id,
+                            "country" => $geo["country"],
+                            "country_code" => $geo["countryCode"],
+                            "region" => $geo["region"],
+                            "region_name" => $geo["regionName"],
+                            "city" => $geo["city"],
+                            "zip" => $geo["zip"],
+                            "lat" => $geo["lat"],
+                            "lon" => $geo["lon"],
+                            "timezone" => $geo["timezone"],
+                            "isp" => $geo["isp"],
+                            "org" => $geo["org"],
+                            "aka" => $geo["as"],
+                            "ip" => $geo["query"],
+                        )
+                    );
+                }
+            }
+
+
 
             //log the login attempt
             $LOG->logActivity($username,LogMonitor::ACTIVITY_LOGIN,"");
@@ -141,8 +164,6 @@ class LoginPage {
             if ($default_language != "") {
                 $_SESSION[SI]["LANG"] = $default_language;
             }
-            error_log($result);
-
 
             $DB->insert(
                 "tb_events_logs",
@@ -152,7 +173,6 @@ class LoginPage {
                     "timestamp" => time()
                 )
             );
-
 
             die("TRUE");
         }

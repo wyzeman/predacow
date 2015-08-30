@@ -37,6 +37,8 @@ define("CONFIG_WEBSITE_PUBLIC_PATH","/var/www/html/predacow");
 define("CONFIG_SESSION_EXPIRATION_TIME", 18000); // 300 minutes
 define("CONFIG_SESSION_IDLE_TIME", 180); // 3 minutes
 
+define("GEOLOCALISATION_API_URL", "http://ip-api.com/json/");
+
 
 // User levels
 

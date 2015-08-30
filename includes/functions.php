@@ -215,3 +215,54 @@ function recursive_rmdir($dir) {
 }
 
 
+function lsfile($dir)
+{
+    $x=0;
+    $ls=opendir($dir);
+    while(false !== ($lsdir = readdir($ls)))
+    {
+        if(!is_dir($dir."/".$lsdir))
+        {
+            $flist[$x]=$lsdir;
+            $x++;
+        }
+    }
+//	if (is_array($flist))
+//		{
+//		sort($flist);
+//		}
+
+    return($flist);
+}
+
+
+
+
+function read_file($file)
+{
+    @$fid=fopen($file,"r");
+    $page="";
+    if ($fid)
+    {
+        while (!feof($fid))
+        {
+            $page=$page.fread($fid,1024);
+        }
+        fclose($fid);
+    }
+    else
+    {
+        $page=0;
+    }
+    return($page);
+}
+
+function write_file($file,$content)
+{
+    @$fid=fopen($file,"w");
+    if ($fid)
+    {
+        fwrite($fid,$content);
+    }
+    fclose($fid);
+}
