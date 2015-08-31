@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2015 at 08:35 PM
+-- Generation Time: Aug 31, 2015 at 08:28 AM
 -- Server version: 5.5.44-0+deb8u1
 -- PHP Version: 5.6.9-0+deb8u1
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `tb_activities` (
   `field_what` varchar(255) NOT NULL,
   `field_reference` varchar(255) NOT NULL,
   `field_when` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_activities`
@@ -176,7 +176,11 @@ INSERT INTO `tb_activities` (`id`, `field_who`, `field_how`, `field_what`, `fiel
 (134, 'wyzeman', 'logout', '', '', '1440821643'),
 (135, 'wyzeman', 'login', '', '', '1440821647'),
 (136, 'wyzeman', 'logout', '', '', '1440821669'),
-(137, 'wyzeman', 'login', '', '', '1440828601');
+(137, 'wyzeman', 'login', '', '', '1440828601'),
+(138, 'wyzeman', 'logout', '', '', '1440895638'),
+(139, 'wyzeman', 'login', '', '', '1440895644'),
+(140, 'wyzeman', 'logout_timeout', '', '', '1440982252'),
+(141, 'wyzeman', 'login', '', '', '1440982258');
 
 -- --------------------------------------------------------
 
@@ -222,6 +226,36 @@ INSERT INTO `tb_chat_unseens` (`id`, `id_user`, `channel`, `timestamp`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_country`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_country` (
+`id` int(11) NOT NULL,
+  `code` varchar(2) NOT NULL,
+  `flag_url` varchar(75) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_country`
+--
+
+INSERT INTO `tb_country` (`id`, `code`, `flag_url`) VALUES
+(1, 'AD', 'images/country/Flag_of_Andorra.png'),
+(2, 'AE', 'images/country/Flag_of_the_United_Arab_Emirates.png'),
+(3, 'AF', 'images/country/Flag_of_Afghanistan.png'),
+(4, 'AG', 'images/country/Flag_of_Antigua_and_Barbuda.png'),
+(5, 'AL', 'images/country/Flag_of_Albania.png'),
+(6, 'AM', 'images/country/Flag_of_Armenia.png'),
+(7, 'AO', 'images/country/Flag_of_Angola.png'),
+(8, 'AR', 'images/country/128px-Flag_of_Argentina.png'),
+(9, 'AS', 'images/country/Flag_of_Samoa.png'),
+(10, 'AT', 'images/country/120px-Flag_of_Austria.png'),
+(11, 'AU', 'images/country/Flag_of_Australia.png'),
+(12, 'AZ', 'images/country/Flag_of_Azerbaijan.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_events`
 --
 
@@ -237,10 +271,10 @@ CREATE TABLE IF NOT EXISTS `tb_events` (
 --
 
 INSERT INTO `tb_events` (`id`, `id_user`, `opened`, `timestamp`) VALUES
-(1, 2, 0, 1440830605),
+(1, 2, 0, 1440985695),
 (2, 4, 0, 0),
-(3, 2, 0, 1440830605),
-(4, 2, 0, 1440830605);
+(3, 2, 0, 1440985695),
+(4, 2, 0, 1440985695);
 
 -- --------------------------------------------------------
 
@@ -253,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `tb_events_logs` (
   `timestamp` int(11) NOT NULL,
   `event_type` int(11) NOT NULL,
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_events_logs`
@@ -355,7 +389,11 @@ INSERT INTO `tb_events_logs` (`id`, `timestamp`, `event_type`, `description`) VA
 (93, 1440821643, 0, 'wyzeman has left the building.'),
 (94, 1440821647, 0, 'wyzeman has join the room.'),
 (95, 1440821669, 0, 'wyzeman has left the building.'),
-(96, 1440828601, 0, 'wyzeman has join the room.');
+(96, 1440828601, 0, 'wyzeman has join the room.'),
+(97, 1440895638, 0, 'wyzeman has left the building.'),
+(98, 1440895644, 0, 'wyzeman has join the room.'),
+(99, 1440982252, 0, 'wyzeman ping timeout!'),
+(100, 1440982258, 0, 'wyzeman has join the room.');
 
 -- --------------------------------------------------------
 
@@ -395,14 +433,14 @@ CREATE TABLE IF NOT EXISTS `tb_sessions` (
   `timestamp_last_activity` int(11) NOT NULL,
   `hostname` varchar(255) NOT NULL,
   `url_last_activity` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_sessions`
 --
 
 INSERT INTO `tb_sessions` (`id`, `id_user`, `timestamp_created`, `timestamp_last_activity`, `hostname`, `url_last_activity`) VALUES
-(1, 2, 1440828600, 1440894930, '127.0.0.1', '/predacow/events.php');
+(3, 2, 1440982258, 1441002951, '127.0.0.1', '/predacow/alerts.php');
 
 -- --------------------------------------------------------
 
@@ -534,6 +572,12 @@ ALTER TABLE `tb_chat_unseens`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `tb_country`
+--
+ALTER TABLE `tb_country`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `tb_events`
 --
 ALTER TABLE `tb_events`
@@ -583,7 +627,7 @@ ALTER TABLE `tb_webchat_chatrooms`
 -- AUTO_INCREMENT for table `tb_activities`
 --
 ALTER TABLE `tb_activities`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=138;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=142;
 --
 -- AUTO_INCREMENT for table `tb_chat`
 --
@@ -595,6 +639,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `tb_chat_unseens`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `tb_country`
+--
+ALTER TABLE `tb_country`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+--
 -- AUTO_INCREMENT for table `tb_events`
 --
 ALTER TABLE `tb_events`
@@ -603,7 +652,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `tb_events_logs`
 --
 ALTER TABLE `tb_events_logs`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=101;
 --
 -- AUTO_INCREMENT for table `tb_groups`
 --
@@ -613,7 +662,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `tb_sessions`
 --
 ALTER TABLE `tb_sessions`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_users`
 --
