@@ -46,6 +46,22 @@ function displaySuperTable() {
 
     $groups = $DB->select("*","tb_groups");
 
+    if (count($groups) > 0) {
+        for ($i=0;$i<count($groups);$i++) {
+            $newgroups[$i]["id"] = $groups[$i]["id"];
+            $newgroups[$i]["value"] = 0;
+            $newgroups[$i]["label"] = $groups[$i]["name"];
+            $newgroups[$i]["name"] = $groups[$i]["name"];
+
+        }
+
+    } else {
+        $newgroups = array();
+    }
+
+    $groups = $newgroups;
+
+
     $fields =
         [
             [
@@ -135,15 +151,11 @@ function displaySuperTable() {
                     "width" => "120px",
                 ],
                 "form" => [
-                    "type" => FormWidget::FORM_ITEM_SELECT,
+                    "type" => FormWidget::FORM_ITEM_CHECKGROUP,
                     "validation" => "",
                     "add" => true,
                     "modify" => true,
-                    "value" => [
-                        "source" =>
-                            $groups,
-                        "selection" => 0
-                    ],
+                    "value" =>  $groups,
                 ]
 
             ],
@@ -276,9 +288,24 @@ function displaySuperTable() {
                 $row["timestamp_created"] = date("m/d/Y", $row["timestamp_created"]);
             }
 
-            if ($row["id_group"] > 0) {
-                $row["id_group"] = $DB->getScalar("name","tb_groups",array("id","=",$row["id_group"]));
+
+            $groups = $DB->select("*","tb_groups_users", array("id_user","=",$row["id"]));
+
+            $row["id_group"] = "";
+
+            if (count($groups > 0)) {
+                for ($i=0;$i<count($groups);$i++) {
+                    $row["id_group"] .= $DB->getScalar("name","tb_groups",array("id","=",$groups[$i]["id_group"])).", ";
+                }
+
             }
+
+
+
+            /*if ($row["id_group"] > 0) {
+                $row["id_group"] = $DB->getScalar("name","tb_groups",array("id","=",$row["id_group"]));
+            }*/
+
             return $row;
         }
 

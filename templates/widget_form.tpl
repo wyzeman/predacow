@@ -110,19 +110,20 @@
                 <label style="color:{$label_color};text-align:{$label_align};{if $label_width > 0}width:{$label_width};{/if}">
                 {* Checkbox *}
                 {if ($items[i].type eq 2)}
-                {else}
-                {* Label *}
-                {if ($items[i].type eq 3)}
-                    <br/>
-               <b style="padding:5px;color:{$label_color}">{$items[i].label|stripslashes}</b>
-               <br/>
-                {else}{* Anything else *}
-                    {if ($items[i].type eq 14)}
-                    {else}
 
-                {$items[i].label|stripslashes}&nbsp;
+                {else}
+                    {* Label *}
+                    {if ($items[i].type eq 3)}
+                        <br/>
+                        <b style="padding:5px;color:{$label_color}">{$items[i].label|stripslashes}</b>
+                        <br/>
+                    {else}{* Anything else *}
+
+                        {if ($items[i].type eq 14)}
+                        {else}
+                            {$items[i].label|stripslashes}&nbsp;
                         {/if}
-                {/if}
+                    {/if}
                 {/if}
                 </label>
 
