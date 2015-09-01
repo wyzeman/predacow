@@ -325,8 +325,7 @@ function displaySuperTable() {
 
 
         public function callbackFilterModifyItems($form_items, $id) {
-            echo "<pre>";
-            print_r($form_items);//die();
+
             return $form_items;
         }
 

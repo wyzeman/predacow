@@ -166,7 +166,9 @@ class SuperTable {
 
 
         for ($i=0;$i<count($form_items);$i++) {
+
             if (array_key_exists($form_items[$i]["name"], $values)) {
+               // echo $form_items[$i]["name"]."<BR>";
                 switch($form_items[$i]["type"]) {
                     case FormWidget::FORM_ITEM_AUTOCOMPLETE:
                         $form_items[$i]["value"]["text"] = $values[$form_items[$i]["name"]];
@@ -182,9 +184,24 @@ class SuperTable {
                         }
                         break;
 
+                    case FormWidget::FORM_ITEM_CHECKGROUP:
+
+                        $selection = $values[$form_items[$i]["name"]];
+                        for ($j=0;$j<count($form_items[$i]["value"]);$j++) {
+                            if ($form_items[$i]["value"][$j]["id"] == $selection) {
+                                $form_items[$i]["value"][$j]["extra"] = "selected";
+                            }
+                        }
+
+                        break;
+
                     default:
+
                         $form_items[$i]["value"] = $values[$form_items[$i]["name"]];
+
                 }
+
+
             } else {
 
                 // Foreign item or separator
@@ -201,6 +218,9 @@ class SuperTable {
 
             }
         }
+
+
+       // print_r($form_items);
 
         // Creating form
         $formModify = new FormWidget($this->labels["title_modify"]." (#".$id.")", "?modify_entry_confirm=" . $id, FormWidget::FORM_METHOD_POST, "300px", "right","#666", true);
@@ -255,9 +275,9 @@ class SuperTable {
 
                 if ($c["column"][0] == '@') {
                     //we gently remove the @ from the field name to be ignored (PATCH WYZEMAN)
-                      //for the class
+                    //for the class
                     $this->fields["column"] = substr($c["column"],- (strlen($c["column"]) -1));
-                      //for this loop
+                    //for this loop
                     $c["column"] = substr($c["column"],- (strlen($c["column"]) -1));
 
                     $add_to_fields = false;
