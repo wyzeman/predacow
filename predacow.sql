@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.2.12deb2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 31, 2015 at 04:09 PM
--- Server version: 5.5.44-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.11
+-- Generation Time: Sep 01, 2015 at 08:12 AM
+-- Server version: 5.5.44-0+deb8u1
+-- PHP Version: 5.6.9-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,15 +27,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `tb_activities` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `field_who` varchar(255) NOT NULL,
   `field_how` varchar(255) NOT NULL,
   `field_what` varchar(255) NOT NULL,
   `field_reference` varchar(255) NOT NULL,
-  `field_when` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=149 ;
+  `field_when` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_activities`
@@ -189,7 +187,12 @@ INSERT INTO `tb_activities` (`id`, `field_who`, `field_how`, `field_what`, `fiel
 (145, 'wyzeman', 'login', '', '', '1441027527'),
 (146, 'wyzeman', 'logout_timeout', '', '', '1441051266'),
 (147, 'wyzeman', 'login', '', '', '1441051271'),
-(148, 'wyzeman', 'logout', '', '', '1441051752');
+(148, 'wyzeman', 'logout', '', '', '1441051752'),
+(149, 'wyzeman', 'login', '', '', '1441071286'),
+(150, 'wyzeman', 'logout', '', '', '1441071375'),
+(151, 'wyzeman', 'login', '', '', '1441071381'),
+(152, 'wyzeman', 'logout', '', '', '1441071414'),
+(153, 'wyzeman', 'login', '', '', '1441071421');
 
 -- --------------------------------------------------------
 
@@ -198,14 +201,12 @@ INSERT INTO `tb_activities` (`id`, `field_who`, `field_how`, `field_what`, `fiel
 --
 
 CREATE TABLE IF NOT EXISTS `tb_chat` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `channel` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `username` varchar(75) NOT NULL,
-  `message` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_chat`
@@ -221,13 +222,11 @@ INSERT INTO `tb_chat` (`id`, `channel`, `timestamp`, `username`, `message`) VALU
 --
 
 CREATE TABLE IF NOT EXISTS `tb_chat_unseens` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `channel` int(11) NOT NULL,
-  `timestamp` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `timestamp` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_chat_unseens`
@@ -243,12 +242,10 @@ INSERT INTO `tb_chat_unseens` (`id`, `id_user`, `channel`, `timestamp`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tb_country` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `code` varchar(2) NOT NULL,
-  `flag_url` varchar(75) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+  `flag_url` varchar(75) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_country`
@@ -266,7 +263,33 @@ INSERT INTO `tb_country` (`id`, `code`, `flag_url`) VALUES
 (9, 'AS', 'images/country/Flag_of_Samoa.png'),
 (10, 'AT', 'images/country/120px-Flag_of_Austria.png'),
 (11, 'AU', 'images/country/Flag_of_Australia.png'),
-(12, 'AZ', 'images/country/Flag_of_Azerbaijan.png');
+(12, 'AZ', 'images/country/Flag_of_Azerbaijan.png'),
+(13, 'BA', 'images/country/Flag_of_Bosnia_and_Herzegovina.png'),
+(14, 'BB', 'images/country/120px-Flag_of_Barbados.png'),
+(15, 'BD', 'images/country/134px-Flag_of_Bangladesh.png'),
+(16, 'BE', 'images/country/Flag_of_Belgium.png'),
+(17, 'BF', 'images/country/Flag_of_Burkina_Faso.png'),
+(18, 'BG', 'images/country/Flag_of_Bulgaria.png'),
+(19, 'BH', 'images/country/134px-Flag_of_Bahrain.png'),
+(20, 'BI', 'images/country/Flag_of_Burundi.png'),
+(21, 'BJ', 'images/country/120px-Flag_of_Benin.png'),
+(22, 'BN', 'images/country/Flag_of_Brunei.png'),
+(23, 'BO', 'images/country/118px-Flag_of_Bolivia.png'),
+(24, 'BR', 'images/country/Flag_of_Brazil.png'),
+(25, 'BS', ''),
+(26, 'BQ', ''),
+(27, 'BO', ''),
+(28, 'BL', ''),
+(29, 'AI', ''),
+(30, 'AQ', ''),
+(31, 'BU', 'images/country/Flag_of_Bhutan.png'),
+(32, 'BV', ''),
+(33, 'BW', 'images/country/Flag_of_Botswana.png'),
+(34, 'BY', 'images/country/Flag_of_Belarus.png'),
+(35, 'BZ', 'images/country/Flag_of_Belize.png'),
+(36, 'CA', 'images/country/Flag_of_Canada.png'),
+(37, 'BZ', 'images/country/Flag_of_Belize.png'),
+(38, 'CA', 'images/country/Flag_of_Canada.png');
 
 -- --------------------------------------------------------
 
@@ -275,23 +298,21 @@ INSERT INTO `tb_country` (`id`, `code`, `flag_url`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tb_events` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `opened` int(11) NOT NULL,
-  `timestamp` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `timestamp` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_events`
 --
 
 INSERT INTO `tb_events` (`id`, `id_user`, `opened`, `timestamp`) VALUES
-(1, 2, 0, 1441051749),
+(1, 2, 0, 1441083757),
 (2, 4, 0, 0),
-(3, 2, 0, 1441051749),
-(4, 2, 0, 1441051749);
+(3, 2, 0, 1441083757),
+(4, 2, 0, 1441083757);
 
 -- --------------------------------------------------------
 
@@ -300,13 +321,11 @@ INSERT INTO `tb_events` (`id`, `id_user`, `opened`, `timestamp`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tb_events_logs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `event_type` int(11) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=108 ;
+  `description` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_events_logs`
@@ -419,7 +438,12 @@ INSERT INTO `tb_events_logs` (`id`, `timestamp`, `event_type`, `description`) VA
 (104, 1441027527, 0, 'wyzeman has join the room.'),
 (105, 1441051266, 0, 'wyzeman ping timeout!'),
 (106, 1441051271, 0, 'wyzeman has join the room.'),
-(107, 1441051752, 0, 'wyzeman has left the building.');
+(107, 1441051752, 0, 'wyzeman has left the building.'),
+(108, 1441071286, 0, 'wyzeman has join the room.'),
+(109, 1441071375, 0, 'wyzeman has left the building.'),
+(110, 1441071381, 0, 'wyzeman has join the room.'),
+(111, 1441071414, 0, 'wyzeman has left the building.'),
+(112, 1441071421, 0, 'wyzeman has join the room.');
 
 -- --------------------------------------------------------
 
@@ -428,15 +452,13 @@ INSERT INTO `tb_events_logs` (`id`, `timestamp`, `event_type`, `description`) VA
 --
 
 CREATE TABLE IF NOT EXISTS `tb_groups` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `name` varchar(75) NOT NULL,
   `parent_group` int(11) NOT NULL DEFAULT '-1',
   `deleted` int(11) NOT NULL DEFAULT '0',
   `timestamp_created` int(11) NOT NULL,
-  `active` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+  `active` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_groups`
@@ -455,11 +477,10 @@ INSERT INTO `tb_groups` (`id`, `name`, `parent_group`, `deleted`, `timestamp_cre
 --
 
 CREATE TABLE IF NOT EXISTS `tb_groups_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_group` int(11) NOT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `id_group` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_groups_users`
@@ -479,15 +500,20 @@ INSERT INTO `tb_groups_users` (`id`, `id_user`, `id_group`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tb_sessions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `timestamp_created` int(11) NOT NULL,
   `timestamp_last_activity` int(11) NOT NULL,
   `hostname` varchar(255) NOT NULL,
-  `url_last_activity` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  `url_last_activity` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_sessions`
+--
+
+INSERT INTO `tb_sessions` (`id`, `id_user`, `timestamp_created`, `timestamp_last_activity`, `hostname`, `url_last_activity`) VALUES
+(9, 2, 1441071420, 1441087159, '127.0.0.1', '/predacow/users.php');
 
 -- --------------------------------------------------------
 
@@ -496,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `tb_sessions` (
 --
 
 CREATE TABLE IF NOT EXISTS `tb_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `username` varchar(75) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email_address` varchar(255) NOT NULL,
@@ -507,10 +533,8 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
   `last_visit_datetime` int(11) NOT NULL,
   `active` int(11) NOT NULL,
   `timestamp_created` int(11) NOT NULL,
-  `deleted` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `deleted` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_users`
@@ -542,27 +566,28 @@ CREATE TABLE IF NOT EXISTS `tb_users_geolocalisation` (
   `isp` varchar(75) NOT NULL,
   `org` varchar(75) NOT NULL,
   `aka` varchar(75) NOT NULL,
-  `ip` varchar(15) NOT NULL
+  `ip` varchar(15) NOT NULL,
+  `timestamp` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_users_geolocalisation`
 --
 
-INSERT INTO `tb_users_geolocalisation` (`id`, `id_user`, `country`, `country_code`, `region`, `region_name`, `city`, `zip`, `lat`, `lon`, `timezone`, `isp`, `org`, `aka`, `ip`) VALUES
-(0, 2, 'Canada', '', '', '', '', '', '', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', '', '', '', '', '', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', '', '', '', '', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', '', '', '', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', '', '', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', '', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', '', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', '', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', '', ''),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229'),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229'),
-(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229');
+INSERT INTO `tb_users_geolocalisation` (`id`, `id_user`, `country`, `country_code`, `region`, `region_name`, `city`, `zip`, `lat`, `lon`, `timezone`, `isp`, `org`, `aka`, `ip`, `timestamp`) VALUES
+(0, 2, 'Canada', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', '', '', '', '', '', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', '', '', '', '', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', '', '', '', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', '', '', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', '', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', '', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', '', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', '', '', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229', 0),
+(0, 2, 'Canada', 'CA', 'QC', 'Quebec', 'Québec', 'G1M', '46.8183', '-71.2706', 'America/Toronto', 'Bell Canada', 'Bell Canada', 'AS577 Bell Canada', '70.24.199.229', 0);
 
 -- --------------------------------------------------------
 
@@ -571,12 +596,10 @@ INSERT INTO `tb_users_geolocalisation` (`id`, `id_user`, `country`, `country_cod
 --
 
 CREATE TABLE IF NOT EXISTS `tb_webchat` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `opened` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `opened` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_webchat`
@@ -594,14 +617,152 @@ INSERT INTO `tb_webchat` (`id`, `id_user`, `opened`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tb_webchat_chatrooms` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `chatroom_id` int(11) NOT NULL,
-  `name` varchar(75) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `name` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tb_activities`
+--
+ALTER TABLE `tb_activities`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_chat`
+--
+ALTER TABLE `tb_chat`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_chat_unseens`
+--
+ALTER TABLE `tb_chat_unseens`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_country`
+--
+ALTER TABLE `tb_country`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_events`
+--
+ALTER TABLE `tb_events`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_events_logs`
+--
+ALTER TABLE `tb_events_logs`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_groups`
+--
+ALTER TABLE `tb_groups`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_groups_users`
+--
+ALTER TABLE `tb_groups_users`
+ ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_sessions`
+--
+ALTER TABLE `tb_sessions`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_users`
+--
+ALTER TABLE `tb_users`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_webchat`
+--
+ALTER TABLE `tb_webchat`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `tb_webchat_chatrooms`
+--
+ALTER TABLE `tb_webchat_chatrooms`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_activities`
+--
+ALTER TABLE `tb_activities`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=154;
+--
+-- AUTO_INCREMENT for table `tb_chat`
+--
+ALTER TABLE `tb_chat`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `tb_chat_unseens`
+--
+ALTER TABLE `tb_chat_unseens`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `tb_country`
+--
+ALTER TABLE `tb_country`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+--
+-- AUTO_INCREMENT for table `tb_events`
+--
+ALTER TABLE `tb_events`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tb_events_logs`
+--
+ALTER TABLE `tb_events_logs`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=113;
+--
+-- AUTO_INCREMENT for table `tb_groups`
+--
+ALTER TABLE `tb_groups`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `tb_groups_users`
+--
+ALTER TABLE `tb_groups_users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tb_sessions`
+--
+ALTER TABLE `tb_sessions`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `tb_users`
+--
+ALTER TABLE `tb_users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tb_webchat`
+--
+ALTER TABLE `tb_webchat`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tb_webchat_chatrooms`
+--
+ALTER TABLE `tb_webchat_chatrooms`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
