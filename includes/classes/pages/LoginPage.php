@@ -149,6 +149,7 @@ class LoginPage {
                             "org" => $geo["org"],
                             "aka" => $geo["as"],
                             "ip" => $geo["query"],
+                            "timestamp" => time()
                         )
                     );
                 }

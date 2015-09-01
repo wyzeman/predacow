@@ -62,6 +62,7 @@ function displaySuperTable() {
     $groups = $newgroups;
 
 
+
     $fields =
         [
             [
@@ -200,6 +201,15 @@ function displaySuperTable() {
 
             ],
 
+            [
+                "label" => T_("Last visit from"),
+
+                "column" => "@country_code",
+                "table" => [
+                    "width" => "120px"
+                ]
+            ],
+
 
 
         ];
@@ -300,17 +310,25 @@ function displaySuperTable() {
 
             }
 
+            $country_code = $DB->select("country_code","tb_users_geolocalisation",array("id_user", "=", $row["id"]));
 
 
-            /*if ($row["id_group"] > 0) {
-                $row["id_group"] = $DB->getScalar("name","tb_groups",array("id","=",$row["id_group"]));
-            }*/
+           if (count($country_code) > 0) {
+                $row["country_code"] = "<img src=\"".$DB->getScalar("flag_url","tb_country",array("code","=",$country_code[count($country_code) -1]["country_code"]))."\"></img>";
+            } else {
+                $row["country_code"] = "N/A";
+            }
+
 
             return $row;
         }
 
 
-
+        public function callbackFilterModifyItems($form_items, $id) {
+            echo "<pre>";
+            print_r($form_items);//die();
+            return $form_items;
+        }
 
 
 

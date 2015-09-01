@@ -254,6 +254,12 @@ class SuperTable {
                 $add_to_fields = true;
 
                 if ($c["column"][0] == '@') {
+                    //we gently remove the @ from the field name to be ignored (PATCH WYZEMAN)
+                      //for the class
+                    $this->fields["column"] = substr($c["column"],- (strlen($c["column"]) -1));
+                      //for this loop
+                    $c["column"] = substr($c["column"],- (strlen($c["column"]) -1));
+
                     $add_to_fields = false;
                 }
 
