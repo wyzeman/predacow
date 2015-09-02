@@ -221,6 +221,9 @@ function displaySuperTable() {
 
         public function callbackAddValidate($items, $foreign_items) {
 
+
+
+
             global $DB;
             if ($items["email_address"] == "") {
                 return ["result"=>false,"error"=>T_("Email address is empty!")];
@@ -236,9 +239,21 @@ function displaySuperTable() {
 
         public function callbackAddPost($items,  $foreign_items, $insert_id) {
 
+            global $DB, $LOG, $INPUT;
 
-            global $DB, $LOG;
+            $groups = $DB->select("*","tb_groups");
 
+            for ($i=0;$i<count($groups);$i++) {
+                 if ($INPUT->post->keyExists(str_replace(" ","_",$groups[$i]["name"]))) {
+                     $DB->insert(
+                         "tb_groups_users",
+                         array(
+                             "id_user" => $insert_id,
+                             "id_group" => $groups[$i]["id"]
+                         )
+                     );
+                 }
+            }
 
             $DB->update("tb_users",["timestamp_created"=>time()],["id","=",$insert_id]);
             $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_CREATE_USER,$items["username"],implode(",",$items));
@@ -273,7 +288,33 @@ function displaySuperTable() {
 
         public function callbackModifyPost($items, $foreign_items, $modify_id) {
 
-            global $DB, $LOG;
+            global $DB, $LOG, $INPUT;
+
+/*            echo "<pre>";
+            print_r($INPUT->post);
+            print_r($items);
+            die ();*/
+            $groups = $DB->select("*","tb_groups");
+
+            for ($i=0;$i<count($groups);$i++) {
+                $remove_id = $DB->delete(
+                    "tb_groups_users",
+                    array(
+                        array("id_user","=",$modify_id),
+                        "AND",
+                        array("id_group","=", $groups[$i]["id"])
+                    )
+                );
+                if ($INPUT->post->keyExists(str_replace(" ","_",$groups[$i]["name"]))) {
+                    $DB->insert(
+                        "tb_groups_users",
+                        array(
+                            "id_user" => $modify_id,
+                            "id_group" => $groups[$i]["id"]
+                        )
+                    );
+                }
+            }
 
             $LOG->logActivity($_SESSION[SI]["user"]["username"],LogMonitor::ACTIVITY_MODIFY_USER,$items["username"],implode(",",$items));
 
@@ -323,12 +364,22 @@ function displaySuperTable() {
             return $row;
         }
 
-
         public function callbackFilterModifyItems($form_items, $id) {
+
+            global $DB;
+
+            $in_groups = $DB->select("*","tb_groups_users",array("id_user","=",$id));
+
+            for ($i=0;$i<count($form_items[4]["value"]);$i++) {
+                for($j=0;$j<count($in_groups);$j++) {
+                    if ($form_items[4]["value"][$i]["id"] == $in_groups[$j]["id_group"] ) {
+                        $form_items[4]["value"][$i]["value"] = true;
+                    }
+                }
+            }
 
             return $form_items;
         }
-
 
 
         public function callbackAddPre($items, $foreign_items) {
@@ -356,10 +407,11 @@ function displaySuperTable() {
                 )
             );
 
-
+            $DB->delete("tb_groups_users",array("id_user","=", $delete_id));
         }
-
     }
+
+
 
 
     $buttons = [];
