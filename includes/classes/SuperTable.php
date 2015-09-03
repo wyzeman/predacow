@@ -168,7 +168,6 @@ class SuperTable {
         for ($i=0;$i<count($form_items);$i++) {
 
             if (array_key_exists($form_items[$i]["name"], $values)) {
-                echo $form_items[$i]["name"]."<BR>";
                 switch($form_items[$i]["type"]) {
                     case FormWidget::FORM_ITEM_AUTOCOMPLETE:
                         $form_items[$i]["value"]["text"] = $values[$form_items[$i]["name"]];

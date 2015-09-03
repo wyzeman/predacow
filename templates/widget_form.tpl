@@ -120,6 +120,7 @@
                     {else}{* Anything else *}
 
                         {if ($items[i].type eq 14)}
+                            {$items[i].label|stripslashes}&nbsp;
                         {else}
                             {$items[i].label|stripslashes}&nbsp;
                         {/if}
@@ -210,16 +211,18 @@
                     {/if}
                     {* Checkbox group *}
                     {if $items[i].type eq 14}
-                        <div style="background-color:#6f6e6d;color:white;margin-top:30px;margin-bottom:15px;padding:10px">
-                            <b>{$items[i].label|stripslashes}</b>
-                        </div>
+
 
                         <span>
+                            {$e=1}
                             {section name=cb loop=$items[i].value}
-                                <div style="display:inline-block;white-space: nowrap">
+
                                 <input type="checkbox" name="{$items[i].value[cb].name}" id="{$items[i].value[cb].name}" {if $items[i].value[cb].value eq true}checked{/if}>
-                                    {$items[i].value[cb].label|stripslashes}&nbsp;&nbsp;
-                                </div>
+                                    {$items[i].value[cb].label|stripslashes}&nbsp;<br>
+                                    {if $e neq $items[i].value|count}
+                                        <label style="color:{$label_color};text-align:{$label_align};{if $label_width > 0}width:{$label_width};{/if}">&nbsp;</label>
+                                        {$e=$e + 1}
+                                    {/if}
                             {/section}
 
                         </span>

@@ -290,10 +290,6 @@ function displaySuperTable() {
 
             global $DB, $LOG, $INPUT;
 
-/*            echo "<pre>";
-            print_r($INPUT->post);
-            print_r($items);
-            die ();*/
             $groups = $DB->select("*","tb_groups");
 
             for ($i=0;$i<count($groups);$i++) {
@@ -353,13 +349,11 @@ function displaySuperTable() {
 
             $country_code = $DB->select("country_code","tb_users_geolocalisation",array("id_user", "=", $row["id"]));
 
-
            if (count($country_code) > 0) {
                 $row["country_code"] = "<img src=\"".$DB->getScalar("flag_url","tb_country",array("code","=",$country_code[count($country_code) -1]["country_code"]))."\"></img>";
             } else {
                 $row["country_code"] = "N/A";
             }
-
 
             return $row;
         }
