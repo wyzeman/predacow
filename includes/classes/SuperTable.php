@@ -460,16 +460,16 @@ class SuperTable {
 
             $items[$i] = $this->callbackFilterRow($items[$i]);
 
-/*            if ($items[$i] != "skip") {
+            if ($items[$i] != "skip") {
 
                 $tmp[$j] = $items[$i];
                 $j++;
 
-            }*/
+            }
         }
-/*
+
         unset($items);
-        $items = $tmp;*/
+        $items = $tmp;
 
         // Remove tables from columns in table columns
         for ($i=0;$i<count($table_columns);$i++) {

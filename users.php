@@ -362,13 +362,13 @@ function displaySuperTable() {
           //  if (count($groups > 0)) {
                 for ($i=0;$i<count($groups);$i++) {
 
-/*                    for($j=0;$j<count($my_group_map);$j++) {
-                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"]) {
+                    for($j=0;$j<count($my_group_map);$j++) {
+                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"] || $my_group_map[$j]["id"] == 1) {
                             $in_my_group = true;
-                          //  echo "found ".$groups[$i]["id_group"];
+
                             $my_group_map[$j]["parent_id"] = $DB->getScalar("parent_group", "tb_groups", array("id", "=", $my_group_map[$j]["id_group"]));
                         }
-                    }*/
+                    }
 
                     $row["id_group"] .= $DB->getScalar("name","tb_groups",array("id","=",$groups[$i]["id_group"])).", ";
 
@@ -386,10 +386,10 @@ function displaySuperTable() {
                 $row["country_code"] = "N/A";
             }
 
-/*            if ($in_my_group == false ) {
+            if ($in_my_group == false ) {
                 unset($row);
                 $row = "skip";
-            }*/
+            }
 
             return $row;
         }
