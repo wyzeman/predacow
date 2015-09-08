@@ -414,7 +414,7 @@ function displaySuperTable() {
 
         public function callbackAddPre($items, $foreign_items) {
 
-            error_log("test");
+
             $items["password"] = crypt($items["password"],'$5$');
             return $items;
         }

@@ -572,7 +572,6 @@ class SuperTable {
                     $insert_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
                 } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_CHECKGROUP) {
                     $insert_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
-                    error_log("mooo");
                 } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_PHONENUMBER) {
                     $value = $INPUT->post->noTags($item["name"]);
                     $value = str_replace("(", "", $value);
@@ -585,7 +584,6 @@ class SuperTable {
                 }
             }
         }
-        error_log("test");
 
         $validation = $this->callbackAddValidate($insert_items, $foreign_items);
         if ($INPUT->get->keyExists("validate_add_entry")) {
