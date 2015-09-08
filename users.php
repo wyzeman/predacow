@@ -221,10 +221,7 @@ function displaySuperTable() {
 
         public function callbackAddValidate($items, $foreign_items) {
 
-
-
-
-            global $DB;
+              global $DB;
             if ($items["email_address"] == "") {
                 return ["result"=>false,"error"=>T_("Email address is empty!")];
             }
@@ -238,6 +235,8 @@ function displaySuperTable() {
         }
 
         public function callbackAddPost($items,  $foreign_items, $insert_id) {
+
+
 
             global $DB, $LOG, $INPUT;
 
@@ -335,25 +334,62 @@ function displaySuperTable() {
                 $row["timestamp_created"] = date("m/d/Y", $row["timestamp_created"]);
             }
 
+            $my_group_map = $DB->select("*","tb_groups_users", array("id_user","=", $_SESSION[SI]["user"]["id"]));
+
+            for($i=0;$i<count($my_group_map);$i++) {
+
+                $my_group_map[$i]["id_parent"] = $DB->getScalar("parent_group","tb_groups",array("id","=",$my_group_map[$i]["id_group"]));
+            }
+
 
             $groups = $DB->select("*","tb_groups_users", array("id_user","=",$row["id"]));
 
+
+            for($i=0;$i<count($groups);$i++) {
+
+                $groups[$i]["id_parent"] = $DB->getScalar("parent_group","tb_groups",array("id","=",$groups[$i]["id_group"]));
+            }
+
             $row["id_group"] = "";
 
-            if (count($groups > 0)) {
+            $in_my_group = false;
+/*            echo "<pre>";
+            print_r($row);
+            print_r($groups);
+            print_r($my_group_map);
+            echo "-----------------";*/
+
+          //  if (count($groups > 0)) {
                 for ($i=0;$i<count($groups);$i++) {
+
+/*                    for($j=0;$j<count($my_group_map);$j++) {
+                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"]) {
+                            $in_my_group = true;
+                          //  echo "found ".$groups[$i]["id_group"];
+                            $my_group_map[$j]["parent_id"] = $DB->getScalar("parent_group", "tb_groups", array("id", "=", $my_group_map[$j]["id_group"]));
+                        }
+                    }*/
+
                     $row["id_group"] .= $DB->getScalar("name","tb_groups",array("id","=",$groups[$i]["id_group"])).", ";
+
                 }
 
-            }
+         //   }
+
+
 
             $country_code = $DB->select("country_code","tb_users_geolocalisation",array("id_user", "=", $row["id"]));
 
-           if (count($country_code) > 0) {
+            if (count($country_code) > 0) {
                 $row["country_code"] = "<img src=\"".$DB->getScalar("flag_url","tb_country",array("code","=",$country_code[count($country_code) -1]["country_code"]))."\" height=\"27\" width=\"42\"></img>";
             } else {
                 $row["country_code"] = "N/A";
             }
+
+/*            if ($in_my_group == false ) {
+                unset($row);
+                $row = "skip";
+            }*/
 
             return $row;
         }
@@ -378,7 +414,7 @@ function displaySuperTable() {
 
         public function callbackAddPre($items, $foreign_items) {
 
-
+            error_log("test");
             $items["password"] = crypt($items["password"],'$5$');
             return $items;
         }
@@ -406,11 +442,8 @@ function displaySuperTable() {
     }
 
 
-
-
     $buttons = [];
     $buttons[] = ["id" => "password_entry", "label" => "", "icon" => "key", "tooltip" => T_("Change Password"), "confirm" => false, "before" => true];
-
 
 
     $st = new MySuperTable("tb_users");

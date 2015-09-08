@@ -221,7 +221,7 @@ function displaySuperTable() {
     $st->setLabel("title_table",T_("System Groups"));
     $st->setLabel("title_add",T_("Add Group"));
     $st->setLabel("button_add",T_("Add Group"));
-    $st->setLabel("button_modify",T_("Modify User"));
+    $st->setLabel("button_modify",T_("Modify Group"));
     $st->setFields($fields);
     $st->SetSortedColumn("tb_groups.id", "DESC");
     $st->setActions(true, true, true, $buttons);

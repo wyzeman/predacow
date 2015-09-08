@@ -453,12 +453,24 @@ class SuperTable {
         $tpl->assign("count_total",$count_total);
 
         $items = $DB->select($fields, $tables, $where, array($oc . " " . $od), "LIMIT ".($this->items_per_page * ($current_page-1)).",".$this->items_per_page);
+        $j=0;
         for ($i=0;$i<count($items);$i++) {
 
             $items[$i]["background_color"] = ($i%2==0?"#e9e9e9":"#f0f0f0");
 
             $items[$i] = $this->callbackFilterRow($items[$i]);
+
+/*            if ($items[$i] != "skip") {
+
+                $tmp[$j] = $items[$i];
+                $j++;
+
+            }*/
         }
+/*
+        unset($items);
+        $items = $tmp;*/
+
         // Remove tables from columns in table columns
         for ($i=0;$i<count($table_columns);$i++) {
             $v = explode(".", $table_columns[$i]["db_name"]);
@@ -534,9 +546,12 @@ class SuperTable {
         $objects_items = [];
         $foreign_items = [];
         foreach($form_items as $key => $item) {
+
             // Separator
             if (($item["column"] != "") && is_array($item["column"])) {
                 if ($item["type"] == FormWidget::FORM_ITEM_CHECKBOX) {
+                    $foreign_items[$key] = $INPUT->post->keyExists($item["name"]);
+                } else if ($item["type"] == FormWidget::FORM_ITEM_CHECKGROUP) {
                     $foreign_items[$key] = $INPUT->post->keyExists($item["name"]);
                 } else if ($item["type"] == FormWidget::FORM_ITEM_PHONENUMBER) {
                     $value = $INPUT->post->noTags($item["name"]);
@@ -555,6 +570,9 @@ class SuperTable {
                     $objects_items[] = $item["value"];
                 } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_CHECKBOX) {
                     $insert_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
+                } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_CHECKGROUP) {
+                    $insert_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
+                    error_log("mooo");
                 } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_PHONENUMBER) {
                     $value = $INPUT->post->noTags($item["name"]);
                     $value = str_replace("(", "", $value);
@@ -567,7 +585,7 @@ class SuperTable {
                 }
             }
         }
-
+        error_log("test");
 
         $validation = $this->callbackAddValidate($insert_items, $foreign_items);
         if ($INPUT->get->keyExists("validate_add_entry")) {
@@ -639,6 +657,8 @@ class SuperTable {
             if (($item["column"] != "") && is_array($item["column"])) {
                 if ($item["type"] == FormWidget::FORM_ITEM_CHECKBOX) {
                     $foreign_items[$key] = $INPUT->post->keyExists($item["name"]);
+                } else if ($item["type"] == FormWidget::FORM_ITEM_CHECKGROUP) {
+                    $foreign_items[$key] = $INPUT->post->keyExists($item["name"]);
                 } else {
                     $foreign_items[$key] = $INPUT->post->noTags($item["name"]);
                 }
@@ -647,6 +667,8 @@ class SuperTable {
                 if (($item["column"] == "") && $item["type"] == FormWidget::FORM_ITEM_WIDGET) {
                     $objects_items[] = $item["value"];
                 } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_CHECKBOX) {
+                    $update_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
+                } else if (($item["column"] != "") && $item["type"] == FormWidget::FORM_ITEM_CHECKGROUP) {
                     $update_items[$item["name"]] = $INPUT->post->keyExists($item["name"]);
                 } else if ($item["column"] != "") {
                     $update_items[$item["name"]] = $INPUT->post->noTags($item["name"]);
