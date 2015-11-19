@@ -123,9 +123,8 @@ class LoginPage {
             }
 
 
-            //check if the user have an existing session open
+            //check if the user have a previous session open
             $user_id = $DB->getScalar("id","tb_users", array("username","=",$username), array("username"));
-
 
             @$geo = read_file(GEOLOCALISATION_API_URL."/".$INPUT->server->getRaw("REMOTE_ADDR"));
 

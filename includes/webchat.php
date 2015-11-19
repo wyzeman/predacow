@@ -33,7 +33,7 @@ function build_webchat_users_table() {
     
     
     $chat_groups = $DB->select(array("id", "name"), "tb_groups", array(array("deleted", "=", 0), "AND", array("parent_group", "=", -1)), array("name ASC"));
-    $user_group = $DB->getScalar("id_group","tb_users", array("id","=", $_SESSION[SI]["user"]["id"]));
+    $user_group = $DB->getScalar("id_group","tb_groups_users", array("id_user","=", $_SESSION[SI]["user"]["id"]));
     $group_name = $DB->getScalar("name","tb_groups",array("id","=",$user_group));
     foreach ($chat_groups as $item) {
 

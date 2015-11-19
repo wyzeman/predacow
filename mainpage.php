@@ -5,8 +5,9 @@ require_once("includes/classes/widgets/FormWidget.php");
 $page = new CustomPage(UserLevel::STAFF);
 $page->setTitle(T_("System Summary"));
 $page->setMenu($MENU_ITEMS);
-
-
+/*echo "<pre>";
+print_r($_SESSION);
+die();*/
 $user_stat = $DB->getCount("tb_users");
 $group_stat = $DB->getCount("tb_groups");
 $user_connect_stat = $DB->getCount("tb_sessions");

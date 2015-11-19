@@ -33,7 +33,8 @@ function displayPasswordForm($id) {
 
     die();
 }
-
+//echo "<pre>";
+//print_r($_SESSION);die();
 /**
  *
  */
@@ -48,6 +49,7 @@ function displaySuperTable() {
 
     if (count($groups) > 0) {
         for ($i=0;$i<count($groups);$i++) {
+            //if ($groupes[$i]["id"] = $_SESSION[SI][])
             $newgroups[$i]["id"] = $groups[$i]["id"];
             $newgroups[$i]["value"] = 0;
             $newgroups[$i]["label"] = $groups[$i]["name"];
@@ -147,7 +149,7 @@ function displaySuperTable() {
 
             [
                 "label" => T_("Group"),
-                "column" => "id_group",
+                "column" => "@id_group",
                 "table" => [
                     "width" => "120px",
                 ],
@@ -234,9 +236,9 @@ function displaySuperTable() {
             return ["result"=>true, "error"=>""];
         }
 
+
+
         public function callbackAddPost($items,  $foreign_items, $insert_id) {
-
-
 
             global $DB, $LOG, $INPUT;
 
@@ -359,11 +361,11 @@ function displaySuperTable() {
             print_r($my_group_map);
             echo "-----------------";*/
 
-          //  if (count($groups > 0)) {
+            if (count($groups) >0 ) {
                 for ($i=0;$i<count($groups);$i++) {
 
                     for($j=0;$j<count($my_group_map);$j++) {
-                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"] || $my_group_map[$j]["id"] == 1) {
+                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"] || $my_group_map[$j]["id"] == 1 ) {
                             $in_my_group = true;
 
                             $my_group_map[$j]["parent_id"] = $DB->getScalar("parent_group", "tb_groups", array("id", "=", $my_group_map[$j]["id_group"]));
@@ -374,8 +376,9 @@ function displaySuperTable() {
 
                 }
 
-         //   }
-
+            } else {
+                $in_my_group = true;
+            }
 
 
             $country_code = $DB->select("country_code","tb_users_geolocalisation",array("id_user", "=", $row["id"]));
@@ -390,6 +393,7 @@ function displaySuperTable() {
                 unset($row);
                 $row = "skip";
             }
+
 
             return $row;
         }
@@ -412,9 +416,13 @@ function displaySuperTable() {
         }
 
 
+        
+
         public function callbackAddPre($items, $foreign_items) {
 
 
+            print_r($items);
+            unset($items["id_group"]);
             $items["password"] = crypt($items["password"],'$5$');
             return $items;
         }
