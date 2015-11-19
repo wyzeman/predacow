@@ -366,14 +366,22 @@ function displaySuperTable() {
 
                     for($j=0;$j<count($my_group_map);$j++) {
                         if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"] || $my_group_map[$j]["id"] == 1 ) {
+                            echo $my_group_map[$j]["id_group"]."<BR>";
+                            echo $groups[$i]["id_group"]."<BR>";
+                            echo $groups[$i]["id_parent"]."<BR>";
+                            echo $my_group_map[$j]["id"]."<BR>";
+
                             $in_my_group = true;
 
                             $my_group_map[$j]["parent_id"] = $DB->getScalar("parent_group", "tb_groups", array("id", "=", $my_group_map[$j]["id_group"]));
                         }
                     }
+                    //$row["id_group"] .= $DB->getScalar("name", "tb_groups", array("id", "=", $groups[$i]["id_group"])) . ", ";
 
-                    $row["id_group"] .= $DB->getScalar("name","tb_groups",array("id","=",$groups[$i]["id_group"])).", ";
-
+                   if ($in_my_group == true) {
+                        $row["id_group"] .= $DB->getScalar("name", "tb_groups", array("id", "=", $groups[$i]["id_group"])) . ", ";
+                        echo $row["id_group"]."<BR>";
+                    }
                 }
 
             } else {
