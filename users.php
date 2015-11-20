@@ -337,57 +337,43 @@ function displaySuperTable() {
             }
 
             $my_group_map = $DB->select("*","tb_groups_users", array("id_user","=", $_SESSION[SI]["user"]["id"]));
+            $valide = array();
 
             for($i=0;$i<count($my_group_map);$i++) {
-
                 $my_group_map[$i]["id_parent"] = $DB->getScalar("parent_group","tb_groups",array("id","=",$my_group_map[$i]["id_group"]));
+                $isdeep = true;
+                $target = $my_group_map[$i]["id_group"];
+                if (!in_array($target, $valide)) {
+                    $valide[] = $target;
+                }
+                while ($isdeep) {
+                    $target = $DB->getScalar("id", "tb_groups", array("parent_group", "=", $target));
+                    if ($target != "") {
+                       if (!in_array($target, $valide)) {
+                            $valide[] = $target;
+                        }
+                    } else {
+                        $isdeep = false;
+                    }
+                }
             }
-
 
             $groups = $DB->select("*","tb_groups_users", array("id_user","=",$row["id"]));
 
-
-            for($i=0;$i<count($groups);$i++) {
-
-                $groups[$i]["id_parent"] = $DB->getScalar("parent_group","tb_groups",array("id","=",$groups[$i]["id_group"]));
-            }
-
             $row["id_group"] = "";
-
             $in_my_group = false;
-/*            echo "<pre>";
-            print_r($row);
-            print_r($groups);
-            print_r($my_group_map);
-            echo "-----------------";*/
 
             if (count($groups) >0 ) {
                 for ($i=0;$i<count($groups);$i++) {
 
-                    for($j=0;$j<count($my_group_map);$j++) {
-                        if ($my_group_map[$j]["id_group"] == $groups[$i]["id_group"] || $my_group_map[$j]["id_group"] == $groups[$i]["id_parent"] || $my_group_map[$j]["id"] == 1 ) {
-                            echo $my_group_map[$j]["id_group"]."<BR>";
-                            echo $groups[$i]["id_group"]."<BR>";
-                            echo $groups[$i]["id_parent"]."<BR>";
-                            echo $my_group_map[$j]["id"]."<BR>";
-
-                            $in_my_group = true;
-
-                            $my_group_map[$j]["parent_id"] = $DB->getScalar("parent_group", "tb_groups", array("id", "=", $my_group_map[$j]["id_group"]));
-                        }
-                    }
-                    //$row["id_group"] .= $DB->getScalar("name", "tb_groups", array("id", "=", $groups[$i]["id_group"])) . ", ";
-
-                   if ($in_my_group == true) {
+                    if (in_array($groups[$i]["id_group"], $valide) ) {
+                        $in_my_group = true;
                         $row["id_group"] .= $DB->getScalar("name", "tb_groups", array("id", "=", $groups[$i]["id_group"])) . ", ";
-                        echo $row["id_group"]."<BR>";
                     }
                 }
-
             } else {
                 $in_my_group = true;
             }
-
 
             $country_code = $DB->select("country_code","tb_users_geolocalisation",array("id_user", "=", $row["id"]));
 
@@ -401,7 +387,6 @@ function displaySuperTable() {
                 unset($row);
                 $row = "skip";
             }
-
 
             return $row;
         }
